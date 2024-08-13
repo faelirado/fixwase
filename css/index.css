@@ -139,9 +139,12 @@ body {
     width: 100px;
     text-align: center;
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-weight: bold;
 }
 
 h4{
     margin-left: 10px;
+    font-size: 20px;
 }
