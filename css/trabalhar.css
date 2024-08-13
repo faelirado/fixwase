@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+    background-color: rgb(255, 243, 228);
+}
+
+.espacologin {
+    width: 400px;
+    height: 490px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    color: #e6d119;
+    position: relative;
+}
+
+.espacologin h1 {
+    margin-top: 15px;
+    font-size: 22px;
+    cursor: default
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.espacologin .entrada {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+}
+
+.entrada input {
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(240, 240, 240, 0.8);
+    border-radius: 40px;
+    padding-left: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.entrada input::placeholder {
+    color: #ddd8af;
+}
+
+#header i {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #e6d119;
+}
+
+.entradalonga textarea {
+    width: 80%;
+    height: 80px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(240, 240, 240, 0.8);
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    resize: none;
+}
+
+.entradalonga textarea::placeholder {
+    color: #ddd8af;
+}
+
+.espacologin .btn {
+    margin-top: 10px;
+    width: 270px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    font: 600;
+    font-size: 16px;
+    background-color: #fff6c7;
+    cursor: pointer;
+}
