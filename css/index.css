@@ -70,6 +70,7 @@ body {
     text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     font-weight: bold;
+    font-size: 18px;
 }
 
 #menu a:last-child {
@@ -92,6 +93,7 @@ body {
     position: absolute;
     right: 10px;
     top: 10px;
+    font-weight: bold;
 }
 
 .cadastrar-button {
@@ -104,8 +106,9 @@ body {
     cursor: pointer;
     text-decoration: none;
     position: absolute;
-    right: 95px;
+    right: 100px;
     top: 10px;
+    font-weight: bold;
 }
 
 .lugar_botoes {
