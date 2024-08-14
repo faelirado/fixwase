@@ -5,6 +5,10 @@ body {
     padding-top: 100px;
 }
 
+*{
+    -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+}
+
 .espacologin {
     width: 400px;
     height: 400px;
