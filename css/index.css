@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 
+*{
+    -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+}
+
 #header {
     background-color: #e6d119;
     color: #fff;
@@ -151,8 +155,4 @@ body {
 h4{
     margin-left: 10px;
     font-size: 20px;
-}
-
-*{
-    -webkit-tap-highlight-color:transparent; /*tira o click azul*/
 }
