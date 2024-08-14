@@ -152,3 +152,7 @@ h4{
     margin-left: 10px;
     font-size: 20px;
 }
+
+*{
+    -webkit-tap-highlight-color:transparent; /*tira o click azul (eu acho)*/
+}
