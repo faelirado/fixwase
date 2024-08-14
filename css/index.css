@@ -144,6 +144,10 @@ body {
     font-weight: bold;
 }
 
+.action-button:focus {
+    outline:none;
+}
+
 h4{
     margin-left: 10px;
     font-size: 20px;
