@@ -13,7 +13,6 @@
 <body>
 
     <div id="header">
-        <button id="menu-button">&#9776;</button>
         <a href="index.html" class="titulo">FixWise</a>
 
         
@@ -24,6 +23,7 @@
     </div>
 
     <div id="menu">
+        <button id="menu-button">&#9776;</button>
         <br>
         <br>
         <a href="index.html">Página Inicial</a>
@@ -55,10 +55,11 @@
         menuButton.addEventListener('click', function () {
             if (menu.style.left === '0px') {
                 menu.style.left = '-300px'; /* Fecha a barra lateral */
-                menuButton.style.left = '10px';
+                menuButton.style.left = '310px';
+                menu.style.display = '';
             } else {
                 menu.style.left = '0px'; /* Abre a barra lateral */
-                menuButton.style.left = '170px';
+                menuButton.style.left = '220px';
             }
         });
 
