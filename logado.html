@@ -13,11 +13,11 @@
 <body>
 
     <div id="header">
-        <button id="menu-button">&#9776;</button> <!-- &#9776; é o código HTML para o ícone de três traços -->
         <a href="index.html" class="titulo">FixWise</a>
     </div>
-
+    
     <div id="menu">
+        <button id="menu-button">&#9776;</button> <!-- &#9776; é o código HTML para o ícone de três traços -->
         <br>
         <br>
         <a href="index.html">Página Inicial</a>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="lugar_botoes" id="lugarscroll">
-        <a href="#" class="action-button"><i class='bx bxs-home'></i><br>CASA</a>
+        <a href="ajudacasa.html" class="action-button"><i class='bx bxs-home'></i><br>CASA</a>
         <a href="#" class="action-button"><i class='bx bxs-business'></i><br>EMPRESA</a>
         <a href="#" class="action-button"><i class='bx bxs-store'></i><br>LOJA</a>
         <a href="#" class="action-button"><i class='bx bxs-wrench'></i><br>REFORMAS</a>
@@ -47,10 +47,10 @@
         menuButton.addEventListener('click', function () {
             if (menu.style.left === '0px') { /* Alterado para verificar a posição left ao invés de display */
                 menu.style.left = '-300px'; /* Fecha a barra lateral */
-                menuButton.style.left = '10px';
+                menuButton.style.left = '310px';
             } else {
                 menu.style.left = '0px'; /* Abre a barra lateral */
-                menuButton.style.left = '170px';
+                menuButton.style.left = '220px';
             }
         });
         
