@@ -54,16 +54,16 @@ body {
 
 #menu-button {
     position: absolute;
-    left: 10px;
+    left: 310px;
     top: 6px;
-    background-color: #e6d119;
+    background-color: transparent;
     color: #fff;
     padding: 5px 10px;
     border: none;
     border-radius: 3px;
     font-size: 23px;
     cursor: pointer;
-    transition: left 0.35s ease;
+    transition: left 0.40s ease;
     z-index: 1;
 }
 
@@ -76,7 +76,7 @@ body {
     width: 200px;
     padding: 10px;
     border-radius: 5px;
-    transition: left 0.3s ease; /* Adiciona uma transição suave */
+    transition: left 0.40s ease; /* Adiciona uma transição suave */
 }
 
 #menu a {
