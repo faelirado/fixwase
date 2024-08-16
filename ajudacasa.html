@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="icone/ico" href="icone.ico">
+    <link rel="stylesheet" href="css/ajudacasa.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>FixWise</title>
+</head>
+
+<body>
+
+    <div id="header">
+        <i class='bx bx-arrow-back' id="backi"></i>
+        <a href="index.html" class="titulo">FixWise</a>
+    </div>
+
+    <div id="main">
+        <h2>Bem-vindo ao FixWise</h2>
+        <p>Selecione o tipo de ajuda você precisa em sua residência:</p>
+        
+        <form>
+
+                <div id="escolherajuda">
+                <label><input type="radio" name="ajuda" id="tipoajuda1" value="casaEncan" required> Encanação</label>
+                </div>
+                <br>
+                <div id="escolherajuda">
+                <label><input type="radio" name="ajuda" id="tipoajuda2" value="casaEletrc" required> Eletricidade</label>
+                </div>
+                <br>
+                <div id="escolherajuda">
+                <label><input type="radio" name="ajuda" id="tipoajuda3" value="casaInstApar" required> Instalar aparelhos</label>
+                </div>
+                <br>
+                <div id="escolherajuda">
+                <label><input type="radio" name="ajuda" id="tipoajuda3" value="casaInsApar" required>Instalar aparelhos</label>
+                </div>
+
+        </form>
+    </div>
+
+    <script>
+
+        /*botao voltar*/
+        var voltar = document.getElementById('backi');
+
+        voltar.addEventListener('click', function () {
+            location.href = "logado.html"
+        });
+
+    </script>
+
+</body>
+
+</html>
