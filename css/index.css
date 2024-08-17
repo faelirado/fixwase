@@ -19,7 +19,7 @@ body {
 }
 
 .titulo{
-    position: fixed;
+    position: absolute;
     left: 60px;
 }
 
