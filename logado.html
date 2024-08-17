@@ -31,16 +31,19 @@
         <p>Selecione o tipo de ajuda você precisa:</p>
     </div>
 
+    <br>
+
     <div class="lugar_botoes" id="lugarscroll">
         <a href="ajudacasa.html" class="action-button"><i class='bx bxs-home'></i><br>CASA</a>
         <a href="#" class="action-button"><i class='bx bxs-business'></i><br>EMPRESA</a>
         <a href="#" class="action-button"><i class='bx bxs-store'></i><br>LOJA</a>
         <a href="#" class="action-button"><i class='bx bxs-wrench'></i><br>REFORMAS</a>
-        <a href="#" class="action-button"><i class='bx bxs-paint-roll'></i><br>PINTURAS</a>
-        <a href="#" class="action-button"><i class='bx bxs-truck'></i><br>MUDANÇA</a>
+        <a href="ajudapintura.html" class="action-button"><i class='bx bxs-paint-roll'></i><br>PINTURAS</a>
+        <a href="ajudamudanca.html" class="action-button"><i class='bx bxs-truck'></i><br>MUDANÇA</a>
     </div>
 
     <script>
+        /* Abrir e fechar menu */
         var menuButton = document.getElementById('menu-button');
         var menu = document.getElementById('menu');
 
@@ -54,7 +57,7 @@
             }
         });
         
-        
+        /* Scroll lateral */
         const scrollLugar = document.getElementById('lugarscroll');
 
         scrollLugar.addEventListener('wheel', function(event) {
