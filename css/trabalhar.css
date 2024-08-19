@@ -6,6 +6,10 @@ body {
     background-color: rgb(255, 243, 228);
 }
 
+* {
+    -webkit-tap-highlight-color: transparent; /*tira o click  do mobile*/
+}
+
 .espacologin {
     width: 400px;
     height: 490px;
