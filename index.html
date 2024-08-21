@@ -30,6 +30,9 @@
         <a href="trabalhar.html">Trabalhe Conosco</a>
         <a href="#">Sobre Nós</a>
         <a href="#">Suporte</a>
+
+        <i class='bx bxl-whatsapp' id="whazap"></i>
+        <button onclick="copiargmail()" id="copiarbotao">rafaelfurtado313@gmail.com</button>
     </div>
 
     <div id="main">
@@ -40,12 +43,12 @@
     <h4>Nossos serviços:</h4>
 
     <div class="lugar_botoes" id="lugarscroll">
-        <a href="login.html" class="action-button"><i class='bx bxs-home'></i><br>CASA</a>
-        <a href="login.html" class="action-button"><i class='bx bxs-business'></i><br>EMPRESA</a>
-        <a href="login.html" class="action-button"><i class='bx bxs-store'></i><br>LOJA</a>
-        <a href="login.html" class="action-button"><i class='bx bxs-wrench'></i><br>REFORMAS</a>
-        <a href="login.html" class="action-button"><i class='bx bxs-paint-roll'></i><br>PINTURAS</a>
-        <a href="login.html" class="action-button"><i class='bx bxs-truck'></i><br>MUDANÇA</a>
+        <div class="divcasa" id="botaocasa"> <img src="imagens/casa.jpg"> <label>CASA</label></div>
+        <div class="divempresa" id="botaoempresa"> <img src="imagens/empresa.jpeg"> <label>EMPRESA</label></div>
+        <div class="divloja" id="botaoloja"> <img src="imagens/loja.jpg"> <label>LOJA</label></div>
+        <div class="divreforma" id="botaoreforma"> <img src="imagens/reforma.jpg"> <label>REFORMAS</label></div>
+        <div class="divpintura" id="botaopintura"> <img src="imagens/pintura.jpg"> <label>PINTURAS</label></div>
+        <div class="divmudanca" id="botaomudanca"> <img src="imagens/mudanca.jpg"> <label>MUDANÇA</label></div>
     </div>
 
     <script>
@@ -70,6 +73,57 @@
         scrollLugar.addEventListener('wheel', function(event) {
             event.preventDefault();
             scrollLugar.scrollLeft += event.deltaY; // Move horizontal scroll by the amount of vertical scroll
+        });
+
+        /* copiar gmail */
+        function copiargmail(){
+            navigator.clipboard.writeText("rafaelfurtado313@gmail.com");
+            alert("Gmail copiado!")
+        }
+
+        /*click whazap*/
+        var whazapi = document.getElementById('whazap');
+
+        whazapi.addEventListener('click', function () {
+            location.href = "https://wa.me/985979676"
+        });
+
+        /*click da imagem*/
+        /*click casa*/
+        var clickcasa = document.getElementById('botaocasa');
+
+        clickcasa.addEventListener('click', function () {
+            location.href = "ajudacasa.html"
+        });
+        /*click empresa*/
+        var clickempresa = document.getElementById('botaoempresa');
+
+        clickempresa.addEventListener('click', function () {
+            location.href = "#"
+        });
+        /*click loja*/
+        var clickloja = document.getElementById('botaoloja');
+
+        clickloja.addEventListener('click', function () {
+            location.href = "#"
+        });
+        /*click reforma*/
+        var clickreforma = document.getElementById('botaoreforma');
+
+        clickreforma.addEventListener('click', function () {
+            location.href = "#"
+        });
+        /*click pintura*/
+        var clickpintura = document.getElementById('botaopintura');
+
+        clickpintura.addEventListener('click', function () {
+            location.href = "ajudapintura.html"
+        });
+        /*click mudanca*/
+        var clickmudanca = document.getElementById('botaomudanca');
+
+        clickmudanca.addEventListener('click', function () {
+            location.href = "ajudamudanca.html"
         });
     </script>
 
