@@ -14,19 +14,21 @@
 
     <div id="header">
         <a href="index.html" class="titulo">FixWise</a>
+        <i class='bx bxs-user-circle' id="iconeUsuario"></i>
     </div>
     
     <div id="menu">
         <button id="menu-button">&#9776;</button> <!-- &#9776; é o código HTML para o ícone de três traços -->
         <br>
         <br>
-        <a href="index.html">Página Inicial</a>
-        <a href="trabalhar.html">Trabalhe Conosco</a>
-        <a href="#">Sobre Nós</a>
-        <a href="#">Suporte</a>
+        <a href="index.html"><i class='bx bxs-home' ></i> Página Inicial</a>
+        <a href="trabalhar.html"><i class='bx bxs-briefcase-alt-2' ></i> Trabalhe Aqui</a>
+        <a href="#"><i class='bx bx-book-open' ></i> Sobre Nós</a>
+        <a href="#"><i class='bx bxs-help-circle' ></i> Suporte</a>
+        <a href="#"><i class='bx bx-history'></i> Serviços Recentes</a>
 
         <i class='bx bxl-whatsapp' id="whazap"></i>
-        <button onclick="copiargmail()" id="copiarbotao">rafaelfurtado313@gmail.com</button>
+        <button onclick="copiargmail()" id="copiarbotao"><i class='bx bxl-gmail' id="meugmail"></i></button>
     </div>
 
     <div id="main">
@@ -37,12 +39,12 @@
     <br>
 
     <div class="lugar_botoes" id="lugarscroll">
-        <div class="divcasa" id="botaocasa"> <img src="imagens/casa.jpg"> <label>CASA</label></div>
-        <div class="divempresa" id="botaoempresa"> <img src="imagens/empresa.jpeg"> <label>EMPRESA</label></div>
-        <div class="divloja" id="botaoloja"> <img src="imagens/loja.jpg"> <label>LOJA</label></div>
-        <div class="divreforma" id="botaoreforma"> <img src="imagens/reforma.jpg"> <label>REFORMAS</label></div>
-        <div class="divpintura" id="botaopintura"> <img src="imagens/pintura.jpg"> <label>PINTURAS</label></div>
-        <div class="divmudanca" id="botaomudanca"> <img src="imagens/mudanca.jpg"> <label>MUDANÇA</label></div>
+        <div class="divcasa" id="botaocasa"> <img src="imagens/casa.jpg"> <label>CASA <br> <i class='bx bxs-star' id="star1"></i><i class='bx bxs-star' id="star2"></i><i class='bx bxs-star' id="star3"></i><i class='bx bxs-star' id="star4"></i><i class='bx bxs-star' id="star5"></i> <!--Avaliação casa--></label></div>
+        <div class="divempresa" id="botaoempresa"> <img src="imagens/empresa.jpeg"> <label>EMPRESA <br> <i class='bx bxs-star' id="star1"></i><i class='bx bxs-star' id="star2"></i><i class='bx bxs-star' id="star3"></i><i class='bx bxs-star' id="star4"></i><i class='bx bxs-star' id="star5"></i> <!--Avaliação empresa--></label></div>
+        <div class="divloja" id="botaoloja"> <img src="imagens/loja.jpg"> <label>LOJA <br> <i class='bx bxs-star' id="star1"></i><i class='bx bxs-star' id="star2"></i><i class='bx bxs-star' id="star3"></i><i class='bx bxs-star' id="star4"></i><i class='bx bxs-star' id="star5"></i> <!--Avaliação loja--></label></div>
+        <div class="divreforma" id="botaoreforma"> <img src="imagens/reforma.jpg"> <label>REFORMAS <br> <i class='bx bxs-star' id="star1"></i><i class='bx bxs-star' id="star2"></i><i class='bx bxs-star' id="star3"></i><i class='bx bxs-star' id="star4"></i><i class='bx bxs-star' id="star5"></i> <!--Avaliação reforma--></label></div>
+        <div class="divpintura" id="botaopintura"> <img src="imagens/pintura.jpg"> <label>PINTURAS <br> <i class='bx bxs-star' id="star1"></i><i class='bx bxs-star' id="star2"></i><i class='bx bxs-star' id="star3"></i><i class='bx bxs-star' id="star4"></i><i class='bx bxs-star' id="star5"></i> <!--Avaliação pintura--></label></div>
+        <div class="divmudanca" id="botaomudanca"> <img src="imagens/mudanca.jpg"> <label>MUDANÇA <br> <i class='bx bxs-star' id="star1"></i><i class='bx bxs-star' id="star2"></i><i class='bx bxs-star' id="star3"></i><i class='bx bxs-star' id="star4"></i><i class='bx bxs-star' id="star5"></i> <!--Avaliação mudanca--></label></div>
     </div>
 
     <script>
@@ -56,7 +58,7 @@
                 menuButton.style.left = '310px';
             } else {
                 menu.style.left = '0px'; /* Abre a barra lateral */
-                menuButton.style.left = '220px';
+                menuButton.style.left = '180px';
             }
         });
         

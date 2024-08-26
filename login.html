@@ -12,17 +12,21 @@
 
 <body background="imagens/fundo.jpg">
 
+    <div id="header">
+        <i class='bx bx-arrow-back' id="backi"></i>
+    </div>
+
     <div class="espacologin">
         <form action="logado.html">
-            <h1>Entre na conta</h1>
+            <h1><i class='bx bx-log-in'></i> Login na conta</h1>
 
             <div class="entrada">
-                <input type="email" placeholder="E-mail" required>
+                <input type="email" placeholder="E-mail" autocomplete="email" required>
                 <i class='bx bxs-user'></i>
             </div>
 
             <div class="entrada">
-                <input type="password" placeholder="Senha" required>
+                <input type="password" placeholder="Senha" autocomplete="current-password" required>
                 <i class='bx bx-key'></i>
             </div>
             
@@ -32,10 +36,19 @@
                 <a href="#">Esqueci a senha</a>
             </div>
 
-            <button type="submit" class="btn" href="#">Fazer login</button>
+            <button type="submit" class="btnlogin" href="#">Fazer login</button>
         </form>
 
         <label>Não tem uma conta? <a href="criarconta.html" class="semconta">Cadastre-se</a></label>
+
+        <script>
+            /*voltar pro inicio*/
+            var voltar = document.getElementById('backi');
+    
+            voltar.addEventListener('click', function () {
+                location.href = "logado.html"
+            });
+        </script>
     </div>
 
 </body>

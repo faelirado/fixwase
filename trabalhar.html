@@ -18,22 +18,22 @@
 
     <div class="espacologin">
         <form action="trabalharenv.html">
-            <h1>Currículo</h1>
+            <h1><i class='bx bxs-briefcase'></i> Currículo</h1>
 
             <div class="entrada">
-                <input type="text" placeholder="Nome completo" required>
+                <input type="text" placeholder="Nome completo" autocomplete="name" required>
             </div>
 
             <div class="entrada">
-                <input type="email" placeholder="E-mail" required>
+                <input type="email" placeholder="E-mail" autocomplete="email" required>
             </div>
 
             <div class="entrada">
-                <input type="tel" placeholder="Número de telefone" required>
+                <input type="tel" placeholder="Número de telefone" autocomplete="tel" required>
             </div>
 
             <div class="entrada">
-                <input type="text" placeholder="Profissão" required>
+                <input type="text" placeholder="Profissão" autocomplete="work" required>
             </div>
 
             <div class="entradalonga">
@@ -44,9 +44,10 @@
                 <textarea placeholder="Formação" cols="2" rows="2" required></textarea>
             </div>
 
-            <button type="submit" class="btn" href="#">Enviar Currículo</button>
+            <button type="submit" class="btncurriculo" href="#">Enviar Currículo</button>
         </form>
     </div>
+    
     <script>
         var voltar = document.getElementById('backi');
 

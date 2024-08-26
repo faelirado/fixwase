@@ -12,35 +12,93 @@
 
 <body background="imagens/fundo.jpg">
 
+    <div id="header">
+        <i class='bx bx-arrow-back' id="backi"></i>
+    </div>
+
     <div class="espacologin">
-        <form action="logado.html">
-            <h1>Criar conta</h1>
-
+        <form id="cadastro" action="logado.html">
+            <h1><i class='bx bxs-user-plus'></i> Criar cadastro</h1> <!--Titulo-->
+            
             <div class="entrada">
-                <input type="text" placeholder="Nome" required>
-                <i class='bx bxs-user'></i>
+                <input type="text" placeholder="Nome" autocomplete="name" required> <!--Inserir nome-->
+                <i class='bx bxs-user'></i> <!--Icone de user-->
             </div>
 
             <div class="entrada">
-                <input type="email" placeholder="E-mail" required>
-                <i class='bx bxs-envelope'></i>
+                <input type="email" placeholder="E-mail (ex: nome123@gmail.com)" autocomplete="email" required> <!--Inserir gmail-->
+                <i class='bx bxs-envelope'></i> <!--Icone de gmail-->
             </div>
 
             <div class="entrada">
-                <input type="password" placeholder="Crie uma senha (min 8 caracteres)" minlength="8" required>
-                <i class='bx bx-key'></i>
+                <input type="password" placeholder="Crie uma senha (min 8 caracteres)" minlength="8" id="senha" required> <!--Inserir senha-->
+                <i class='bx bx-key'></i> <!--Icone de senha-->
+            </div>
+
+            <div class="entrada">
+                <input type="password" placeholder="Confirmar senha" minlength="8" id="confimarsenha" required> <!--Inserir senha-->
+                <i class='' id="checksenha"></i> <!--Icone de checagem-->
             </div>
 
             <div class="relembrar">
-                <label><input type="checkbox"> Lembrar do login</label>
+                <label><input type="checkbox"> Lembrar do login</label> <!--Lembrar de login ou não-->
+            </div>
+            
+            <div class="outrasformas">
+                <div class="separacaoformas"> <!--Outras formas de login-->
+                    <label>ou</label>
+                </div>
+                    <div id="espacoformas">
+                        <div id="formagoogle" class="forma">
+                            <img src="imagens/google_icon.png" class="icone_google">
+                            <span class="separador"></span>
+                            <a> Continuar com Google</a> <!--Forma Google-->
+                        </div>
+
+                        <div id="formaapple" class="forma">
+                            <img src="imagens/apple_icon.png" class="icone_google">
+                            <span class="separador"></span>
+                            <a> Continuar com Apple</a> <!--Forma Apple-->
+                        </div>
+                    </div>
             </div>
 
-            <button type="submit" class="btn" href="#">Criar conta</button>
+            <button type="submit" class="btncadastrar" href="#">Criar conta</button> <!--Botão de criar conta-->
         </form>
 
-        <label>Já tem uma conta? <a href="login.html" class="comconta">Faça login</a></label>
+        <label>Já tem uma conta? <a href="login.html" class="comconta">Faça login</a></label> <!--Login se tiver conta-->
     </div>
 
+    <script>
+        /*voltar pro inicio*/
+        var voltar = document.getElementById('backi');
+
+        voltar.addEventListener('click', function () {
+            location.href = "logado.html"
+        });
+
+        /*confere se a senha é a mesma*/
+        document.getElementById("cadastro").addEventListener("submit", function(event) {
+            // Seleciona todos os checkboxes no formulário
+            const senha = document.getElementById('senha').value;
+            const conferirsenha = document.getElementById('confimarsenha').value;
+            let senhaDif = false;
+
+            // verifica se a senha é a mesma
+
+            if (senha == conferirsenha) {
+                senhaDif = true;
+            }
+
+
+            // Se a senha é diferente, impede o envio do formulário
+            if (!senhaDif) {
+                event.preventDefault(); // Impede o envio do formulário
+                document.getElementById('checksenha').className = "bx bx-x"
+                setTimeout(() => {document.getElementById('checksenha').className = "";}, 2000);
+            }
+        });
+    </script>
 </body>
 
 </html>
