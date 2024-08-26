@@ -51,7 +51,7 @@ body {
     -moz-appearance: none;
     -webkit-appearance: none;
     border-radius: 20%;
-    border: 2px solid #555;
+    border: 1px solid #555;
     width: 15px;
     height: 15px;
     transform: translateY(4px);
@@ -70,14 +70,24 @@ body {
     margin-left: 10px;
 }
 
-.btn {
+#ajudas .btnenviar {
     margin-top: 50px;
     width: 270px;
     height: 50px;
-    border-radius: 30px;
+    border-radius: 20px;
     border: none;
     font: 600;
-    font-size: 16px;
-    background-color: #fdec96;
+    font-size: 20px;
+    background-color: #fded9d;
     cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: #555 0 2px 2px 0;
+}
+
+#ajudas .btnenviar:hover {
+    background-color: #ffe875;
+}
+
+#ajudas .btnenviar:focus {
+    box-shadow: #555 0 0 0 0;
 }

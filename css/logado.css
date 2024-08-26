@@ -17,6 +17,13 @@ body {
     height: 30px;
 }
 
+#header #iconeUsuario {
+    position: absolute;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 .titulo{
     position: absolute;
     left: 60px;
@@ -70,6 +77,15 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Adiciona uma linha entre os botões */
     font-weight: bold; /* Deixa o texto em negrito */
     font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+#menu a:hover {
+    box-shadow: #fff 0 0 1px 1px;
+}
+
+#menu a:active {
+    box-shadow: #fff 0 0 0px 0px;
 }
 
 #menu #whazap{
@@ -84,6 +100,18 @@ body {
     border: 0px;
 }
 
+#menu #meugmail {
+    color: #c54739;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 35px;
+    font-size: 30px;
+}
+#menu #meugmail:active {
+    height: 32px;
+    width: 37px;
+}
+
 #menu #copiarbotao{
     position: absolute;
     padding: 5px 0;
@@ -93,7 +121,7 @@ body {
     border: 0px;
     font-weight: bold;
     font-size: 12px;
-    bottom: 35px;
+    bottom: 30px;
     left: 45px;
     cursor: pointer;
     border-bottom: 0px;
@@ -115,9 +143,26 @@ body {
     width: 100%;
 }
 
-.lugar_botoes i {
-    font-size: 25px;
-    color: #fff;
+.lugar_botoes i{
+    position: absolute;
+    color: #e6d119;
+    font-size: 13px;
+}
+
+#star1 {
+    right: 55px;
+}
+#star2 {
+    right: 41px;
+}
+#star3 {
+    right: 27px;
+}
+#star4 {
+    right: 13px;
+}
+#star5 {
+    right: -1px;
 }
 
 .lugar_botoes::-webkit-scrollbar{
@@ -126,7 +171,7 @@ body {
 
 /*divs*/
 .divcasa,.divempresa,.divloja,.divpintura,.divreforma,.divmudanca{
-    background: linear-gradient(0deg,rgba(0, 0, 0,0.85) 30%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(0deg,rgba(0, 0, 0,0.78) 20%, rgba(255,255,255,0) 100%);
     border-radius: 5px;
     width: 150px;
     height: 150px;

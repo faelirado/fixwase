@@ -9,6 +9,15 @@ body {
     -webkit-tap-highlight-color: transparent; /*tira o click  do mobile*/
 }
 
+#backi {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #e6d119;
+}
+
 .espacologin {
     width: 400px;
     height: 400px;
@@ -50,12 +59,12 @@ body {
 }
 
 .entrada input::placeholder {
-    color: #ddd8af;
+    color: #dad08a;
 }
 
 .entrada i {
     position: absolute;
-    right: 10px;
+    right: 15px;
     transform: translateY(100%);
 }
 
@@ -81,20 +90,45 @@ body {
     text-decoration: underline;
 }
 
-.relembrar input {
-    border-radius: 30%;
+.relembrar input[type="checkbox"]{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 20%;
+    border: 1px solid #555;
+    width: 15px;
+    height: 15px;
+    transform: translateY(2px);
+    transition: background-color 0.4s ease;
 }
 
-.espacologin .btn {
+.relembrar input[type="checkbox"]:checked{
+    content: "";
+    background: #e6d119;
+    width: 15px;
+    height: 15px;
+}
+
+.espacologin .btnlogin {
     margin-top: 50px;
     width: 270px;
     height: 50px;
-    border-radius: 30px;
+    border-radius: 20px;
     border: none;
     font: 600;
-    font-size: 16px;
-    background-color: #fff6c7;
+    font-size: 20px;
+    background-color: #fded9d;
     cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: #555 0 2px 2px 0;
+}
+
+.btnlogin:hover {
+    background-color: #ffe875;
+}
+
+.btnlogin:focus {
+    box-shadow: #555 0 0 0 0;
 }
 
 .semconta{
@@ -104,4 +138,5 @@ body {
 
 .semconta:hover {
     text-decoration: underline;
+    color: #cece62;
 }
