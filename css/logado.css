@@ -6,6 +6,10 @@ body {
 
 *{
     -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+    user-select: none; /* Desativa a seleção de texto */
+    -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+    -moz-user-select: none; /* Suporte para Firefox */
+    -ms-user-select: none; /* Suporte para navegadores Microsoft */
 }
 
 #header {
@@ -17,12 +21,56 @@ body {
     height: 30px;
 }
 
-#header #iconeUsuario {
+/*---MENU PERFIL---*/
+
+.user-container {
     position: absolute;
+    display: inline-block;
     right: 10px;
+}
+  
+#user-icon {
     font-size: 30px;
     cursor: pointer;
 }
+  
+.menuperfil {
+    display: block; /* Escondido por padrão */
+    position: absolute;
+    top: -150px; /* Ajuste para posicionar abaixo do ícone */
+    left: 50%;
+    width:max-content;
+    transform: translateX(-80%);
+    background-color: #e6d119; /* Cor de fundo do menuperfil */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+    z-index: 3;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+  
+.menuperfil::before { /*seta em cima do menu*/
+    content: "";
+    position: absolute;
+    top: -10px; /* Ajusta a seta para ficar em cima do menuperfil */
+    left: 50%;
+    transform: translateX(20px);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #e6d119 transparent;
+}
+  
+.menuperfil-item { /*itens do menu*/
+    padding: 10px 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/*---------------------------------------------------------------------*/
 
 .titulo{
     position: absolute;
@@ -40,6 +88,8 @@ body {
     font-weight: bold;
     color: #e6d119;
 }
+
+/*---MENU ESQUERDA---*/
 
 #menu-button {
     position: absolute;
@@ -107,6 +157,7 @@ body {
     width: 35px;
     font-size: 30px;
 }
+
 #menu #meugmail:active {
     height: 32px;
     width: 37px;
@@ -131,10 +182,14 @@ body {
     border-bottom: none; /* Remove a linha do último botão */
 }
 
+/*---------------------------------------------------------------------*/
+
 #header a {
     text-decoration: none;
     color: #fff;
 }
+
+/*---SERVICOS---*/
 
 .lugar_botoes{
     display: flex;
@@ -210,3 +265,5 @@ body {
     right: 15px;
     position: absolute;
 }
+
+/*---------------------------------------------------------------------*/

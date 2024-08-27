@@ -5,8 +5,12 @@ body {
     padding-top: 70px;
 }
 
-* {
-    -webkit-tap-highlight-color: transparent; /*tira o click  do mobile*/
+*{
+    -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+    user-select: none; /* Desativa a seleção de texto */
+    -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+    -moz-user-select: none; /* Suporte para Firefox */
+    -ms-user-select: none; /* Suporte para navegadores Microsoft */
 }
 
 #backi {
@@ -202,4 +206,30 @@ body {
 .comconta:hover {
     text-decoration: underline;
     color: #cece62;
+}
+
+@media screen and (max-width: 390px){ /*responsivo*/
+    .espacologin {
+        margin: 0px 15px 0px 15px;
+    }
+
+    .forma {
+        width: 140px;
+        height: 38px;
+        font-size: 11px;
+    }
+
+    .separador {
+        width: 5px; /* Largura do separador */
+        height: 38px; /* Altura do separador */
+    }
+
+    .espacologin .entrada {
+        transform: translateX(-5px);
+    }
+
+    #espacoformas {
+        margin-top: 10px; /* Ajuste de margem se necessário */
+        margin-bottom: 5px;
+    }
 }
