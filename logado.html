@@ -14,7 +14,14 @@
 
     <div id="header">
         <a href="index.html" class="titulo">FixWise</a>
-        <i class='bx bxs-user-circle' id="iconeUsuario"></i>
+        
+        <div class="user-container">
+            <i class='bx bxs-user-circle' id="user-icon"></i>
+            <div class="menuperfil">
+              <div class="menuperfil-item"><a href="#"><i class='bx bxs-user'></i> Perfil</a></div>
+              <div class="menuperfil-item"><a href="index.html"><i class='bx bx-log-out' ></i> Sair</a></div>
+            </div>
+        </div>
     </div>
     
     <div id="menu">
@@ -61,14 +68,6 @@
                 menuButton.style.left = '180px';
             }
         });
-        
-        /* Scroll lateral */
-        const scrollLugar = document.getElementById('lugarscroll');
-
-        scrollLugar.addEventListener('wheel', function(event) {
-            event.preventDefault();
-            scrollLugar.scrollLeft += event.deltaY; // Move horizontal scroll by the amount of vertical scroll
-        });
 
         /* copiar gmail */
         function copiargmail(){
@@ -81,6 +80,24 @@
 
         whazapi.addEventListener('click', function () {
             location.href = "https://wa.me/985979676"
+        });
+
+        //Menu perfil
+        document.getElementById('user-icon').addEventListener('click', function() {
+            var menuperfil = document.querySelector('.menuperfil');
+            if (menuperfil.style.top === '50px') {
+                menuperfil.style.top = '-150px';
+            } else {
+                menuperfil.style.top = '50px';
+            }
+        });
+        
+        /* Scroll lateral */
+        const scrollLugar = document.getElementById('lugarscroll');
+
+        scrollLugar.addEventListener('wheel', function(event) {
+            event.preventDefault();
+            scrollLugar.scrollLeft += event.deltaY; // Move horizontal scroll by the amount of vertical scroll
         });
 
         /*click da imagem*/
