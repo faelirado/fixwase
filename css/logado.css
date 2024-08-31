@@ -138,49 +138,41 @@ body {
     box-shadow: #fff 0 0 0px 0px;
 }
 
+#menu a:last-child {
+    border-bottom: none; /* Remove a linha do último botão */
+}
+
 #menu #whazap{
-    position: absolute;
     padding: 5px 0;
     color: #5dff4e;
-    text-decoration: none;
     font-weight: bold;
     font-size: 30px;
-    bottom: 30px;
     cursor: pointer;
-    border: 0px;
 }
 
 #menu #meugmail {
     color: #c54739;
-    background-color: #fff;
-    border-radius: 10px;
-    width: 35px;
     font-size: 30px;
 }
 
-#menu #meugmail:active {
-    height: 32px;
-    width: 37px;
-}
-
 #menu #copiarbotao{
-    position: absolute;
     padding: 5px 0;
-    color: white;
     background-color: transparent;
-    text-decoration: none;
     border: 0px;
-    font-weight: bold;
     font-size: 12px;
-    bottom: 30px;
-    left: 45px;
     cursor: pointer;
-    border-bottom: 0px;
 }
 
-#menu a:last-child {
-    border-bottom: none; /* Remove a linha do último botão */
+#menu #menusociais {
+    position: absolute;
+    background-color: rgba(255, 242, 128, 0.7);
+    bottom: 30px;
+    border-radius: 10px;
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
 }
+
 
 /*---------------------------------------------------------------------*/
 
@@ -196,6 +188,7 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
+    height: max-content;
 }
 
 .lugar_botoes i{
@@ -244,14 +237,15 @@ body {
     height: 100%;
     border-radius: 5px;
     mix-blend-mode: multiply;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     object-fit: cover;
     display: inline-block;
+    
 }
 
 /*hover das divs*/
 .divcasa:hover img,.divempresa:hover img,.divloja:hover img,.divpintura:hover img,.divreforma:hover img,.divmudanca:hover img{
-    transform: scale(1.2); /* Aumenta a imagem em 20% ao passar o mouse */
+    transform: scale(1.2); /* Aumenta a imagem em 20%*/
 }
 
 /*label das divs*/
