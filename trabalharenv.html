@@ -16,6 +16,7 @@
 
         h2 {
             color: #75e45f;
+            font-size: 28px;
         }
 
         #main {
@@ -23,6 +24,7 @@
             width: 80%;
             text-align: center;
             cursor: default;
+            transform: translateY(150px);
         }
 
         #main i {
@@ -30,37 +32,49 @@
             color: #75e45f;
         }
 
-        #voltar-button {
-            background-color: #e6d119;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
+        #header i {
+            position: absolute;
+            left: 20px;
+            top: 15px;
             cursor: pointer;
-            text-decoration: none;
+            font-size: 20px;
+            color: #5fbb4d;
         }
 
-        #butao{
-            text-align: center;
-            padding-top: 350px;
+        #header p {
+            position: absolute;
+            left: 45px;
+            top: -5px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #5fbb4d;
+        }
+
+        * {
+            -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+            user-select: none; /* Desativa a seleção de texto */
+            -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+            -moz-user-select: none; /* Suporte para Firefox */
+            -ms-user-select: none; /* Suporte para navegadores Microsoft */
         }
     </style>
 </head>
 
 <body>
 
+    <div id="header">
+        <i class='bx bx-arrow-back' id="backi"></i>
+        <p>Início</p>
+    </div>
+
     <div id="main">
         <h2>Currículo enviado</h2>
         <p>Enviaremos o seu currículo para nossos especialistas, e enviaremos a você uma resposta.</p>
         <i class='bx bxs-check-circle'></i>
-        <br>
-        <br>
     </div>
 
-    <div id="butao">
-    <a href="logado.html" id="voltar-button">Voltar ao Início</a>
-    </div>
+    <script src="js/trabalharenv.js"></script>
+
 </body>
 
 </html>

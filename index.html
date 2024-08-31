@@ -23,17 +23,24 @@
     </div>
 
     <div id="menu">
+
         <button id="menu-button">&#9776;</button>
         <br>
         <br>
-        <a href="index.html"><i class='bx bxs-home' ></i> Página Inicial</a>
-        <a href="trabalhar.html"><i class='bx bxs-briefcase-alt-2' ></i> Trabalhe Aqui</a>
-        <a href="#"><i class='bx bx-book-open' ></i> Sobre Nós</a>
-        <a href="#"><i class='bx bxs-help-circle' ></i> Suporte</a>
-        <a href="#"><i class='bx bx-history'></i> Serviços Recentes</a>
 
-        <i class='bx bxl-whatsapp' id="whazap"></i>
-        <button onclick="copiargmail()" id="copiarbotao"><i class='bx bxl-gmail' id="meugmail"></i></button>
+        <div id="paginasmenu">
+            <a href="index.html"><i class='bx bxs-home' ></i> Página Inicial</a>
+            <a href="trabalhar.html"><i class='bx bxs-briefcase-alt-2' ></i> Trabalhe Aqui</a>
+            <a href="#"><i class='bx bx-book-open' ></i> Sobre Nós</a>
+            <a href="#"><i class='bx bxs-help-circle' ></i> Suporte</a>
+            <a href="#"><i class='bx bx-history'></i> Serviços Recentes</a>
+        </div>
+
+        <div id="menusociais">
+            <i class='bx bxl-whatsapp' id="whazap"></i>
+            <button onclick="copiargmail()" id="copiarbotao"><i class='bx bxl-gmail' id="meugmail"></i></button>
+        </div>
+
     </div>
 
     <div id="main">
@@ -52,80 +59,7 @@
         <div class="divmudanca" id="botaomudanca"> <img src="imagens/mudanca.jpg"> <label>MUDANÇA <br> <i class='bx bxs-star' id="star1"></i><i class='bx bxs-star' id="star2"></i><i class='bx bxs-star' id="star3"></i><i class='bx bxs-star' id="star4"></i><i class='bx bxs-star' id="star5"></i> <!--Avaliação mudanca--></label></div>
     </div>
 
-    <script>
-        /* Abrir e fechar menu */
-        var menuButton = document.getElementById('menu-button');
-        var menu = document.getElementById('menu');
-
-        menuButton.addEventListener('click', function () {
-            if (menu.style.left === '0px') {
-                menu.style.left = '-300px'; /* Fecha a barra lateral */
-                menuButton.style.left = '310px';
-            } else {
-                menu.style.left = '0px'; /* Abre a barra lateral */
-                menuButton.style.left = '180px';
-            }
-        });
-
-        /* Scroll lateral */
-        const scrollLugar = document.getElementById('lugarscroll');
-
-        scrollLugar.addEventListener('wheel', function(event) {
-            event.preventDefault();
-            scrollLugar.scrollLeft += event.deltaY; // Move horizontal scroll by the amount of vertical scroll
-        });
-
-        /* copiar gmail */
-        function copiargmail(){
-            navigator.clipboard.writeText("rafaelfurtado313@gmail.com");
-            alert("Gmail copiado!")
-        }
-
-        /*click whazap*/
-        var whazapi = document.getElementById('whazap');
-
-        whazapi.addEventListener('click', function () {
-            location.href = "https://wa.me/985979676"
-        });
-
-        /*click da imagem*/
-        /*click casa*/
-        var clickcasa = document.getElementById('botaocasa');
-
-        clickcasa.addEventListener('click', function () {
-            location.href = "ajudacasa.html"
-        });
-        /*click empresa*/
-        var clickempresa = document.getElementById('botaoempresa');
-
-        clickempresa.addEventListener('click', function () {
-            location.href = "#"
-        });
-        /*click loja*/
-        var clickloja = document.getElementById('botaoloja');
-
-        clickloja.addEventListener('click', function () {
-            location.href = "#"
-        });
-        /*click reforma*/
-        var clickreforma = document.getElementById('botaoreforma');
-
-        clickreforma.addEventListener('click', function () {
-            location.href = "#"
-        });
-        /*click pintura*/
-        var clickpintura = document.getElementById('botaopintura');
-
-        clickpintura.addEventListener('click', function () {
-            location.href = "ajudapintura.html"
-        });
-        /*click mudanca*/
-        var clickmudanca = document.getElementById('botaomudanca');
-
-        clickmudanca.addEventListener('click', function () {
-            location.href = "ajudamudanca.html"
-        });
-    </script>
+    <script src="js/index.js"></script>
 
 </body>
 
