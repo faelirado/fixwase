@@ -145,6 +145,8 @@ body {
     color: #cece62;
 }
 
+/*---responsivo---*/
+
 @media screen and (max-width: 390px){ /*responsivo*/
     .espacologin {
         margin: 0px 15px 0px 15px;
@@ -154,3 +156,5 @@ body {
         transform: translateX(-5px);
     }
 }
+
+/*---------------------------------------------------------------------*/

@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+    user-select: none; /* Desativa a seleção de texto */
+    -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+    -moz-user-select: none; /* Suporte para Firefox */
+    -ms-user-select: none; /* Suporte para navegadores Microsoft */
+}
+
+/*---header---*/
+
+#header {
+    background-color: #e6d119;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 24px;
+    height: 30px;
+}
+
+#backi {
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+}
+
+.titulo {
+    position: absolute;
+    left: 60px;
+}
+
+#header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*---------------------------------------------------------------------*/
+
+#main {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#fotopefil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#fotopefil:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#fotopefil:hover #textofoto{
+    display: none;
+}
+
+#textofoto {
+    position: absolute;
+    left: 40%;
+    top: 26%;
+    color: #555;
+}

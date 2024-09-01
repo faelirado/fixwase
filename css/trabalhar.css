@@ -14,21 +14,6 @@ body {
     -ms-user-select: none; /* Suporte para navegadores Microsoft */
 }
 
-.espacologin {
-    width: 400px;
-    height: 490px;
-    background-color: #fff;
-    border-radius: 10px;
-    color: #e6d119;
-    position: relative;
-}
-
-.espacologin h1 {
-    margin-top: 15px;
-    font-size: 22px;
-    cursor: default
-}
-
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -36,7 +21,35 @@ body {
     box-sizing: border-box;
 }
 
-.espacologin .entrada {
+#header i {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #e6d119;
+}
+
+/*---form curriculo---*/
+
+.espacocurriculo {
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #e6d119;
+    position: relative;
+}
+
+.espacocurriculo h1 {
+    margin-top: 15px;
+    font-size: 22px;
+    cursor: default
+}
+
+/*---entradas---*/
+
+.espacocurriculo .entrada {
     width: 100%;
     height: 40px;
     margin: 10px 0;
@@ -59,15 +72,6 @@ body {
     color: #ddd8af;
 }
 
-#header i {
-    position: absolute;
-    left: 20px;
-    top: 15px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #e6d119;
-}
-
 .entradalonga textarea {
     width: 80%;
     height: 80px;
@@ -87,7 +91,9 @@ body {
     color: #ddd8af;
 }
 
-.espacologin .btncurriculo {
+/*--------------*/
+
+.btncurriculo {
     margin-top: 10px;
     width: 270px;
     height: 50px;
@@ -108,3 +114,15 @@ body {
 .btncurriculo:focus {
     box-shadow: #555 0 0 0 0;
 }
+
+/*---------------------------------------------------------------------*/
+
+/*---responsivo---*/
+
+@media screen and (max-width: 390px){ /*responsivo*/
+    .espacocurriculo {
+        margin: 0px 15px 0px 15px;
+    }
+}
+
+/*---------------------------------------------------------------------*/

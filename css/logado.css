@@ -12,6 +12,8 @@ body {
     -ms-user-select: none; /* Suporte para navegadores Microsoft */
 }
 
+/*---header---*/
+
 #header {
     background-color: #e6d119;
     color: #fff;
@@ -19,6 +21,11 @@ body {
     text-align: center;
     font-size: 24px;
     height: 30px;
+}
+
+.titulo {
+    position: absolute;
+    left: 60px;
 }
 
 /*---MENU PERFIL---*/
@@ -48,7 +55,7 @@ body {
     padding: 5px 10px;
     z-index: 3;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
 }
   
 .menuperfil::before { /*seta em cima do menu*/
@@ -72,21 +79,12 @@ body {
 
 /*---------------------------------------------------------------------*/
 
-.titulo{
-    position: absolute;
-    left: 60px;
-}
+/*---------------------------------------------------------------------*/
 
 #main {
     margin: 20px auto;
     width: 80%;
     text-align: center;
-}
-
-#logo {
-    font-size: 40px;
-    font-weight: bold;
-    color: #e6d119;
 }
 
 /*---MENU ESQUERDA---*/
@@ -102,7 +100,7 @@ body {
     border-radius: 3px;
     font-size: 23px;
     cursor: pointer;
-    transition: left 0.40s ease;
+    transition: left 0.50s ease;
     z-index: 2;
 }
 
@@ -115,7 +113,7 @@ body {
     width: 200px;
     padding: 10px;
     border-radius: 5px;
-    transition: left 0.40s ease; /* Adiciona uma transição suave */
+    transition: left 0.50s ease; /* Adiciona uma transição suave */
     z-index: 2;
 }
 
@@ -142,7 +140,7 @@ body {
     border-bottom: none; /* Remove a linha do último botão */
 }
 
-#menu #whazap{
+#menu #whazap  {
     padding: 5px 0;
     color: #5dff4e;
     font-weight: bold;
@@ -155,7 +153,7 @@ body {
     font-size: 30px;
 }
 
-#menu #copiarbotao{
+#menu #copiarbotao {
     padding: 5px 0;
     background-color: transparent;
     border: 0px;
@@ -171,6 +169,7 @@ body {
     width: 80px;
     display: flex;
     justify-content: space-around;
+    border: #bbab20 1px solid;
 }
 
 
@@ -183,7 +182,7 @@ body {
 
 /*---SERVICOS---*/
 
-.lugar_botoes{
+.lugar_servicos {
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -191,7 +190,7 @@ body {
     height: max-content;
 }
 
-.lugar_botoes i{
+.lugar_servicos i {
     position: absolute;
     color: #e6d119;
     font-size: 13px;
@@ -213,12 +212,12 @@ body {
     right: -1px;
 }
 
-.lugar_botoes::-webkit-scrollbar{
+.lugar_servicos::-webkit-scrollbar {
     display: none;
 }
 
 /*divs*/
-.divcasa,.divempresa,.divloja,.divpintura,.divreforma,.divmudanca{
+.divservicos {
     background: linear-gradient(0deg,rgba(0, 0, 0,0.78) 20%, rgba(255,255,255,0) 100%);
     border-radius: 5px;
     width: 150px;
@@ -229,10 +228,11 @@ body {
     z-index: 1;
     overflow: hidden;
     min-width: 150px;
+    flex: 1;
 }
 
 /*imagens das divs*/
-.divcasa img,.divempresa img,.divloja img,.divpintura img,.divreforma img,.divmudanca img{
+.divservicos img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
@@ -244,12 +244,12 @@ body {
 }
 
 /*hover das divs*/
-.divcasa:hover img,.divempresa:hover img,.divloja:hover img,.divpintura:hover img,.divreforma:hover img,.divmudanca:hover img{
+.divservicos:hover img {
     transform: scale(1.2); /* Aumenta a imagem em 20%*/
 }
 
 /*label das divs*/
-.divcasa label,.divempresa label,.divloja label,.divpintura label,.divreforma label,.divmudanca label{
+.divservicos label {
     color: #fff;
     border: none;
     cursor: pointer;
@@ -258,6 +258,14 @@ body {
     bottom: 20px;
     right: 15px;
     position: absolute;
+}
+
+/*---------------------------------------------------------------------*/
+
+/*responsivo*/
+
+@media (min-width: 768px) {
+    
 }
 
 /*---------------------------------------------------------------------*/
