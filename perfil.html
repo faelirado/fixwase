@@ -18,7 +18,33 @@
     </div>
 
     <div id="main">
-        <img src="imagens/camera.jpg" id="fotopefil"> <label id="textofoto">Escolher Foto</label>
+        <div id="informacoes_conta">
+            <div class="profile-picture">
+                <img src="imagens/user.png" alt="Imagem do Usuário" class="user-image">
+                
+                <div class="escolhefoto">
+                    <input type="file" id="fileInput" class="file-input" />
+                    <label for="fileInput" id="escolhefotolbl">Escolher foto</label>
+                </div>
+            </div>
+    
+            <div class="informacao" id="nomeuser">
+                <input type="text" id="usuarioNome" placeholder="Nome" autocomplete="name"> <!--Inserir nome-->
+                <i class='bx bxs-user'></i> <!--Icone de user-->
+            </div>
+    
+            <div class="informacao" id="emailuser">
+                <input type="email" id="usuarioEmail" placeholder="E-mail" autocomplete="email"> <!--Inserir gmail-->
+                <i class='bx bxs-envelope'></i> <!--Icone de gmail-->
+            </div>
+    
+            <div class="informacao" id="senhauser">
+                <input type="password" id="usuarioSenha" placeholder="Senha"> <!--Inserir senha-->
+                <i class='bx bx-key'></i> <!--Icone de senha-->
+            </div>
+            
+            <button type="submit" id="savebtn">Salvar Alterações</button>
+        </div>
     </div>
 
     <script src="js/perfil.js"></script>
