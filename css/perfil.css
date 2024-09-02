@@ -116,6 +116,11 @@ body {
     padding-left: 20px;
 }
 
+.informacao i {
+    font-size: 20px;
+    transform: translateY(3px);
+}
+
 #informacoes_conta {
     color: #e6d119;
     text-align: center;
