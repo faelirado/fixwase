@@ -12,7 +12,7 @@ menuButton.addEventListener('click', function () {
     }
 });
 
-// Fecha o menu do perfil ao clicar fora dele
+// Fecha o menu ao clicar fora dele
 document.addEventListener('click', function(event) {
     const isClickInsideMenu = menuButton.contains(event.target) || menu.contains(event.target);
   
@@ -49,40 +49,40 @@ whazapi.addEventListener('click', function () {
 var clickcasa = document.getElementById('botaocasa');
 
 clickcasa.addEventListener('click', function () {
-    location.href = "ajudacasa.html"
+    location.href = "criarconta.html"
 });
 
 /*click empresa*/
 var clickempresa = document.getElementById('botaoempresa');
 
 clickempresa.addEventListener('click', function () {
-    location.href = "#"
+    location.href = "criarconta.html"
 });
 
 /*click loja*/
 var clickloja = document.getElementById('botaoloja');
 
 clickloja.addEventListener('click', function () {
-    location.href = "#"
+    location.href = "criarconta.html"
 });
 
 /*click reforma*/
 var clickreforma = document.getElementById('botaoreforma');
 
 clickreforma.addEventListener('click', function () {
-    location.href = "#"
+    location.href = "criarconta.html"
 });
 
 /*click pintura*/
 var clickpintura = document.getElementById('botaopintura');
 
 clickpintura.addEventListener('click', function () {
-    location.href = "ajudapintura.html"
+    location.href = "criarconta.html"
 });
 
 /*click mudanca*/
 var clickmudanca = document.getElementById('botaomudanca');
 
 clickmudanca.addEventListener('click', function () {
-    location.href = "ajudamudanca.html"
+    location.href = "criarconta.html"
 });
