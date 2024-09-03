@@ -1,3 +1,11 @@
+/*---cores---*/
+:root {
+    --cor-primaria: #00A3E0;
+    --cor-botao: #72c2df;
+    --cor-hover-botao:#39aed8;
+  }
+/*---------------------------------------------------------------------*/
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -15,7 +23,7 @@ body {
 /*---header---*/
 
 #header {
-    background-color: #e6d119;
+    background-color: var(--cor-primaria);
     color: #fff;
     padding: 12px;
     text-align: center;
@@ -122,26 +130,27 @@ body {
 }
 
 #informacoes_conta {
-    color: #e6d119;
+    color: var(--cor-primaria);
     text-align: center;
 }
 
 #savebtn {
-    color: #6d6c4b;
+    color: #ffffff;
+    font-weight: bold;
     margin-top: 30px;
     width: 270px;
     height: 50px;
     border-radius: 20px;
     border: none;
     font-size: 20px;
-    background-color: #fded9d;
+    background-color: var(--cor-botao);
     cursor: pointer;
     transition: all 0.4s ease;
     box-shadow: #555 0 2px 2px 0;
 }
 
 #savebtn:hover {
-    background-color: #ffe875;
+    background-color: var(--cor-hover-botao);
 }
 
 #savebtn:active {

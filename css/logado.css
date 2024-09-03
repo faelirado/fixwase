@@ -1,3 +1,10 @@
+/*---cores---*/
+:root {
+    --cor-primaria: #00A3E0;
+    --cor-sociais: rgba(23, 161, 211, 0.8);
+  }
+/*---------------------------------------------------------------------*/
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -15,7 +22,7 @@ body {
 /*---header---*/
 
 #header {
-    background-color: #e6d119;
+    background-color: var(--cor-primaria);
     color: #fff;
     padding: 12px;
     text-align: center;
@@ -48,7 +55,7 @@ body {
     left: 50%;
     width:max-content;
     transform: translateX(-80%);
-    background-color: #e6d119; /* Cor de fundo do menuperfil */
+    background-color: var(--cor-primaria); /* Cor de fundo do menuperfil */
     color: white;
     text-align: center;
     border-radius: 5px;
@@ -66,7 +73,7 @@ body {
     transform: translateX(20px);
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #e6d119 transparent;
+    border-color: transparent transparent var(--cor-primaria) transparent;
 }
   
 .menuperfil-item { /*itens do menu*/
@@ -82,9 +89,16 @@ body {
 /*---------------------------------------------------------------------*/
 
 #main {
-    margin: 20px auto;
-    width: 80%;
+    margin: 5px 20px auto;
+    width: 95%;
     text-align: center;
+}
+
+#main p{
+    display: flex;
+    align-self: flex-start;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /*---MENU ESQUERDA---*/
@@ -105,7 +119,7 @@ body {
 }
 
 #menu {
-    background-color: #e6d119;
+    background-color: var(--cor-primaria);
     position: absolute;
     top: 0;
     left: -300px; /* Alterado para que a barra lateral comece fechada */
@@ -113,6 +127,7 @@ body {
     width: 200px;
     padding: 10px;
     border-radius: 5px;
+    border-right: #0d7ea7 1px solid;
     transition: left 0.50s ease; /* Adiciona uma transição suave */
     z-index: 2;
 }
@@ -124,7 +139,7 @@ body {
     text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Adiciona uma linha entre os botões */
     font-weight: bold; /* Deixa o texto em negrito */
-    font-size: 18px;
+    font-size: 20px;
     transition: all 0.5s ease;
 }
 
@@ -142,7 +157,7 @@ body {
 
 #menu #whazap  {
     padding: 5px 0;
-    color: #5dff4e;
+    color: #3be22c;
     font-weight: bold;
     font-size: 30px;
     cursor: pointer;
@@ -163,13 +178,13 @@ body {
 
 #menu #menusociais {
     position: absolute;
-    background-color: rgba(255, 242, 128, 0.7);
-    bottom: 30px;
+    background-color: var(--cor-sociais);
+    bottom: 40px;
     border-radius: 10px;
     width: 80px;
     display: flex;
     justify-content: space-around;
-    border: #bbab20 1px solid;
+    border: #0d7ea7 1px solid;
 }
 
 
@@ -192,7 +207,7 @@ body {
 
 .lugar_servicos i {
     position: absolute;
-    color: #e6d119;
+    color: #ffe81e;
     font-size: 13px;
 }
 
@@ -229,6 +244,7 @@ body {
     overflow: hidden;
     min-width: 150px;
     flex: 1;
+    border: #555 1px solid;
 }
 
 /*imagens das divs*/

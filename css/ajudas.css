@@ -1,3 +1,11 @@
+/*---cores---*/
+:root {
+    --cor-primaria: #00A3E0;
+    --cor-botao: #72c2df;
+    --cor-hover-botao: #39aed8;
+  }
+/*---------------------------------------------------------------------*/
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -15,7 +23,7 @@ body {
 /*---header---*/
 
 #header {
-    background-color: #e6d119;
+    background-color: var(--cor-primaria);
     color: #fff;
     padding: 12px;
     text-align: center;
@@ -66,7 +74,7 @@ body {
 
 #escolherajuda input[type="checkbox"]:checked{
     content: "";
-    background: #e6d119;
+    background: var(--cor-primaria);
     width: 15px;
     height: 15px;
 }
@@ -76,7 +84,9 @@ body {
     margin-left: 10px;
 }
 
-#ajudas .btnenviar {
+.btnenviar {
+    color: #fff;
+    font-weight: bold;
     margin-top: 50px;
     width: 270px;
     height: 50px;
@@ -84,17 +94,17 @@ body {
     border: none;
     font: 600;
     font-size: 20px;
-    background-color: #fded9d;
+    background-color: var(--cor-botao);
     cursor: pointer;
     transition: all 0.4s ease;
     box-shadow: #555 0 2px 2px 0;
 }
 
-#ajudas .btnenviar:hover {
-    background-color: #ffe875;
+.btnenviar:hover {
+    background-color: var(--cor-hover-botao);
 }
 
-#ajudas .btnenviar:focus {
+.btnenviar:focus {
     box-shadow: #555 0 0 0 0;
 }
 

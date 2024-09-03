@@ -1,8 +1,19 @@
+/*---cores---*/
+:root {
+    --cor-primaria: #00A3E0;
+    --cor-botao: #72c2df;
+    --cor-hover-botao: #39aed8;
+    --cor-placeholder: #90bbca;
+    --cor-fundo: #f0fbff;
+  }
+/*---------------------------------------------------------------------*/
+
 body {
     display: flex;
     justify-content: center;
     text-align: center;
     padding-top: 100px;
+    background-color: var(--cor-fundo);
 }
 
 *{
@@ -19,16 +30,17 @@ body {
     top: 15px;
     cursor: pointer;
     font-size: 20px;
-    color: #e6d119;
+    color: var(--cor-primaria);
 }
 
 .espacologin {
-    width: 400px;
+    width: 380px;
     height: 400px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    color: #e6d119;
+    color: var(--cor-primaria);
     position: relative;
+    border: #cfe3eb 1px solid;
 }
 
 .espacologin h1 {
@@ -50,7 +62,7 @@ body {
 }
 
 .entrada input {
-    width: 80%;
+    width: 70%;
     height: 100%;
     background: transparent;
     border: none;
@@ -63,13 +75,13 @@ body {
 }
 
 .entrada input::placeholder {
-    color: #dad08a;
+    color: var(--cor-placeholder);
 }
 
 .entrada i {
     position: absolute;
-    right: 15px;
-    transform: translateY(100%);
+    right: 35px;
+    transform: translateY(90%);
 }
 
 .relembrar {
@@ -108,27 +120,28 @@ body {
 
 .relembrar input[type="checkbox"]:checked{
     content: "";
-    background: #e6d119;
+    background: var(--cor-primaria);
     width: 15px;
     height: 15px;
 }
 
 .btnlogin {
-    color: #6d6c4b;
+    color: #fff;
+    font-weight: bold;
     margin-top: 50px;
     width: 270px;
     height: 50px;
     border-radius: 20px;
     border: none;
     font-size: 20px;
-    background-color: #fded9d;
+    background-color: var(--cor-botao);
     cursor: pointer;
     transition: all 0.4s ease;
     box-shadow: #555 0 2px 2px 0;
 }
 
 .btnlogin:hover {
-    background-color: #ffe875;
+    background-color: var(--cor-hover-botao);
 }
 
 .btnlogin:focus {
@@ -137,12 +150,12 @@ body {
 
 .semconta{
     text-decoration: none;
-    color: #dada9a;
+    color: var(--cor-botao);
 }
 
 .semconta:hover {
     text-decoration: underline;
-    color: #cece62;
+    color: var(--cor-hover-botao);
 }
 
 /*---responsivo---*/
