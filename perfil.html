@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00A3E0">
     <link rel="shortcut icon" type="icone/ico" href="icone.ico">
     <link rel="stylesheet" href="css/perfil.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a1f9ee299c.js" crossorigin="anonymous"></script>
     <title>FixWise - Ajuda</title>
 </head>
 
@@ -18,33 +20,38 @@
     </div>
 
     <div id="main">
-        <div id="informacoes_conta">
-            <div class="profile-picture">
-                <img src="imagens/user-default.jpg" alt="Imagem do Usuário" class="user-image">
-                
-                <div class="escolhefoto">
-                    <input type="file" id="fileInput" class="file-input" />
-                    <label for="fileInput" id="escolhefotolbl">Escolher foto</label>
+
+        <form id="espaco_mudancas">
+
+            <div id="informacoes_conta">
+                <div class="profile-picture">
+                    <img src="imagens/user-default.jpg" alt="Imagem do Usuário" class="user-image">
+                    
+                    <div class="escolhefoto">
+                        <input type="file" id="fileInput" class="file-input" />
+                        <label for="fileInput" id="escolhefotolbl">Escolher foto</label>
+                    </div>
                 </div>
+        
+                <div class="informacao" id="nomeuser">
+                    <input type="text" id="usuarioNome" placeholder="Nome" autocomplete="name" required> <!--Inserir nome-->
+                    <i class='bx bxs-user'></i> <!--Icone de user-->
+                </div>
+        
+                <div class="informacao" id="emailuser">
+                    <input type="email" id="usuarioEmail" placeholder="E-mail" autocomplete="email" required> <!--Inserir gmail-->
+                    <i class='bx bxs-envelope'></i> <!--Icone de gmail-->
+                </div>
+        
+                <div class="informacao" id="senhauser">
+                    <input type="password" id="usuarioSenha" placeholder="Senha" minlength="8" autocomplete="new-password" required> <!--Inserir senha-->
+                    <i class='bx bx-key'></i> <!--Icone de senha-->
+                </div>
+                
+                <button type="submit" id="savebtn"></button>
             </div>
-    
-            <div class="informacao" id="nomeuser">
-                <input type="text" id="usuarioNome" placeholder="Nome" autocomplete="name"> <!--Inserir nome-->
-                <i class='bx bxs-user'></i> <!--Icone de user-->
-            </div>
-    
-            <div class="informacao" id="emailuser">
-                <input type="email" id="usuarioEmail" placeholder="E-mail" autocomplete="email"> <!--Inserir gmail-->
-                <i class='bx bxs-envelope'></i> <!--Icone de gmail-->
-            </div>
-    
-            <div class="informacao" id="senhauser">
-                <input type="password" id="usuarioSenha" placeholder="Senha"> <!--Inserir senha-->
-                <i class='bx bx-key'></i> <!--Icone de senha-->
-            </div>
-            
-            <button type="submit" id="savebtn">Salvar Alterações</button>
-        </div>
+
+        </form>
     </div>
 
     <script src="js/perfil.js"></script>

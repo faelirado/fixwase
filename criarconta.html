@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00A3E0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/criarconta.css">
     <link rel="shortcut icon" type="icone/ico" href="icone.ico">
@@ -31,17 +32,17 @@
             </div>
 
             <div class="entrada">
-                <input type="password" placeholder="Crie uma senha (min 8 caracteres)" minlength="8" id="usuarioSenha" required> <!--Inserir senha-->
+                <input type="password" placeholder="Crie uma senha (min 8 caracteres)" minlength="8" id="usuarioSenha" autocomplete="new-password" required> <!--Inserir senha-->
                 <i class='bx bx-key'></i> <!--Icone de senha-->
             </div>
 
             <div class="entrada">
-                <input type="password" placeholder="Confirmar senha" minlength="8" id="confimarsenha" required> <!--Inserir senha-->
+                <input type="password" placeholder="Confirmar senha" minlength="8" id="confimarsenha" autocomplete="new-password" required> <!--Inserir senha-->
                 <i class='' id="checksenha"></i> <!--Icone de checagem-->
             </div>
 
             <div class="relembrar">
-                <label><input type="checkbox"> Lembrar do login</label> <!--Lembrar de login ou não-->
+                <label><input type="checkbox" id="checkLembrar"> Lembrar do login</label> <!--Lembrar de login ou não-->
             </div>
             
             <div class="outrasformas">
