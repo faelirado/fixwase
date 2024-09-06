@@ -1,7 +1,7 @@
 /*---cores---*/
 :root {
     --cor-primaria: #00A3E0;
-    --cor-sociais: rgba(23, 161, 211, 0.8);
+    --cor-sociais: rgba(21, 145, 190, 0.8);
   }
 /*---------------------------------------------------------------------*/
 
@@ -17,6 +17,7 @@ body {
     -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
     -moz-user-select: none; /* Suporte para Firefox */
     -ms-user-select: none; /* Suporte para navegadores Microsoft */
+    -webkit-user-drag: none;
 }
 
 /*---header---*/
@@ -202,7 +203,7 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
-    height: max-content;
+    height: 200px;
 }
 
 .lugar_servicos i {
@@ -244,7 +245,8 @@ body {
     overflow: hidden;
     min-width: 150px;
     flex: 1;
-    border: #555 1px solid;
+    border: #888 1px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /*imagens das divs*/
@@ -278,9 +280,24 @@ body {
 
 /*---------------------------------------------------------------------*/
 
+#conteudo {
+    text-align: center;
+}
+
+#conteudo img {
+    width: 80%;
+    border-radius: 30px;
+}
+
 /*responsivo*/
 
 @media (min-width: 768px) {
+    #conteudo img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
     
 }
 

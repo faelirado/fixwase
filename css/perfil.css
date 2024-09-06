@@ -3,7 +3,7 @@
     --cor-primaria: #00A3E0;
     --cor-botao: #72c2df;
     --cor-hover-botao:#39aed8;
-  }
+}
 /*---------------------------------------------------------------------*/
 
 body {
@@ -18,6 +18,7 @@ body {
     -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
     -moz-user-select: none; /* Suporte para Firefox */
     -ms-user-select: none; /* Suporte para navegadores Microsoft */
+    -webkit-user-drag: none;
 }
 
 /*---header---*/
@@ -95,7 +96,7 @@ body {
 }
 
 #escolhefotolbl {
-    background-color: rgb(105, 105, 105,0.6);
+    background-color: rgba(116, 116, 116, 0.6);
     border: #333 1px solid;
     border-radius: 15px;
     width: 84%;
@@ -126,7 +127,7 @@ body {
 
 .informacao i {
     font-size: 20px;
-    transform: translateY(3px);
+    transform: translate(8px,3px);
 }
 
 #informacoes_conta {
@@ -134,26 +135,68 @@ body {
     text-align: center;
 }
 
-#savebtn {
-    color: #ffffff;
-    font-weight: bold;
+/*---botao de salvar---*/
+button {
+    outline: none;
+    text-align: center;
     margin-top: 30px;
     width: 270px;
     height: 50px;
     border-radius: 20px;
-    border: none;
+    background: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0;
     font-size: 20px;
-    background-color: var(--cor-botao);
+    font-weight: bold;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.25s ease;
     box-shadow: #555 0 2px 2px 0;
-}
-
-#savebtn:hover {
-    background-color: var(--cor-hover-botao);
-}
-
-#savebtn:active {
+  }
+  button:active {
+    letter-spacing: 2px;
+  }
+  button:after {
+    content: "Salvar Alterações";
+  }
+  .onclic {
+    height: 50px;
+    width: 50px;
+    border-color: #bbbbbb;
+    background-color: #fff;
+    border-radius: 40px;
+    border-width: 3px;
     box-shadow: #555 0 0 0 0;
-}
+    font-size: 0;
+    border-left-color: var(--cor-primaria);
+    animation: rotating 1.5s 0.25s linear infinite;
+  }
+  .onclic:after {
+    content: "";
+  }
+  .onclic:hover {
+    color: var(--cor-primaria);
+    background: white;
+  }
+  .validate {
+    font-size: 25px;
+    color: white;
+    background: var(--cor-primaria);
+  }
+  .validate:after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+  }
+  
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/*---------------------------------------------------------------------*/
+
 /*---------------------------------------------------------------------*/

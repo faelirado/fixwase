@@ -18,6 +18,7 @@ body {
     -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
     -moz-user-select: none; /* Suporte para Firefox */
     -ms-user-select: none; /* Suporte para navegadores Microsoft */
+    -webkit-user-drag: none;
 }
 
 /*---header---*/
@@ -54,7 +55,7 @@ body {
 
 #main {
     margin: 20px auto;
-    width: 80%;
+    width: 50dvh;
     text-align: center;
 }
 

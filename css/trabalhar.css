@@ -22,6 +22,7 @@ body {
     -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
     -moz-user-select: none; /* Suporte para Firefox */
     -ms-user-select: none; /* Suporte para navegadores Microsoft */
+    -webkit-user-drag: none;
 }
 
 * {
