@@ -43,7 +43,25 @@ whazapi.addEventListener('click', function () {
     location.href = "https://wa.me/985979676"
 });
 
-//click da imagem
+/*vai pra logado caso lembrar login true*/
+
+window.onload = function() {
+
+    // Carregar email salvo
+    const lembrarLogin = localStorage.getItem('lembrar-login');
+    if (lembrarLogin === "sim") {
+
+        location.href = "logado.html";
+
+    } else if (lembrarLogin === "nao"){
+        localStorage.setItem('image', '');
+        localStorage.setItem('valor-nome', '');
+        localStorage.setItem('valor-email', '');
+        localStorage.setItem('valor-senha', '');
+    }
+};
+
+/*----click da imagem----*/
 
 /*click casa*/
 var clickcasa = document.getElementById('botaocasa');

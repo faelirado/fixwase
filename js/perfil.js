@@ -80,16 +80,16 @@ window.onload = function() {
 
 // Manipula a seleção de uma nova imagem
 fileInput.addEventListener('change', function(event) {
-
+    
     const file = event.target.files[0];
     if (file && file.type.startsWith('image/')) {
-
+        
         const reader = new FileReader();
         reader.onload = function(e) {
-
+            
             const imageURL = e.target.result;
             imagemUser.src = imageURL;
-
+            
             // Salva a imagem no Local Storage ao clicar no botão
             salvarAlt.addEventListener('click', () => {
                 localStorage.setItem('image', imageURL);
@@ -103,7 +103,7 @@ fileInput.addEventListener('change', function(event) {
 
 // Salva o nome e email no Local Storage ao clicar no botão
 salvarAlt.addEventListener('click', () => {
-
+    
     const valorNome = nomeInput.value;
     localStorage.setItem('valor-nome', valorNome);
 
@@ -112,4 +112,30 @@ salvarAlt.addEventListener('click', () => {
 
     const valorSenha = senhaInput.value;
     localStorage.setItem('valor-senha', valorSenha);
+});
+
+//animação de salvar
+document.getElementById('savebtn').addEventListener('click', function() {
+    var button = this;
+  
+    // Adiciona a classe 'loading' e inicia o carregamento
+    button.classList.add('onclic');
+  
+    // Simula um tempo de carregamento (ex: 2 segundos)
+    setTimeout(function() {
+      // Remove a classe 'loading' e adiciona 'success' para exibir o check
+      button.classList.remove('onclic');
+      button.classList.add('validate');
+    }, 1750);
+  
+    // Simula um tempo de carregamento (ex: 2 segundos)
+    setTimeout(function() {
+      // Remove a classe 'loading' e adiciona 'success' para exibir o check
+      button.classList.remove('validate');
+    }, 2900);
+  });
+
+// Impede a atualização da página
+document.getElementById('espaco_mudancas').addEventListener('submit', function(e) {
+  e.preventDefault();
 });

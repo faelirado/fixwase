@@ -48,6 +48,16 @@ document.getElementById('user-icon').addEventListener('click', function() {
     }
 });
 
+/*desloga da conta*/
+
+// menu perfil
+document.getElementById('deslogar').addEventListener('click', function() {
+    localStorage.setItem('image', '');
+    localStorage.setItem('valor-nome', '');
+    localStorage.setItem('valor-email', '');
+    localStorage.setItem('valor-senha', '');
+    localStorage.setItem('lembrar-login', '');
+});
 
 // Fecha o menu do perfil ao clicar fora dele
 document.addEventListener('click', function(event) {

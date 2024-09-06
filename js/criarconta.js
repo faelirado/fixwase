@@ -18,7 +18,6 @@ document.getElementById("cadastro").addEventListener("submit", function(event) {
         senhaDif = true;
     }
 
-
     // Se a senha é diferente, impede o envio do formulário
     if (!senhaDif) {
         event.preventDefault(); // Impede o envio do formulário
@@ -39,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Seleciona o input de senha
     const senhaInput = document.getElementById('usuarioSenha');
 
+    // Seleciona o check de lembrar login
+    const lembrarCheck = document.getElementById('checkLembrar');
+
     const cadastro = document.querySelector('.btncadastrar');
 
     // Salvar o texto no Local Storage quando o botão for clicado
@@ -52,5 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const senhaValor = senhaInput.value;
         localStorage.setItem('valor-senha', senhaValor);
+
+        if (lembrarCheck.checked) {
+            localStorage.setItem('lembrar-login', 'sim');
+          } else {
+            localStorage.setItem('lembrar-login', 'nao');
+          }
     });
 });
