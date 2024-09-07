@@ -180,7 +180,7 @@ body {
 #menu #menusociais {
     position: absolute;
     background-color: var(--cor-sociais);
-    bottom: 40px;
+    bottom: 10vh;
     border-radius: 10px;
     width: 80px;
     display: flex;
