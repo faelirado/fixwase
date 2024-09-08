@@ -1,14 +1,23 @@
 // Abrir e fechar menu
 const menuButton = document.getElementById('menu-button');
 const menu = document.getElementById('menu');
+const titulo = document.querySelector('.titulo');
 
 menuButton.addEventListener('click', function () {
     if (menu.style.left === '0px') { /* Alterado para verificar a posição left ao invés de display */
+        titulo.style.opacity = '0';
         menu.style.left = '-300px'; /* Fecha a barra lateral */
         menuButton.style.left = '310px';
+        setTimeout(function() {
+            titulo.style.opacity = '1';
+        }, 550);
     } else {
+        titulo.style.opacity = '0';
         menu.style.left = '0px'; /* Abre a barra lateral */
         menuButton.style.left = '180px';
+        setTimeout(function() {
+            titulo.style.opacity = '1';
+        }, 550);
     }
 });
 
