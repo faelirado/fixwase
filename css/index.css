@@ -24,6 +24,7 @@ body {
 
 #header {
     background-color: var(--cor-primaria);
+    border-bottom: #0d7ea7 1px solid;
     color: #fff;
     padding: 12px;
     text-align: center;
@@ -35,6 +36,8 @@ body {
 .titulo{
     position: absolute;
     left: 60px;
+    z-index: 9;
+    transition: all .4s ease;
 }
 
 #header a {
@@ -138,6 +141,17 @@ h4{
     border-bottom: none;
 }
 
+#menu #menusociais {
+    position: absolute;
+    background-color: var(--cor-sociais);
+    bottom: 10dvh;
+    border-radius: 10px;
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+    border: #0d7ea7 1px solid;
+}
+
 #menu #whazap{
     padding: 5px 0;
     color: #3be22c;
@@ -157,17 +171,6 @@ h4{
     border: 0px;
     font-size: 12px;
     cursor: pointer;
-}
-
-#menu #menusociais {
-    position: absolute;
-    background-color: var(--cor-sociais);
-    bottom: 30px;
-    border-radius: 10px;
-    width: 80px;
-    display: flex;
-    justify-content: space-around;
-    border: #0d7ea7 1px solid;
 }
 
 /*---------------------------------------------------------------------*/
@@ -266,9 +269,17 @@ h4{
 
 /*responsivo*/
 
+/*---computador---*/
 @media (min-width: 768px) {
     #conteudo img {
         width: 500px;
+    }
+}
+
+/*---celular---*/
+@media (max-width: 768px) {
+    #menu #menusociais {
+        bottom: 22dvh;
     }
 }
 

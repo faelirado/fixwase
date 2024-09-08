@@ -85,6 +85,15 @@ body {
     transform: translateY(90%);
 }
 
+.toggle-password {
+    position: absolute;
+    transform: translate(-9px,5px);
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--cor-botao);
+    visibility: hidden;
+}
+
 .relembrar {
     display: flex;
     justify-content: space-between;

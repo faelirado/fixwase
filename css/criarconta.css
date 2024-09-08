@@ -88,6 +88,15 @@ body {
     transform: translateY(80%);
 }
 
+.toggle-password {
+    position: absolute;
+    transform: translate(-5px,4px);
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--cor-botao);
+    visibility: hidden;
+}
+
 #checksenha {
     transition: all 0.4s ease;
     color: darkred;
