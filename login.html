@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00A3E0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a1f9ee299c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/login.css">
     <link rel="shortcut icon" type="icone/ico" href="icone.ico">
     <title>Login - FixWise</title>
@@ -27,7 +28,8 @@
             </div>
 
             <div class="entrada">
-                <input type="password" placeholder="Senha" autocomplete="current-password" required>
+                <input type="password" placeholder="Senha" onclick="olharSenha()" id="usuarioSenha" autocomplete="current-password" required>
+                <span class="toggle-password" onclick="togglePassword()"> <i class="fa-solid fa-eye-slash" id="olho"></i> </span>
                 <i class='bx bx-key'></i>
             </div>
             
