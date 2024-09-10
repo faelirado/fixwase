@@ -1,9 +1,11 @@
 /*voltar pro inicio*/
 var voltar = document.getElementById('backi');
 
-voltar.addEventListener('click', function () {
-    location.href = "logado.html"
-});
+if (voltar) {
+  voltar.addEventListener('click', function () {
+    location.href = "index.html";
+  });
+}
 
 /*confere se a senha é a mesma*/
 document.getElementById("cadastro").addEventListener("submit", function(event) {

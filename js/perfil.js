@@ -1,9 +1,11 @@
 /*botao voltar*/
 var voltar = document.getElementById('backi');
 
-voltar.addEventListener('click', function () {
-    location.href = "logado.html"
-});
+if (voltar) {
+  voltar.addEventListener('click', function () {
+    location.href = "logado.html";
+  });
+}
 
 // Adiciona o eventListener para mostrar/esconder o escolhefoto ao clicar na imagem do usuário
 document.querySelector('.user-image').addEventListener('click', function() {

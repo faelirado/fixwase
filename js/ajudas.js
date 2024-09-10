@@ -1,9 +1,11 @@
 /*botao voltar*/
 var voltar = document.getElementById('backi');
 
-voltar.addEventListener('click', function () {
-    location.href = "logado.html"
-});
+if (voltar) {
+  voltar.addEventListener('click', function () {
+    location.href = "logado.html";
+  });
+}
 
 /*confere se há algum checkbox marcado*/
 document.getElementById("ajudas").addEventListener("submit", function(event) {

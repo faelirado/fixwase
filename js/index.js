@@ -2,32 +2,30 @@
 const menuButton = document.getElementById('menu-button');
 const menu = document.getElementById('menu');
 const titulo = document.querySelector('.titulo');
+const titulomenu = document.querySelector('.tituloMenu');
 
 menuButton.addEventListener('click', function () {
     if (menu.style.left === '0px') { /* Alterado para verificar a posição left ao invés de display */
-        titulo.style.opacity = '0';
+        titulo.style.opacity = '1';
+        titulomenu.style.opacity = '0';
         menu.style.left = '-300px'; /* Fecha a barra lateral */
-        menuButton.style.left = '310px';
-        setTimeout(function() {
-            titulo.style.opacity = '1';
-        }, 550);
+        menuButton.style.left = '10px';
     } else {
         titulo.style.opacity = '0';
+        titulomenu.style.opacity = '1';
         menu.style.left = '0px'; /* Abre a barra lateral */
         menuButton.style.left = '180px';
-        setTimeout(function() {
-            titulo.style.opacity = '1';
-        }, 550);
     }
 });
 
 // Fecha o menu ao clicar fora dele
 document.addEventListener('click', function(event) {
     const isClickInsideMenu = menuButton.contains(event.target) || menu.contains(event.target);
-  
+    
     if (!isClickInsideMenu) {
         menu.style.left = '-300px'; /* Fecha a barra lateral */
-        menuButton.style.left = '310px';
+        menuButton.style.left = '10px';
+        titulo.style.opacity = '1';
     }
   });
 
