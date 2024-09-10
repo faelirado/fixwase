@@ -68,7 +68,7 @@ window.onload = function() {
     }
 };
 
-/*----click da imagem----*/
+/*----click servicos----*/
 
 /*click casa*/
 var clickcasa = document.getElementById('botaocasa');

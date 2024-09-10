@@ -28,6 +28,7 @@ const onDrag = (y) => {
     animationFrameId = requestAnimationFrame(() => {
         menu.style.height = `${newHeight}px`;
     });
+
 };
 
 // Função para finalizar o arrasto

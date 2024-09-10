@@ -83,7 +83,7 @@ scrollLugar.addEventListener('wheel', function(event) {
     scrollLugar.scrollLeft += event.deltaY; // Move horizontal scroll by the amount of vertical scroll
 });
 
-/*click da imagem*/
+/*---click servicos---*/
 
 /*click casa*/
 var clickcasa = document.getElementById('botaocasa');
@@ -96,21 +96,21 @@ clickcasa.addEventListener('click', function () {
 var clickempresa = document.getElementById('botaoempresa');
 
 clickempresa.addEventListener('click', function () {
-    location.href = "#"
+    location.href = "ajudaempresa.html"
 });
 
 /*click loja*/
 var clickloja = document.getElementById('botaoloja');
 
 clickloja.addEventListener('click', function () {
-    location.href = "#"
+    location.href = "ajudaloja.html"
 });
 
 /*click reforma*/
 var clickreforma = document.getElementById('botaoreforma');
 
 clickreforma.addEventListener('click', function () {
-    location.href = "#"
+    location.href = "ajudareforma.html"
 });
 
 /*click pintura*/
