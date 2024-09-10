@@ -86,6 +86,10 @@ body {
     margin-left: 10px;
 }
 
+#escolherajuda label{
+    text-wrap: nowrap;
+}
+
 #espacoajuda1 {
     height: 370px;
     overflow-y: auto;
@@ -97,7 +101,7 @@ body {
     color: #fff;
     font-weight: bold;
     margin-top: 35px;
-    width: 270px;
+    width: 290px;
     height: 50px;
     border-radius: 20px;
     border: none;
@@ -107,7 +111,7 @@ body {
     cursor: pointer;
     transition: all 0.4s ease;
     box-shadow: #555 0 2px 2px 0;
-    display: flex;
+
     align-items: center;
     justify-content: center;
 }

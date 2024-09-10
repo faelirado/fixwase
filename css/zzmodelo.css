@@ -1,0 +1,67 @@
+/*---cores---*/
+:root {
+    --cor-primaria: #00A3E0;
+  }
+/*---------------------------------------------------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+    user-select: none; /* Desativa a seleção de texto */
+    -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+    -moz-user-select: none; /* Suporte para Firefox */
+    -ms-user-select: none; /* Suporte para navegadores Microsoft */
+    -webkit-user-drag: none;
+}
+
+/*---header---*/
+
+#header {
+    background-color: var(--cor-primaria);
+    border-bottom: #0d7ea7 1px solid;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 24px;
+    height: 30px;
+    position: fixed;
+    width: 100dvw;
+    top: 0;
+    z-index: 2;
+}
+
+#header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.titulo {
+    position: absolute;
+    left: 60px;
+    z-index: 3;
+    transition: all .4s ease;
+}
+/*---------------------------------------------------------------------*/
+
+#main {
+    margin: 5px 20px auto;
+    text-align: center;
+}
+
+/*responsivo*/
+
+/*---computador---*/
+@media (min-width: 768px) {
+
+}
+/*---celular---*/
+@media (max-width: 768px) {
+
+}
+
+/*---------------------------------------------------------------------*/

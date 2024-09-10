@@ -30,19 +30,28 @@ body {
     text-align: center;
     font-size: 24px;
     height: 30px;
+    position: fixed;
+    width: 100dvw;
+    top: 0;
+    z-index: 2;
+}
+
+#header a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .titulo {
     position: absolute;
     left: 60px;
-    z-index: 9;
+    z-index: 3;
     transition: all .4s ease;
 }
 
 /*---MENU PERFIL---*/
 
 .user-container {
-    position: absolute;
+    position: fixed;
     display: inline-block;
     right: 10px;
 }
@@ -51,7 +60,7 @@ body {
     font-size: 30px;
     cursor: pointer;
 }
-  
+
 .menuperfil {
     display: block; /* Escondido por padrão */
     position: absolute;
@@ -68,7 +77,7 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
 }
-  
+
 .menuperfil::before { /*seta em cima do menu*/
     content: "";
     position: absolute;
@@ -79,7 +88,7 @@ body {
     border-style: solid;
     border-color: transparent transparent var(--cor-primaria) transparent;
 }
-  
+
 .menuperfil-item { /*itens do menu*/
     padding: 10px 0;
     cursor: pointer;
@@ -108,8 +117,8 @@ body {
 /*---MENU ESQUERDA---*/
 
 #menu-button {
-    position: absolute;
-    left: 310px;
+    position: fixed;
+    left: 10px;
     top: 6px;
     background-color: transparent;
     color: #fff;
@@ -124,10 +133,10 @@ body {
 
 #menu {
     background-color: var(--cor-primaria);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -300px; /* Alterado para que a barra lateral comece fechada */
-    height: 100vh;
+    height: 96.9dvh;
     width: 200px;
     padding: 10px;
     border-radius: 5px;
@@ -136,7 +145,18 @@ body {
     z-index: 2;
 }
 
-#menu a {
+.tituloMenu {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    left: 60px;
+    top: 12px;
+    z-index: 3;
+    transition: all .4s ease;
+}
+
+#paginasMenu a {
     display: block;
     padding: 5px 0;
     color: #fff;
@@ -147,15 +167,15 @@ body {
     transition: all 0.5s ease;
 }
 
-#menu a:hover {
+#paginasMenu a:hover {
     box-shadow: #fff 0 0 1px 1px;
 }
 
-#menu a:active {
+#paginasMenu a:active {
     box-shadow: #fff 0 0 0px 0px;
 }
 
-#menu a:last-child {
+#paginasMenu a:last-child {
     border-bottom: none; /* Remove a linha do último botão */
 }
 
@@ -193,11 +213,6 @@ body {
 
 /*---------------------------------------------------------------------*/
 
-#header a {
-    text-decoration: none;
-    color: #fff;
-}
-
 /*---SERVICOS---*/
 
 .lugar_servicos {
@@ -205,7 +220,7 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
-    height: 200px;
+    height: 160px;
 }
 
 .lugar_servicos i {
@@ -240,7 +255,7 @@ body {
     border-radius: 5px;
     width: 150px;
     height: 150px;
-    margin: 0px 5px 0px 5px; /*1-cima 2-esquerda 3-baixo 4-direita*/
+    margin: 0px 5px 0px 5px; /*1-cima 2-direita 3-baixo 4-esquerda*/
     position: relative;
     cursor: pointer;
     z-index: 1;

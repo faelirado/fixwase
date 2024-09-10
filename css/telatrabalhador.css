@@ -1,0 +1,85 @@
+/*---cores---*/
+:root {
+    --cor-primaria: #00A3E0;
+  }
+/*---------------------------------------------------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+    user-select: none; /* Desativa a seleção de texto */
+    -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+    -moz-user-select: none; /* Suporte para Firefox */
+    -ms-user-select: none; /* Suporte para navegadores Microsoft */
+    -webkit-user-drag: none;
+}
+
+/*---header---*/
+
+#header {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 24px;
+    height: 30px;
+}
+
+.titulo {
+    position: absolute;
+    left: 40px;
+}
+
+#header a {
+    text-decoration: none;
+    color: #fff;
+}
+/*---------------------------------------------------------------------*/
+
+#abriropcoes {
+    position: absolute;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--cor-primaria);
+    width: 100%;
+    height: 45px;
+    bottom: 0;
+    text-align: center;
+}
+
+#opcoes {
+    position: fixed;
+    width: 100%;
+    height: 45px; /* Começa fechado com a altura da linha */
+    background-color: var(--cor-primaria);
+    border-radius: 10px 10px 0px 0px;
+    bottom: 0;
+    transition: height 0.3s ease-in-out; /* Anima a altura */
+    overflow: hidden; /* Oculta o conteúdo quando o menu está fechado */
+}
+
+.linha {
+    width: 80px; /* Ajuste a largura da linha */
+    height: 4px; /* Ajuste a altura da linha */
+    background-color: rgb(200, 200, 200, 0.7); /* Cor da linha */
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+/*responsivo*/
+
+/*---computador---*/
+@media (min-width: 768px) {
+
+}
+/*---celular---*/
+@media (max-width: 768px) {
+
+}
+
+/*---------------------------------------------------------------------*/
