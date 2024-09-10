@@ -23,6 +23,8 @@ const onDrag = (y) => {
         cancelAnimationFrame(animationFrameId);
     }
 
+    e.preventDefault();
+
     animationFrameId = requestAnimationFrame(() => {
         menu.style.height = `${newHeight}px`;
     });
