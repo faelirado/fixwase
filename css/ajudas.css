@@ -10,6 +10,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 * {
@@ -62,6 +63,55 @@ body {
 
 /*---form ajudas---*/
 
+#ajudas {
+    display: flex;
+}
+
+#ajuda {
+    margin-right: 50dvw;
+    transition: all 1.5s ease;
+}
+
+.ajuda2 {
+    display: none;
+}
+
+.ajuda2 p {
+    font-weight: bold;
+}
+
+#rangeorcamento {
+    -webkit-appearance: none; /* Remove o estilo padrão no WebKit */
+    width: 80%;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .15s ease-in-out;
+    background: #ddd; /* Cor de fundo */
+}
+
+#rangeorcamento::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    background: var(--cor-primaria); /* Cor do botão do slider */
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.value-display {
+    position: absolute;
+    margin-left: 21dvw;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
+}
+
 #escolherajuda input[type="checkbox"] {
     appearance: none;
     -moz-appearance: none;
@@ -90,14 +140,20 @@ body {
     text-wrap: nowrap;
 }
 
-#espacoajuda1 {
+#espacoajuda {
+    margin-top: 50px;
+    width: 330px;
     height: 370px;
     overflow-y: auto;
     border: #3c6b7c 1px solid;
     border-radius: 10px;
 }
 
-.btnenviar {
+#espacoajuda h3 {
+
+}
+
+#btnenviar {
     color: #fff;
     font-weight: bold;
     margin-top: 35px;
