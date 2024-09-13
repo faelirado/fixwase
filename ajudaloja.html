@@ -15,79 +15,99 @@
 
     <div id="header">
         <i class='bx bx-arrow-back' id="backi"></i>
-        <a href="logado.html" class="titulo">FixWise</a>
     </div>
 
     <div id="main">
-        <h3>Selecione o tipo de ajuda você precisa em seu comércio:</h3>
 
         <form id="ajudas">
 
-            <div id="espacoajuda1">
+            <div id="ajuda" class="ajuda1">
 
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda1" value="lojaInstEquipCom"> Instalação de Equipamentos Comerciais</label>
+                <div id="espacoajuda" class="espacoajuda1">
+
+                    <h3>Selecione o tipo de ajuda você precisa em seu comércio:</h3>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda1" value="lojaInstEquipCom"> Instalação de Equipamentos Comerciais</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda2" value="lojaRepElet"> Reparos Elétricos</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda3" value="lojaInstSegCFTV"> Instalação de Segurança e CFTV</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda4" value="lojaRepMobCom"> Reparos e Ajustes de Mobília Comercial</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda5" value="lojaPintRepEst"> Pintura e Reparos Estéticos</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda6" value="lojaInstFachLetr"> Instalação de Fachadas e Letreiros</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda7" value="lojaInstCorArExa"> Instalação de Cortinas de Ar e Exaustores</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda8" value="lojaMontEstExp"> Montagem de Estruturas de Exposição</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda9" value="lojaServSerr"> Serviços de Serralheria</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda10" value="lojaManApaArCond"> Manutenção de Aparelhos de Ar-Condicionado</label>
+                    </div>
+
                 </div>
 
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda2" value="lojaRepElet"> Reparos Elétricos</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda3" value="lojaInstSegCFTV"> Instalação de Segurança e CFTV</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda4" value="lojaRepMobCom"> Reparos e Ajustes de Mobília Comercial</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda5" value="lojaPintRepEst"> Pintura e Reparos Estéticos</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda6" value="lojaInstFachLetr"> Instalação de Fachadas e Letreiros</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda7" value="lojaInstCorArExa"> Instalação de Cortinas de Ar e Exaustores</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda8" value="lojaMontEstExp"> Montagem de Estruturas de Exposição</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda9" value="lojaServSerr"> Serviços de Serralheria</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda10" value="lojaManApaArCond"> Manutenção de Aparelhos de Ar-Condicionado</label>
-                </div>
-
-                <br>
+                <button type="submit" id="btnenviar" class="btnenviar1"> <i class='bx bx-right-arrow-alt'></i> </button>
 
             </div>
-            
-            <button type="submit" class="btnenviar" href="#"> <i class='bx bx-right-arrow-alt'></i> </button>
+
+            <div id="ajuda" class="ajuda2">
+
+                <div id="espacoajuda" class="espacoajuda2">
+                    <h3>Defina o valor do orçamento:</h3>
+
+                    <p>Preço mínimo: R$<label id="valormin">10</label></p>
+
+                    <div id="escolherorcamento">
+                        <input type="range" id="rangeorcamento" min="" max="100" value="">
+                        <div class="value-display" id="valororcamento"></div>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="btnenviar" class="btnenviar2"> <i class='bx bx-right-arrow-alt'></i> </button>
+
+            </div>
 
         </form>
     </div>

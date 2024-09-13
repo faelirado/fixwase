@@ -15,79 +15,99 @@
 
     <div id="header">
         <i class='bx bx-arrow-back' id="backi"></i>
-        <a href="logado.html" class="titulo">FixWise</a>
     </div>
 
     <div id="main">
-        <h3>Selecione o tipo de ajuda você precisa em sua residência:</h3>
 
         <form id="ajudas">
 
-            <div id="espacoajuda1">
+            <div id="ajuda" class="ajuda1">
 
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda1" value="emprRefManCom"> Reforma e Manutenção Comercial</label>
+                <div id="espacoajuda" class="espacoajuda1">
+
+                    <h3>Selecione o tipo de ajuda você precisa em sua residência:</h3>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda1" value="emprRefManCom"> Reforma e Manutenção Comercial</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda2" value="emprInstManEquip"> Instalação e Manutenção de Equipamentos</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda3" value="emprLimpCom"> Limpeza Comercial</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda4" value="emprGestRes"> Gestão de Resíduos</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda5" value="emprConsSegTrab"> Consultoria de Segurança do Trabalho</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda6" value="emprServEncHid"> Serviços de Encanamento e Hidráulica</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda7" value="emprInstRedTITel"> Instalação de Redes de TI e Telecomunicações</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda8" value="emprManSisEnergSol"> Manutenção de Sistemas de Energia Solar</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda9" value="emprInstDivDry"> Instalação de Divisórias e Drywall</label>
+                    </div>
+
+                    <br>
+
+                    <div id="escolherajuda">
+                        <label><input type="checkbox" id="tipoajuda10" value="emprManJard"> Manutenção de Jardins e Áreas Verdes</label>
+                    </div>
+
                 </div>
 
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda2" value="emprInstManEquip"> Instalação e Manutenção de Equipamentos</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda3" value="emprLimpCom"> Limpeza Comercial</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda4" value="emprGestRes"> Gestão de Resíduos</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda5" value="emprConsSegTrab"> Consultoria de Segurança do Trabalho</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda6" value="emprServEncHid"> Serviços de Encanamento e Hidráulica</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda7" value="emprInstRedTITel"> Instalação de Redes de TI e Telecomunicações</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda8" value="emprManSisEnergSol"> Manutenção de Sistemas de Energia Solar</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda9" value="emprInstDivDry"> Instalação de Divisórias e Drywall</label>
-                </div>
-
-                <br>
-
-                <div id="escolherajuda">
-                    <label><input type="checkbox" id="tipoajuda10" value="emprManJard"> Manutenção de Jardins e Áreas Verdes</label>
-                </div>
-
-                <br>
+                <button type="submit" id="btnenviar" class="btnenviar1"> <i class='bx bx-right-arrow-alt'></i> </button>
 
             </div>
-            
-            <button type="submit" class="btnenviar" href="#"> <i class='bx bx-right-arrow-alt'></i> </button>
+
+            <div id="ajuda" class="ajuda2">
+
+                <div id="espacoajuda" class="espacoajuda2">
+                    <h3>Defina o valor do orçamento:</h3>
+
+                    <p>Preço mínimo: R$<label id="valormin">10</label></p>
+
+                    <div id="escolherorcamento">
+                        <input type="range" id="rangeorcamento" min="" max="100" value="">
+                        <div class="value-display" id="valororcamento"></div>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="btnenviar" class="btnenviar2"> <i class='bx bx-right-arrow-alt'></i> </button>
+
+            </div>
 
         </form>
     </div>
