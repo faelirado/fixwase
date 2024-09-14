@@ -1,0 +1,133 @@
+/*---cores---*/
+:root {
+    --cor-primaria: #00A3E0;
+  }
+/*---------------------------------------------------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+    user-select: none; /* Desativa a seleção de texto */
+    -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+    -moz-user-select: none; /* Suporte para Firefox */
+    -ms-user-select: none; /* Suporte para navegadores Microsoft */
+    -webkit-user-drag: none;
+}
+
+/*---header---*/
+
+#header {
+    background-color: var(--cor-primaria);
+    border-bottom: #0d7ea7 1px solid;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 24px;
+    height: 30px;
+    position: fixed;
+    width: 100dvw;
+    top: 0;
+    z-index: 2;
+}
+
+#header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.titulo {
+    position: absolute;
+    z-index: 3;
+    top:-10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#backi {
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+}
+/*---------------------------------------------------------------------*/
+
+#main {
+    margin-top: 70px;
+    text-align: center;
+}
+
+#mensagens #semMensagens {
+    display: block;
+}
+
+#mensagem {
+    margin-top: 65px;
+    position: absolute;
+    top: -10px;
+    border-bottom: #9999997e 1px solid;
+    width: 100dvw;
+    height: 70px;
+    display: none;
+}
+
+#mensagem img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 8px;
+}
+
+#mensagem #nomeCliente {
+    position: absolute;
+    left: 95px;
+    top: 2px;
+}
+
+#mensagem #mensangemCliente {
+    position: absolute;
+    left: 95px;
+    top: 25px;
+    width: 220px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+    font-size: 14px;
+    color: #999;
+}
+
+#qntNotifs {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    right: 20px;
+    top: 25px;
+}
+
+/*responsivo*/
+
+/*---computador---*/
+@media (min-width: 480px) {
+}
+/*---celular---*/
+@media (max-width: 480px) {
+}
+
+/*---------------------------------------------------------------------*/

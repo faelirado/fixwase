@@ -43,13 +43,6 @@ body {
   color: #fff;
 }
 
-.titulo {
-  position: absolute;
-  left: 60px;
-  z-index: 2;
-  transition: all .4s ease;
-}
-
 #backi {
   position: absolute;
   left: 20px;
