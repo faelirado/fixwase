@@ -3,17 +3,20 @@
   --cor-primaria: #00A3E0;
   --cor-botao: #72c2df;
   --cor-hover-botao: #39aed8;
+  --cor-placeholder: #90bbca;
+  --cor-fundo: #f0fbff;
 }
 /*---------------------------------------------------------------------*/
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 140px;
+  background-color: var(--cor-fundo);
 }
 
-* {
+*{
   -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
   user-select: none; /* Desativa a seleção de texto */
   -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
@@ -22,158 +25,187 @@ body {
   -webkit-user-drag: none;
 }
 
-/*---header---*/
-
-#header {
-  background-color: var(--cor-primaria);
-  border-bottom: #0d7ea7 1px solid;
-  color: #fff;
-  padding: 12px;
-  text-align: center;
-  font-size: 24px;
-  height: 30px;
-}
-
-#backi {
-  position: absolute;
-  left: 20px;
-  top: 13px;
-  cursor: pointer;
-  font-size: 25px;
-  color: #fff;
-}
-
-.titulo {
-  position: absolute;
-  left: 60px;
-}
-
-#header a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/*---------------------------------------------------------------------*/
-
-#main {
-  margin: 20px auto;
-  width: 50dvh;
-  text-align: center;
-}
-
-/*---form ajudas---*/
-
-#ajudas {
-  display: flex;
-}
-
-#ajuda {
-  margin-right: 50dvw;
-  transition: all 1.5s ease;
-}
-
-.ajuda2 {
-  display: none;
-}
-
-.ajuda2 p {
-  font-weight: bold;
-}
-
-#rangeorcamento {
-  -webkit-appearance: none; /* Remove o estilo padrão no WebKit */
-  width: 80%;
-  height: 8px;
-  border-radius: 5px;
-  outline: none;
-  opacity: 0.7;
-  transition: opacity .15s ease-in-out;
-  background: #ddd; /* Cor de fundo */
-}
-
-#rangeorcamento::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 13px;
-  height: 13px;
-  background: var(--cor-primaria); /* Cor do botão do slider */
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-}
-
-.value-display {
-  position: absolute;
-  margin-left: 21dvw;
-  text-align: center;
-  color: #333;
-  font-size: 14px;
-  font-weight: bold;
-  display: none;
-}
-
-#escolherajuda input[type="checkbox"] {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  border-radius: 20%;
-  border: 1px solid #555;
-  width: 15px;
-  height: 15px;
-  transform: translateY(4px);
-  transition: background-color 0.4s ease;
-}
-
-#escolherajuda input[type="checkbox"]:checked {
-  content: "";
-  background: var(--cor-primaria);
-  width: 15px;
-  height: 15px;
-}
-
-#escolherajuda {
-  display: flex;
-  margin-left: 10px;
-}
-
-#escolherajuda label{
-  text-wrap: nowrap;
-}
-
-#espacoajuda {
-  margin-top: 50px;
-  width: 330px;
-  height: 370px;
-  overflow-y: auto;
-  border: #3c6b7c 1px solid;
+.espacologin {
+  width: 400px;
+  height: 350px;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
+  color: var(--cor-primaria);
+  position: relative;
+  border: #cfe3eb 1px solid;
 }
 
-#btnenviar {
+.espacologin h1 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.espacologin .entrada {
+  width: 100%;
+  height: 40px;
+  margin: 15px 0;
+  margin-top: 5px;
+}
+
+.entrada input {
+  width: 70%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(1, 135, 184, 0.3);
+  border-radius: 40px;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.entrada input::placeholder {
+  color: var(--cor-placeholder);
+  font-size: 12px;
+}
+
+.entrada i {
+  position: absolute;
+  right: 28px;
+  transform: translateY(80%);
+}
+
+#espacoformas {
+  display: flex; /* Alinha os botões lado a lado */
+  gap: 13px; /* Espaço entre os botões */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  width: 100%; /* Faz o contêiner dos botões ocupar toda a largura disponível */
+  margin-top: 15px; /* Ajuste de margem se necessário */
+}
+
+.forma {
+  border-radius: 15px;
+  background-color: transparent;
+  width: 165px;
+  height: 45px;
+  font-weight: bold;
+  color: #90c3d6;
+  border: 2px solid #90c3d6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.separador {
+  width: 3px; /* Largura do separador */
+  height: 45px; /* Altura do separador */
+  background-color: #90c3d6; /* Cor do separador */
+  margin: 0 10px; /* Espaçamento ao redor do separador */
+  transform: translateX(10px);
+}
+
+.separacaoformas{
+  margin-top: 15px;
+  color: var(--cor-primaria);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.separacaoformas::before,
+.separacaoformas::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid rgba(114, 194, 223, 0.5); /* Cor e estilo da linha */
+  margin: 0 30px;
+}
+
+.separacaoformas::before {
+  margin-right: 10px; /* Espaço à direita da linha antes do texto */
+}
+
+.separacaoformas::after {
+  margin-left: 10px; /* Espaço à esquerda da linha depois do texto */
+}
+
+.icone_google {
+  width: 25px;
+  transform: translateX(10px);
+}
+
+#formagoogle {
+  display: inline-flex;
+  align-items: center;
+}
+
+.espacologin .btncadastrar {
   color: #fff;
   font-weight: bold;
-  margin-top: 35px;
-  width: 290px;
+  margin-top: 10px;
+  width: 270px;
   height: 50px;
   border-radius: 20px;
   border: none;
-  font: 600;
-  font-size: 30px;
+  font-size: 20px;
   background-color: var(--cor-botao);
   cursor: pointer;
   transition: all 0.4s ease;
   box-shadow: #555 0 2px 2px 0;
-
-  align-items: center;
-  justify-content: center;
 }
 
-#btnenviar:hover {
+.btncadastrar:hover {
   background-color: var(--cor-hover-botao);
 }
 
-#btnenviar:focus {
+.btncadastrar:focus {
   box-shadow: #555 0 0 0 0;
+}
+
+.comconta {
+  text-decoration: none;
+  color: var(--cor-botao);
+}
+
+.comconta:hover {
+  text-decoration: underline;
+  color: var(--cor-hover-botao);
+}
+
+/*---responsivo---*/
+
+/*---celular---*/
+@media screen and (max-width: 390px){ /*responsivo*/
+  .espacologin {
+      margin: 0px 15px 0px 15px;
+  }
+
+  .forma {
+      width: 140px;
+      height: 38px;
+      font-size: 11px;
+  }
+
+  .separador {
+      width: 5px; /* Largura do separador */
+      height: 38px; /* Altura do separador */
+  }
+
+  .espacologin .entrada {
+      transform: translateX(-5px);
+  }
+
+  #espacoformas {
+      margin-top: 10px; /* Ajuste de margem se necessário */
+      margin-bottom: 5px;
+  }
 }
 
 /*---------------------------------------------------------------------*/

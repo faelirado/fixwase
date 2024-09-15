@@ -57,11 +57,11 @@ body {
 /*responsivo*/
 
 /*---computador---*/
-@media (min-width: 768px) {
+@media (min-width: 480px) {
 
 }
 /*---celular---*/
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
 }
 
