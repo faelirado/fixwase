@@ -27,7 +27,20 @@ document.addEventListener('click', function(event) {
         menuButton.style.left = '10px';
         titulo.style.opacity = '1';
     }
-  });
+});
+
+/*vai pra index caso não tiver conta*/
+
+window.onload = function() {
+
+    // Carregar email salvo
+    const savedEmail = localStorage.getItem('valor-email');
+    if (savedEmail === null || savedEmail === "") {
+
+        location.href = "index.html";
+
+    }
+};
 
 //copiar gmail
 function copiargmail(){

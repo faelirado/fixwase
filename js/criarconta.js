@@ -31,23 +31,31 @@ document.getElementById("cadastro").addEventListener("submit", function(event) {
 //salva o nome
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Seleciona o input de nome
-    const nomeInput = document.getElementById('usuarioNome');
-
-    // Seleciona o input de email
-    const emailInput = document.getElementById('usuarioEmail');
-
-    // Seleciona o input de senha
-    const senhaInput = document.getElementById('usuarioSenha');
-
-    // Seleciona o check de lembrar login
-    const lembrarCheck = document.getElementById('checkLembrar');
-
-    const cadastro = document.querySelector('.btncadastrar');
-
-    // Salvar o texto no Local Storage quando o botão for clicado
-    cadastro.addEventListener('click', () => {
-
+  // Seleciona o input de nome
+  const nomeInput = document.getElementById('usuarioNome');
+  
+  // Seleciona o input de senha
+  const senhaInput = document.getElementById('usuarioSenha');
+  
+  // Seleciona o input de nome
+  const emailInput = document.getElementById('usuarioEmail');
+  
+  // Seleciona o check de lembrar login
+  const lembrarCheck = document.getElementById('checkLembrar');
+  
+  // Seleciona o botao de cadastro
+  const cadastro = document.querySelector('.btncadastrar');
+  
+  // Carregar nome salvo
+  const savedEmail = localStorage.getItem('valor-email');
+  if (savedEmail) {
+    
+    emailInput.value = savedEmail;
+  }
+  
+  // Salvar o texto no Local Storage quando o botão for clicado
+  cadastro.addEventListener('click', () => {
+    
         const nomeValor = nomeInput.value;
         localStorage.setItem('valor-nome', nomeValor);
 
