@@ -45,14 +45,6 @@ rangeOrcamento.value = valorMin.innerText
 // Atualiza o valor exibido
 function updateValue() {
     valorOrcamento.textContent = `R$${rangeOrcamento.value}`;
-    
-    // Calcula a posição do valor com base na posição do slider
-    const percentage = ((rangeOrcamento.value - rangeOrcamento.min) / (rangeOrcamento.max - rangeOrcamento.min)) * 100;
-    const thumbWidth = 13; // Largura do thumb
-    const containerWidth = rangeOrcamento.offsetWidth;
-    const valuePosition = (percentage / 100) * (containerWidth - thumbWidth);
-    
-    valorOrcamento.style.left = `${valuePosition}px`;
 }
 
 // Adiciona um ouvinte de eventos para o input do range
@@ -63,18 +55,15 @@ updateValue();
 
 function showValue() {
     valorOrcamento.style.display = 'block';
+    rangeOrcamento.style.marginTop = '40px';
     updateValue();
 }
-
-function hideValue() {
-    valorOrcamento.style.display = 'none';
-        }
         
-    rangeOrcamento.addEventListener('input', showValue);
-    rangeOrcamento.addEventListener('mousedown', showValue);
-    rangeOrcamento.addEventListener('mousemove', updateValue);
+rangeOrcamento.addEventListener('input', showValue);
+rangeOrcamento.addEventListener('mousedown', showValue);
+rangeOrcamento.addEventListener('mousemove', updateValue);
         
         
-    // Para dispositivos móveis
-    rangeOrcamento.addEventListener('touchstart', showValue);
-    rangeOrcamento.addEventListener('touchmove', updateValue);
+// Para dispositivos móveis
+rangeOrcamento.addEventListener('touchstart', showValue);
+rangeOrcamento.addEventListener('touchmove', updateValue);
