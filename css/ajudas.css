@@ -89,6 +89,7 @@ body {
     opacity: 0.7;
     transition: opacity .15s ease-in-out;
     background: #ddd; /* Cor de fundo */
+    transition: all 0.5s ease;
 }
 
 #rangeorcamento::-webkit-slider-thumb {
@@ -102,13 +103,16 @@ body {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
-.value-display {
+#valororcamento {
+    width: min-content;
     position: absolute;
-    margin-left: 21dvw;
-    text-align: center;
-    color: #333;
-    font-size: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #222;
+    font-size: 29px;
     font-weight: bold;
+    border-bottom: #3c6b7c 1px solid;
+    padding: 3px;
     display: none;
 }
 
@@ -147,10 +151,6 @@ body {
     overflow-y: auto;
     border: #3c6b7c 1px solid;
     border-radius: 10px;
-}
-
-#espacoajuda h3 {
-
 }
 
 #btnenviar {
