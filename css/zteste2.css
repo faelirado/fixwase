@@ -1,211 +1,43 @@
-/*---cores---*/
-:root {
-  --cor-primaria: #00A3E0;
-  --cor-botao: #72c2df;
-  --cor-hover-botao: #39aed8;
-  --cor-placeholder: #90bbca;
-  --cor-fundo: #f0fbff;
-}
-/*---------------------------------------------------------------------*/
-
-body {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding-top: 140px;
-  background-color: var(--cor-fundo);
-}
-
-*{
-  -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
-  user-select: none; /* Desativa a seleção de texto */
-  -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
-  -moz-user-select: none; /* Suporte para Firefox */
-  -ms-user-select: none; /* Suporte para navegadores Microsoft */
-  -webkit-user-drag: none;
-}
-
-.espacologin {
-  width: 400px;
-  height: 350px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  color: var(--cor-primaria);
+.carrossel {
   position: relative;
-  border: #cfe3eb 1px solid;
+  width: 240px; /* Largura do carrossel */
+  height: 120px; /* Altura do carrossel */
+  overflow: hidden; /* Esconde imagens que não estão visíveis */
+  border: 2px solid #ccc; /* Apenas para visualização */
+  border-radius: 10px;
+  margin-left: 35px;
 }
 
-.espacologin h1 {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  cursor: default;
+.imagens {
+  display: flex; /* Coloca todas as imagens em uma única linha */
+  transition: transform 0.5s ease-in-out; /* Anima a transição */
 }
 
-* {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.imagens img {
+  width: 120px; /* Largura de cada imagem */
+  height: 120px; /* Altura de cada imagem */
+  border-radius: 10px;
+  margin-right: 5px;
 }
 
-.espacologin .entrada {
-  width: 100%;
-  height: 40px;
-  margin: 15px 0;
-  margin-top: 5px;
-}
-
-.entrada input {
-  width: 70%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  border: 2px solid rgba(1, 135, 184, 0.3);
-  border-radius: 40px;
-  padding-left: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.entrada input::placeholder {
-  color: var(--cor-placeholder);
-  font-size: 12px;
-}
-
-.entrada i {
+.anterior, .proximo {
   position: absolute;
-  right: 28px;
-  transform: translateY(80%);
-}
-
-#espacoformas {
-  display: flex; /* Alinha os botões lado a lado */
-  gap: 13px; /* Espaço entre os botões */
-  justify-content: center; /* Centraliza os botões horizontalmente */
-  width: 100%; /* Faz o contêiner dos botões ocupar toda a largura disponível */
-  margin-top: 15px; /* Ajuste de margem se necessário */
-}
-
-.forma {
-  border-radius: 15px;
-  background-color: transparent;
-  width: 165px;
-  height: 45px;
-  font-weight: bold;
-  color: #90c3d6;
-  border: 2px solid #90c3d6;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.separador {
-  width: 3px; /* Largura do separador */
-  height: 45px; /* Altura do separador */
-  background-color: #90c3d6; /* Cor do separador */
-  margin: 0 10px; /* Espaçamento ao redor do separador */
-  transform: translateX(10px);
-}
-
-.separacaoformas{
-  margin-top: 15px;
-  color: var(--cor-primaria);
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.separacaoformas::before,
-.separacaoformas::after {
-  content: '';
-  flex: 1;
-  border-bottom: 2px solid rgba(114, 194, 223, 0.5); /* Cor e estilo da linha */
-  margin: 0 30px;
-}
-
-.separacaoformas::before {
-  margin-right: 10px; /* Espaço à direita da linha antes do texto */
-}
-
-.separacaoformas::after {
-  margin-left: 10px; /* Espaço à esquerda da linha depois do texto */
-}
-
-.icone_google {
-  width: 25px;
-  transform: translateX(10px);
-}
-
-#formagoogle {
-  display: inline-flex;
-  align-items: center;
-}
-
-.espacologin .btncadastrar {
-  color: #fff;
-  font-weight: bold;
-  margin-top: 10px;
-  width: 270px;
-  height: 50px;
-  border-radius: 20px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: white;
   border: none;
-  font-size: 20px;
-  background-color: var(--cor-botao);
+  padding: 10px;
   cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: #555 0 2px 2px 0;
+  z-index: 1; /* Mantém os botões acima das imagens */
+  font-weight: bold;
 }
 
-.btncadastrar:hover {
-  background-color: var(--cor-hover-botao);
+.anterior {
+  top: 70px;
 }
 
-.btncadastrar:focus {
-  box-shadow: #555 0 0 0 0;
+.proximo {
+  left: 290px;
+  top: 70px;
 }
-
-.comconta {
-  text-decoration: none;
-  color: var(--cor-botao);
-}
-
-.comconta:hover {
-  text-decoration: underline;
-  color: var(--cor-hover-botao);
-}
-
-/*---responsivo---*/
-
-/*---celular---*/
-@media screen and (max-width: 390px){ /*responsivo*/
-  .espacologin {
-      margin: 0px 15px 0px 15px;
-  }
-
-  .forma {
-      width: 140px;
-      height: 38px;
-      font-size: 11px;
-  }
-
-  .separador {
-      width: 5px; /* Largura do separador */
-      height: 38px; /* Altura do separador */
-  }
-
-  .espacologin .entrada {
-      transform: translateX(-5px);
-  }
-
-  #espacoformas {
-      margin-top: 10px; /* Ajuste de margem se necessário */
-      margin-bottom: 5px;
-  }
-}
-
-/*---------------------------------------------------------------------*/

@@ -107,7 +107,7 @@ body::-webkit-scrollbar {
 /*---------------------------------------------------------------------*/
 
 #main {
-    margin: 5px 20px auto;
+    margin: 5px 10px auto;
     width: 95%;
     text-align: center;
 }
@@ -216,6 +216,15 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
+#conteudo {
+    text-align: center;
+}
+
+#conteudo img {
+    width: 80%;
+    border-radius: 30px;
+}
+
 /*---------------------------------------------------------------------*/
 
 /*---SERVICOS---*/
@@ -280,7 +289,6 @@ body::-webkit-scrollbar {
     transition: transform 0.5s ease;
     object-fit: cover;
     display: inline-block;
-    
 }
 
 /*hover das divs*/
@@ -302,13 +310,74 @@ body::-webkit-scrollbar {
 
 /*---------------------------------------------------------------------*/
 
-#conteudo {
-    text-align: center;
+h3 {
+    margin-left: 10px;
 }
 
-#conteudo img {
-    width: 80%;
-    border-radius: 30px;
+#avaliacoes {
+    width: 100%;
+    height: 240px;
+    border: #9999997e solid;
+    border-width: 1px 0px 1px 0px; /* Cima, Direita, Baixo, Esquerda */
+    margin-top: 10px;
+}
+
+#avaliacao #fotoCliente {
+    position: absolute;
+    transform: translate(10px,-100px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#avaliacao #nomeCliente {
+    position: absolute;
+    transform: translate(70px,-105px);
+    font-weight: bold;
+}
+
+#avaliacao #dataAvaliacao {
+    position: absolute;
+    transform: translateY(-100px);
+    right: 10px;
+    color: #999;
+    font-size: 12px;
+}
+
+#avaliacao #avaliacaoCliente {
+    position: absolute;
+    transform: translate(70px,-85px);
+    font-weight: bold;
+    color: #f3de1c;
+    text-shadow: 
+    -1px -1px 0px #9e9e9e, /* Sombra para a esquerda e para cima */
+    1px -1px 0px #9e9e9e,  /* Sombra para a direita e para cima */
+    -1px 1px 0px #9e9e9e,  /* Sombra para a esquerda e para baixo */
+    1px 1px 0px #9e9e9e;   /* Sombra para a direita e para baixo */
+    ;
+}
+
+#avaliacao #descricaoCliente {
+    position: absolute;
+    transform: translate(20px,-55px);
+}
+
+#imagensCliente {
+    overflow-x: scroll;
+    overflow: hidden;
+    margin-top: 110px;
+    margin-left: 10px;
+    display: flex;
+    height: 130px;
+}
+
+#imagensCliente img {
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin: 0 5px 0 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 /*responsivo*/
