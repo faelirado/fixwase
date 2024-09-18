@@ -1,13 +1,18 @@
-//salva o nome
+let indiceAtual = 0;
+    const imagens = document.getElementById('carrossel-imagens');
+    const totalImagens = imagens.children.length;
 
-document.addEventListener('DOMContentLoaded', () => {
+    function mostrarImagem() {
+      const larguraImagem = imagens.children[0].clientWidth;
+      imagens.style.transform = `translateX(${-indiceAtual * larguraImagem}px)`;
+    }
 
-    const cadastro = document.querySelector('.btncadastrar');
+    function proximaImagem() {
+      indiceAtual = (indiceAtual + 1) % totalImagens;
+      mostrarImagem();
+    }
 
-    // Salvar o texto no Local Storage quando o botão for clicado
-    cadastro.addEventListener('click', () => {
-
-        const emailValor = emailInput.value;
-        localStorage.setItem('valor-email', emailValor);
-    });
-});
+    function anteriorImagem() {
+      indiceAtual = (indiceAtual - 1 + totalImagens) % totalImagens;
+      mostrarImagem();
+    }

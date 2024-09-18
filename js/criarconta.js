@@ -11,6 +11,7 @@ if (voltar) {
 document.getElementById("cadastro").addEventListener("submit", function(event) {
     // Seleciona todos os checkboxes no formulário
     const senha = document.getElementById('usuarioSenha').value;
+    const inputSenhaConf = document.getElementById('confimarsenha');
     const conferirsenha = document.getElementById('confimarsenha').value;
     let senhaDif = false;
 
@@ -20,12 +21,16 @@ document.getElementById("cadastro").addEventListener("submit", function(event) {
         senhaDif = true;
     }
 
+    inputSenhaConf.setCustomValidity('');
+
     // Se a senha é diferente, impede o envio do formulário
     if (!senhaDif) {
-        event.preventDefault(); // Impede o envio do formulário
-        document.getElementById('checksenha').className = "bx bx-x"
-        setTimeout(() => {document.getElementById('checksenha').className = "";}, 2000);
+      inputSenhaConf.setCustomValidity("Confirmar senha incorreto.");
+      event.preventDefault(); // Impede o envio do formulário
+      document.getElementById('checksenha').className = "bx bx-x"
+      setTimeout(() => {document.getElementById('checksenha').className = "";}, 2000);
     }
+    inputSenhaConf.reportValidity();
 });
 
 //salva o nome

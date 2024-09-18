@@ -88,54 +88,41 @@ document.addEventListener('click', function(event) {
   }
 });
 
-// Scroll lateral
-const scrollLugar = document.getElementById('lugarscroll');
+// Scroll lateral servicos
+const scrollServicos = document.getElementById('lugarscroll');
 
-scrollLugar.addEventListener('wheel', function(event) {
+scrollServicos.addEventListener('wheel', function(event) {
     event.preventDefault();
-    scrollLugar.scrollLeft += event.deltaY; // Move horizontal scroll by the amount of vertical scroll
+    scrollServicos.scrollLeft += event.deltaY; // Move horizontal scroll by the amount of vertical scroll
+});
+
+// Scroll lateral avaliacao
+const scrollAvaliacoes = document.getElementById('imagensCliente');
+
+scrollAvaliacoes.addEventListener('wheel', function(event) {
+    event.preventDefault();
+    scrollAvaliacoes.scrollLeft += event.deltaY; // Move horizontal scroll by the amount of vertical scroll
 });
 
 /*---click servicos---*/
 
-/*click casa*/
-var clickcasa = document.getElementById('botaocasa');
+const container = document.querySelector('.lugar_servicos');
+  
+container.addEventListener('click', function(event) {
+  // O event.target é o elemento que foi clicado
+  const elementoClicado = event.target.closest('.divservicos');
+  
+  // Verifique se o clique foi em um elemento com a classe 'divservicos'
+  if (elementoClicado) {
+    const idBotao = elementoClicado.id;
 
-clickcasa.addEventListener('click', function () {
-    location.href = "ajudacasa.html"
-});
+    // Verifique se o id foi capturado corretamente
+    if (idBotao) {
+      // Redireciona para o arquivo HTML correspondente
+      window.location.href = `${idBotao}.html`; /*pega o id do botao serviço e redireciona com o valor do id*/
+    } else {
+      console.log('ID de pag não encontrado');
+    }
+  }
 
-/*click empresa*/
-var clickempresa = document.getElementById('botaoempresa');
-
-clickempresa.addEventListener('click', function () {
-    location.href = "ajudaempresa.html"
-});
-
-/*click loja*/
-var clickloja = document.getElementById('botaoloja');
-
-clickloja.addEventListener('click', function () {
-    location.href = "ajudaloja.html"
-});
-
-/*click reforma*/
-var clickreforma = document.getElementById('botaoreforma');
-
-clickreforma.addEventListener('click', function () {
-    location.href = "ajudareforma.html"
-});
-
-/*click pintura*/
-var clickpintura = document.getElementById('botaopintura');
-
-clickpintura.addEventListener('click', function () {
-    location.href = "ajudapintura.html"
-});
-
-/*click mudanca*/
-var clickmudanca = document.getElementById('botaomudanca');
-
-clickmudanca.addEventListener('click', function () {
-    location.href = "ajudamudanca.html"
 });

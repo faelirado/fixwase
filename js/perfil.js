@@ -133,41 +133,55 @@ fileInput.addEventListener('change', function(event) {
     }
 });
 
-// Salva o nome e email no Local Storage ao clicar no botão
-salvarAlt.addEventListener('click', () => {
+// Salva o nome e email no Local Storage ao clicar no botão e animação de salvar
+
+salvarAlt.addEventListener('click', function() {
+  var button = this;
+
+  var textoGmail = emailInput.value
+  
+  if(textoGmail.toLowerCase().includes("@gmail.com".toLowerCase())) {
     
     const valorNome = nomeInput.value;
     localStorage.setItem('valor-nome', valorNome);
-
+    
     const valorEmail = emailInput.value;
     localStorage.setItem('valor-email', valorEmail);
-
+    
     const valorSenha = senhaInput.value;
     localStorage.setItem('valor-senha', valorSenha);
-});
-
-//animação de salvar
-document.getElementById('savebtn').addEventListener('click', function() {
-    var button = this;
-  
     // Adiciona a classe 'loading' e inicia o carregamento
     button.classList.add('onclic');
-  
-    // Simula um tempo de carregamento (ex: 2 segundos)
+    
+      // Simula um tempo de carregamento (ex: 2 segundos)
     setTimeout(function() {
       // Remove a classe 'loading' e adiciona 'success' para exibir o check
       button.classList.remove('onclic');
       button.classList.add('validate');
     }, 1750);
-  
+      
     // Simula um tempo de carregamento (ex: 2 segundos)
     setTimeout(function() {
       // Remove a classe 'loading' e adiciona 'success' para exibir o check
       button.classList.remove('validate');
     }, 2900);
-  });
+  } else {
+    emailInput.setCustomValidity("Por favor insira um email valido.");
+    
+    button.style.backgroundColor = "#c00000"
+    button.style.border = "#c00000"
+    
+    setTimeout(function() {
+      
+      button.style.backgroundColor = "var(--cor-primaria)"
+      button.style.border = "var(--cor-primaria)"
+    }, 500);
+    e.preventDefault();
+  }
+  
+});
 
-// Impede a atualização da página
-document.getElementById('espaco_mudancas').addEventListener('submit', function(e) {
-  e.preventDefault();
+  // Impede a atualização da página
+  document.getElementById('espaco_mudancas').addEventListener('submit', function(e) {
+    e.preventDefault();
 });
