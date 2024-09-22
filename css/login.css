@@ -25,6 +25,14 @@ body {
     -webkit-user-drag: none;
 }
 
+/*olhinho padrao*/
+
+input[type="password"]::-ms-reveal,  /* Para Internet Explorer/Edge antigo */
+input[type="password"]::-ms-clear,   /* Para Internet Explorer/Edge antigo */
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none;
+}
+
 #backi {
     position: absolute;
     left: 20px;

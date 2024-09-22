@@ -1,43 +1,97 @@
-.carrossel {
-  position: relative;
-  width: 240px; /* Largura do carrossel */
-  height: 120px; /* Altura do carrossel */
-  overflow: hidden; /* Esconde imagens que não estão visíveis */
-  border: 2px solid #ccc; /* Apenas para visualização */
-  border-radius: 10px;
-  margin-left: 35px;
+/* Estilos existentes */
+#avaliacoes {
+  width: 100%;
+  height: 240px;
+  border: #9999997e solid;
+  border-width: 1px 0px 1px 0px;
+  margin-top: 10px;
 }
 
-.imagens {
-  display: flex; /* Coloca todas as imagens em uma única linha */
-  transition: transform 0.5s ease-in-out; /* Anima a transição */
-}
-
-.imagens img {
-  width: 120px; /* Largura de cada imagem */
-  height: 120px; /* Altura de cada imagem */
-  border-radius: 10px;
-  margin-right: 5px;
-}
-
-.anterior, .proximo {
+#avaliacao #fotoCliente {
   position: absolute;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  transform: translate(10px,-100px);
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1; /* Mantém os botões acima das imagens */
+}
+
+#avaliacao #nomeCliente {
+  position: absolute;
+  transform: translate(70px,-105px);
   font-weight: bold;
 }
 
-.anterior {
-  top: 70px;
+#avaliacao #dataAvaliacao {
+  position: absolute;
+  transform: translateY(-100px);
+  right: 10px;
+  color: #999;
+  font-size: 12px;
 }
 
-.proximo {
-  left: 290px;
-  top: 70px;
+#avaliacao #avaliacaoCliente {
+  position: absolute;
+  transform: translate(70px,-85px);
+  font-weight: bold;
+  color: #f3de1c;
+  text-shadow: 
+    -1px -1px 0px #9e9e9e,
+    1px -1px 0px #9e9e9e,
+    -1px 1px 0px #9e9e9e,
+    1px 1px 0px #9e9e9e;
+}
+
+#avaliacao #descricaoCliente {
+  position: absolute;
+  transform: translate(20px,-55px);
+}
+
+#imagensCliente {
+  overflow-x: scroll;
+  overflow: hidden;
+  margin-top: 110px;
+  margin-left: 10px;
+  display: flex;
+  height: 130px;
+}
+
+#imagensCliente img {
+  flex-direction: column;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  margin: 0 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para o wrapper das avaliações */
+#avaliacoes-wrapper {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 240px;
+  transition: transform 0.5s ease;
+}
+
+/* Estilos para navegação */
+#navegacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.seta-esquerda, .seta-direita {
+  background-color: #ddd;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.seta-esquerda:hover, .seta-direita:hover {
+  background-color: #bbb;
 }
