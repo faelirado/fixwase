@@ -34,48 +34,57 @@ document.getElementById("cadastro").addEventListener("submit", function(event) {
 });
 
 //salva o nome
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Seleciona o input de nome
+  // Seleciona os inputs
   const nomeInput = document.getElementById('usuarioNome');
-  
-  // Seleciona o input de senha
   const senhaInput = document.getElementById('usuarioSenha');
-  
-  // Seleciona o input de nome
   const emailInput = document.getElementById('usuarioEmail');
-  
-  // Seleciona o check de lembrar login
   const lembrarCheck = document.getElementById('checkLembrar');
   
   // Seleciona o botao de cadastro
   const cadastro = document.querySelector('.btncadastrar');
   
-  // Carregar nome salvo
+  // Carregar email salvo
   const savedEmail = localStorage.getItem('valor-email');
   if (savedEmail) {
-    
     emailInput.value = savedEmail;
   }
   
   // Salvar o texto no Local Storage quando o botão for clicado
-  cadastro.addEventListener('click', () => {
-    
-        const nomeValor = nomeInput.value;
-        localStorage.setItem('valor-nome', nomeValor);
+  cadastro.addEventListener('click', (e) => {
 
-        const emailValor = emailInput.value;
-        localStorage.setItem('valor-email', emailValor);
+    var textoGmail = emailInput.value;
+  
+    if (textoGmail.includes("@gmail.com")) {
+      // Limpa qualquer mensagem de erro anterior
+      emailInput.setCustomValidity("");
 
-        const senhaValor = senhaInput.value;
-        localStorage.setItem('valor-senha', senhaValor);
+      // Salvar os dados no Local Storage
+      const nomeValor = nomeInput.value;
+      localStorage.setItem('valor-nome', nomeValor);
 
-        if (lembrarCheck.checked) {
-            localStorage.setItem('lembrar-login', 'sim');
-          } else {
-            localStorage.setItem('lembrar-login', 'nao');
-          }
-    });
+      const emailValor = emailInput.value;
+      localStorage.setItem('valor-email', emailValor);
+
+      const senhaValor = senhaInput.value;
+      localStorage.setItem('valor-senha', senhaValor);
+
+      // Salvar a escolha de lembrar login
+      if (lembrarCheck.checked) {
+        localStorage.setItem('lembrar-login', 'sim');
+      } else {
+        localStorage.setItem('lembrar-login', 'nao');
+      }
+    } else {
+      // Define a mensagem de erro e exibe no campo
+      emailInput.setCustomValidity("Por favor insira um email válido.");
+      emailInput.reportValidity();  // Mostra a mensagem de erro
+      
+      // Impede o envio do formulário
+      e.preventDefault();
+    }
+
+  });
 });
 
 //ver senha escrita

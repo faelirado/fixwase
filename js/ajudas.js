@@ -7,6 +7,7 @@ if (voltar) {
   });
 }
 
+
 /*confere se há algum checkbox marcado*/
 document.getElementById("ajudas").addEventListener("submit", function(event) {
     // Seleciona todos os checkboxes no formulário
@@ -15,26 +16,47 @@ document.getElementById("ajudas").addEventListener("submit", function(event) {
     const ajuda2 = document.querySelector('.ajuda2');
     let isChecked = false;
     event.preventDefault();
-
+    
     // Verifica se pelo menos um checkbox está selecionado
     for (const checkbox of checkboxes) {
         if (checkbox.checked) {
             isChecked = true;
+            
+            var total = 0
+            let valorMin = document.getElementById('valormin');
+
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    total += parseFloat(checkbox.value);
+                }
+            });
+
+            valorMin.textContent = total
+            
+            
             ajuda2.style.display = "block"
             ajuda1.style.transform = "translateX(-100dvw)"
             setTimeout(function() {
                 ajuda1.style.display = "none"
-              }, 1400);
-              break;
-            }
+            }, 1400);
+
+            setTimeout(function() {
+                valorOrcamento.style.display = 'block';
+            }, 1401);
+
+            rangeOrcamento.min = valorMin.innerText
+            valorOrcamento.textContent = `R$${rangeOrcamento.value}`;
+
+            break;
         }
-        
-        // Se nenhum checkbox estiver selecionado, impede o envio do formulário
-        if (!isChecked) {
-            alert("Por favor, selecione pelo menos uma opção.");
-        }
-    });
+    }
     
+    // Se nenhum checkbox estiver selecionado, impede o envio do formulário
+    if (!isChecked) {
+        alert("Por favor, selecione pelo menos uma opção.");
+    }
+});
+
 const valorOrcamento = document.getElementById('valororcamento');
 const valorMin = document.getElementById('valormin');
 const rangeOrcamento = document.getElementById('rangeorcamento');
@@ -54,8 +76,6 @@ rangeOrcamento.addEventListener('input', updateValue);
 updateValue();
 
 function showValue() {
-    valorOrcamento.style.display = 'block';
-    rangeOrcamento.style.marginTop = '40px';
     updateValue();
 }
         

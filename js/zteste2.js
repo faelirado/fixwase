@@ -1,18 +1,34 @@
-let indiceAtual = 0;
-    const imagens = document.getElementById('carrossel-imagens');
-    const totalImagens = imagens.children.length;
+document.addEventListener('DOMContentLoaded', () => {
+  const wrapper = document.querySelector('#avaliacoes-wrapper');
+  const avaliacoes = document.querySelectorAll('.avaliacao');
+  const btnEsquerda = document.querySelector('.seta-esquerda');
+  const btnDireita = document.querySelector('.seta-direita');
+  
+  let currentIndex = 0;
 
-    function mostrarImagem() {
-      const larguraImagem = imagens.children[0].clientWidth;
-      imagens.style.transform = `translateX(${-indiceAtual * larguraImagem}px)`;
-    }
+  // Função para atualizar a visualização da avaliação
+  function updateAvaliacao() {
+    const offset = -currentIndex * 100; // Move as avaliações em 100% do container
+    wrapper.style.transform = `translateX(${offset}%)`;
+  }
 
-    function proximaImagem() {
-      indiceAtual = (indiceAtual + 1) % totalImagens;
-      mostrarImagem();
+  // Evento para a seta da direita
+  btnDireita.addEventListener('click', () => {
+    if (currentIndex < avaliacoes.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0; // Volta para a primeira avaliação
     }
+    updateAvaliacao();
+  });
 
-    function anteriorImagem() {
-      indiceAtual = (indiceAtual - 1 + totalImagens) % totalImagens;
-      mostrarImagem();
+  // Evento para a seta da esquerda
+  btnEsquerda.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = avaliacoes.length - 1; // Vai para a última avaliação
     }
+    updateAvaliacao();
+  });
+});
