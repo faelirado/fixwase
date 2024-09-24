@@ -62,7 +62,9 @@ body::-webkit-scrollbar {
 }
   
 #user-icon {
-    font-size: 30px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -161,6 +163,10 @@ body::-webkit-scrollbar {
     transition: all .4s ease;
 }
 
+#paginasMenu {
+    margin-top: 20px;
+}
+
 #paginasMenu a {
     display: block;
     padding: 5px 0;
@@ -168,7 +174,7 @@ body::-webkit-scrollbar {
     text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Adiciona uma linha entre os botões */
     font-weight: bold; /* Deixa o texto em negrito */
-    font-size: 22px;
+    font-size: 21px;
     transition: all 0.5s ease;
 }
 
@@ -187,7 +193,7 @@ body::-webkit-scrollbar {
 #menu #menusociais {
     position: absolute;
     background-color: var(--cor-sociais);
-    bottom: 10dvh;
+    bottom: 5dvh;
     border-radius: 10px;
     width: 80px;
     display: flex;

@@ -63,21 +63,21 @@ input[type="password"]::-webkit-textfield-decoration-container {
 /*---espaco perfil*/
 
 .profile-picture {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    overflow: hidden; /* Esconde partes que ultrapassarem os limites do contêiner */
-    border-radius: 50%;
-    border: #555 1px solid;
-    left: 50%;
-    transform: translateX(-50%);
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden; /* Esconde partes que ultrapassarem os limites do contêiner */
+  border-radius: 50%;
+  border: #999 1px solid;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .user-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover; /* Faz a imagem cobrir o contêiner */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* Faz a imagem cobrir o contêiner */
 }
 
 .escolhefoto {
@@ -87,6 +87,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Efeito de blur no fundo */
   display: none;
   flex-direction: column;
   align-items: center;
@@ -95,24 +96,30 @@ input[type="password"]::-webkit-textfield-decoration-container {
   font-size: 18px;
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease; /* Suaviza a transição */
 }
 
 #escolhefotolbl {
-    background-color: rgba(116, 116, 116, 0.6);
-    border: #333 1px solid;
-    border-radius: 15px;
-    width: 84%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* Centraliza o texto */
-    margin: 0; /* Remove qualquer margem padrão */
-    cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+  border: #333 1px solid;
+  border-radius: 15px;
+  width: 84%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centraliza o texto */
+  margin: 0; /* Remove qualquer margem padrão */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Suaviza a transição */
+}
+
+#escolhefotolbl:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Fundo mais claro ao passar o mouse */
 }
 
 .file-input {
-    display: none;
+  display: none;
 }
 
 .informacao input {
@@ -122,7 +129,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(240, 240, 240, 0.8);
+    border: 2px solid rgba(1, 135, 184, 0.3);
     border-radius: 40px;
     padding-left: 20px;
 }
