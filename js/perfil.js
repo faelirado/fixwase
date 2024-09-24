@@ -84,7 +84,7 @@ window.onload = function() {
     // Carregar imagem salva
     const imagemSalva = localStorage.getItem('image');
     if (imagemSalva) {
-
+      
         imagemUser.src = imagemSalva;
     }
 
@@ -115,12 +115,16 @@ fileInput.addEventListener('change', function(event) {
     
     const file = event.target.files[0];
     if (file && file.type.startsWith('image/')) {
+
+      //tira o escolhe perfil depois de escolher
+      const escolhefoto = document.querySelector('.escolhefoto');
+      escolhefoto.style.display = 'none';
         
-        const reader = new FileReader();
-        reader.onload = function(e) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
             
-            const imageURL = e.target.result;
-            imagemUser.src = imageURL;
+        const imageURL = e.target.result;
+        imagemUser.src = imageURL;
             
             // Salva a imagem no Local Storage ao clicar no botão
             salvarAlt.addEventListener('click', () => {

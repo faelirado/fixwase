@@ -29,6 +29,9 @@ document.addEventListener('click', function(event) {
     }
 });
 
+// Seleciona o input de imagem de usuário
+const imagemUser = document.getElementById('user-icon');
+
 /*vai pra index caso não tiver conta*/
 
 window.onload = function() {
@@ -38,7 +41,13 @@ window.onload = function() {
     if (savedEmail === null || savedEmail === "") {
 
         location.href = "index.html";
+    }
 
+    // Carregar imagem salva
+    const imagemSalva = localStorage.getItem('image');
+    if (imagemSalva) {
+      
+        imagemUser.src = imagemSalva;
     }
 };
 
