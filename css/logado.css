@@ -370,12 +370,16 @@ h3 {
 }
 
 #imagensCliente {
-    overflow-x: scroll;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     margin-top: 110px;
     margin-left: 10px;
     display: flex;
     height: 130px;
+}
+
+#imagensCliente::-webkit-scrollbar {
+    display: none;
 }
 
 #imagensCliente img {
