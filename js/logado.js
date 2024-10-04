@@ -32,7 +32,7 @@ document.addEventListener('click', function(event) {
 // Seleciona o input de imagem de usuário
 const imagemUser = document.getElementById('user-icon');
 
-/*vai pra index caso não tiver conta*/
+/* vai pra index caso não tiver conta */
 
 window.onload = function() {
 
