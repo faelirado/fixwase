@@ -1,0 +1,280 @@
+/*---cores---*/
+:root {
+    --cor-primaria: #00A3E0;
+    --cor-background: #f5f5f5;
+    --cor-barra-procurar: #51b0d3;
+  }
+/*---------------------------------------------------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-background);
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+*{
+    -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+    user-select: none; /* Desativa a seleção de texto */
+    -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+    -moz-user-select: none; /* Suporte para Firefox */
+    -ms-user-select: none; /* Suporte para navegadores Microsoft */
+    -webkit-user-drag: none;
+}
+
+/*---header---*/
+
+#header {
+    background-color: var(--cor-primaria);
+    border-bottom: #0d7ea7 1px solid;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 24px;
+    height: 30px;
+    position: fixed;
+    width: 100dvw;
+    top: 0;
+    z-index: 2;
+}
+
+
+#backi {
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+}
+
+#header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*---carrinho---*/
+
+#header #carrinho {
+    position: absolute;
+    right: 155px;
+    top: 15px;
+    font-size: 22px;
+    background-color: #fff;
+    color: var(--cor-primaria);
+    width: 30px;
+    height: 30px;
+    border-radius: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#header #numCarrinho {
+    position: absolute;
+    right: -10px;
+    top: -19px;
+    font-size: 12px;
+    background-color: #0093c9;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------------------*/
+
+/*---orcamento---*/
+
+#header #espacoOrcamento {
+    background-color: #0183b363;
+    border: #b1daff7a 1px solid;
+    width: 95px;
+    height: 35px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+}
+
+#header #orcamento {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    font-size: 12px;
+}
+
+#header label {
+    position: absolute;
+    top: 18px;
+    right: 70px;
+    font-size: 12px;
+}
+
+#header #valorOrcamento {
+    position: absolute;
+    top: -15px;
+    right: -65px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 60px;
+    text-align: left;
+}
+
+/*---------------------------------------------------------------------*/
+
+.titulo {
+    position: absolute;
+    left: 60px;
+    z-index: 3;
+    transition: all .4s ease;
+}
+
+/*---------------------------------------------------------------------*/
+
+#main {
+    margin: 5px 20px auto;
+    text-align: center;
+    display: flex;
+}
+
+/*---barra de procurar---*/
+
+#filtro {
+    margin-top: 145px;
+    color: var(--cor-primaria);
+    font-size: 24px;
+    margin-left: 10px;
+    transform: translate(20px,10px);
+    cursor: pointer;
+}
+
+#barraProcurar {
+    margin-top: 70px;
+    position: absolute;
+    top: 10px;
+    width: 75dvw;
+    height: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 6%;
+    border: 2px solid var(--cor-barra-procurar);
+}
+
+#barraProcurar:focus {
+    outline: none; /* Remove o foco padrão */
+    border: 2px solid var(--cor-barra-procurar); /* Nova borda ao focar */
+}
+
+#botaoProcurar {
+    width: 29px;
+    height: 29px;
+    right: 8.9dvw;
+    top: 83.5px;
+    border-radius: 15px;
+    position: absolute;
+    border: none;
+    font-size: 16px;
+    background-color: var(--cor-barra-procurar);
+    color: #fff;
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------------------*/
+
+/*---produtos---*/
+
+#produtos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+#produto {
+    border: #9999997a 1px solid;
+    border-radius: 10px;
+    padding: 0px 0px 4px 0px;
+    width: 150px;
+    background-color: #fff;
+    height: 215px;
+    cursor: pointer;
+    min-width: 150px;
+    flex: 10%;
+    overflow: hidden;
+}
+
+#produto #espacoImagem {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+#produto #imgProduto {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+#produto #separador {
+    width: 100%;
+    height: 0px;
+    border-radius: 8px 8px 0px 0px;
+    border-bottom: 1px #9999997a solid;
+}
+
+#produto #nomeProduto {
+    text-align: left;
+    margin-left: 5px;
+    transform: translate(5px, -15px);
+    color: #555;
+    font-size: 15px;
+    width: 90%;
+    height: 4ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; /* Necessário para o efeito de múltiplas linhas */
+    -webkit-box-orient: vertical; /* Necessário para o efeito de múltiplas linhas */
+    -webkit-line-clamp: 2; /* Limita a exibição a 2 linhas */
+    white-space: normal; /* Permite que o texto quebre em várias linhas */
+}
+
+#produto #precoProduto {
+    text-align: left;
+    margin-left: 5px;
+    position: absolute;
+    transform: translate(5px,-40px);
+    color: #518db1;
+    font-size: 15.5px;
+    font-weight: bold;
+}
+
+/*---------------------------------------------------------------------*/
+
+/*responsivo*/
+
+/*---computador---*/
+@media (min-width: 550px) {
+    #produto {
+        max-width: 40%;
+    }
+}
+/*---celular---*/
+@media (max-width: 480px) {
+
+}
+
+/*---------------------------------------------------------------------*/

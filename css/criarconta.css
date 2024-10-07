@@ -1,10 +1,10 @@
 /*---cores---*/
 :root {
     --cor-primaria: #00A3E0;
+    --cor-background: #f5f5f5;
     --cor-botao: #72c2df;
     --cor-hover-botao: #39aed8;
     --cor-placeholder: #90bbca;
-    --cor-fundo: #f0fbff;
   }
 /*---------------------------------------------------------------------*/
 
@@ -13,7 +13,7 @@ body {
     justify-content: center;
     text-align: center;
     padding-top: 70px;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-background);
 }
 
 *{

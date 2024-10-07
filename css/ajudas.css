@@ -1,6 +1,7 @@
 /*---cores---*/
 :root {
     --cor-primaria: #00A3E0;
+    --cor-background: #f5f5f5;
     --cor-botao: #72c2df;
     --cor-hover-botao: #39aed8;
   }
@@ -11,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: var(--cor-background);
 }
 
 * {
