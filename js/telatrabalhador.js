@@ -7,6 +7,39 @@ if (voltar) {
   });
 }
 
+// comprar materiais
+var loja = document.querySelector('.divloja');
+
+if (loja) {
+  loja.addEventListener('click', function () {
+    location.href = "lojatrabalhador.html";
+  });
+}
+
+// icone seguranca
+var seguranca = document.getElementById('protecao');
+var menuseguranca = document.getElementById('menuprotecao');
+
+if (seguranca) {
+  seguranca.addEventListener('click', function () {
+    if(menuseguranca.style.display === "block"){
+      menuseguranca.style.display = "none";
+    }
+    else{
+      menuseguranca.style.display = "block";
+    }
+  });
+}
+
+// Fecha o menu da protecao ao clicar fora dele
+document.addEventListener('click', function(event) {
+  const isClickInsideProtecao = seguranca.contains(event.target) || menuseguranca.contains(event.target);
+  
+  if (!isClickInsideProtecao) {
+    menuseguranca.style.display = "none";
+  }
+});
+
 // icone chat
 var chat = document.getElementById('chat');
 
