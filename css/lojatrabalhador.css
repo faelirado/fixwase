@@ -156,6 +156,74 @@ body::-webkit-scrollbar {
     margin-left: 10px;
     transform: translate(20px,10px);
     cursor: pointer;
+    width: min-content;
+}
+
+#filtroMenu {
+    position: absolute;
+    background-color: #fff;
+    border: #9999997a 1px solid;
+    width: 250px;
+    height: 350px;
+    z-index: 1;
+    border-radius: 15px;
+    transform: translateY(-7px);
+    display: none;
+    margin-left: 10px;
+    overflow-x: scroll;
+}
+
+#filtroMenu::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+#filtroMenu input[type="checkbox"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 20%;
+    border: 1px solid #0093c9;
+    width: 15px;
+    height: 15px;
+    transform: translateY(4px);
+    transition: background-color 0.4s ease;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#filtroMenu label {
+    color: #0093c9;
+    margin-left: 10px;
+}
+
+#filtroMenu input[type="checkbox"]:checked {
+    content: "";
+    background: var(--cor-primaria);
+    width: 15px;
+    height: 15px;
+}
+
+#filtroMenu h3{
+    text-align: center;
+    color: #0093c9;
+}
+
+#filtroMenu #espacoConfirmar {
+    text-align: center;
+    width: 250px;
+    margin: 20px 0 10px 0;
+}
+
+#filtroMenu #filtroConfirmar {
+    text-align: center;
+    width: 50%;
+    height: 25px;
+    font-size: 14px;
+    background-color: var(--cor-primaria);
+    border: transparent;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
 }
 
 #barraProcurar {
