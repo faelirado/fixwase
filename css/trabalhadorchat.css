@@ -67,6 +67,7 @@ body {
 
 #mensagens #semMensagens {
     display: block;
+    color: #00000081;
 }
 
 #mensagem {

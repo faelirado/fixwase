@@ -242,7 +242,6 @@ body::-webkit-scrollbar {
 
 #barraProcurar:focus {
     outline: none; /* Remove o foco padrão */
-    border: 2px solid var(--cor-barra-procurar); /* Nova borda ao focar */
 }
 
 #botaoProcurar {
