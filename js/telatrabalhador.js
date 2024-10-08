@@ -16,6 +16,52 @@ if (loja) {
   });
 }
 
+/*---anotacao---*/
+
+// icone anotacoes
+var botaoanotacoes = document.getElementById('botaoanotacoes');
+var menuanotacoes = document.getElementById('menuanotacoes');
+
+if (botaoanotacoes) {
+  botaoanotacoes.addEventListener('click', function () {
+    if(menuanotacoes.style.display === "flex"){
+      menuanotacoes.style.display = "none";
+    }
+    else{
+      menuanotacoes.style.display = "flex";
+    }
+  });
+}
+
+// Fecha o menu de anotacoes ao clicar fora dele
+document.addEventListener('click', function(event) {
+  const isClickInsideAnotacoes = botaoanotacoes.contains(event.target) || menuanotacoes.contains(event.target);
+  
+  if (!isClickInsideAnotacoes) {
+    menuanotacoes.style.display = "none";
+  }
+});
+
+var anotacao = document.getElementById('anotacoes')
+
+const anotacaoArmazenada = localStorage.getItem('anotacao')
+
+if(anotacaoArmazenada){
+  anotacao.value = anotacaoArmazenada
+}
+
+function salvaranotacao(){
+
+  if(anotacao.value === "" || anotacao.value === null){
+    localStorage.removeItem('anotacao')
+  }
+  else {
+    localStorage.setItem('anotacao', anotacao.value)
+  }
+}
+
+/*---------------------------------------------------------------------*/
+
 // icone seguranca
 var seguranca = document.getElementById('protecao');
 var menuseguranca = document.getElementById('menuprotecao');
