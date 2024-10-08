@@ -32,7 +32,7 @@
 
             <div id="espacoPolicia">
 
-                <div id="quadrado" class="ligarPolicia">
+                <div id="quadradoProtecao" class="ligarPolicia">
                     <div id="numPolicia">190</div>
                     <a> Ligar para a policia</a>
                 </div>
@@ -41,7 +41,7 @@
 
             <div id="espacoGravarAudio">
 
-                <div id="quadrado" class="gravarAudio">
+                <div id="quadradoProtecao" class="gravarAudio">
                     <div id="iconGravarAudio"><i class='bx bxs-microphone'></i></div>
                     <span class="separadorGravar"></span>
                     <a> Gravar audio</a>
@@ -51,11 +51,20 @@
 
         </div>
 
+        <div id="menuanotacoes">
+
+            <textarea id="anotacoes" placeholder="Faça suas anotações aqui" onkeypress="salvaranotacao()"></textarea>
+            <button id="salvaranotacao" onclick="salvaranotacao()">Salvar</button>
+
+        </div>
+
         <div class="bottom-sheet">
             <div class="sheet-overlay"></div>
             <div class="content">
 
                 <p id="protecao"><i class='bx bxs-shield'></i></p>
+
+                <p id="botaoanotacoes"><i class='bx bxs-edit-alt'></i></p>
 
                 <p id="chat"><i class='bx bxs-conversation'></i></p>
                 <div class="header">
