@@ -9,11 +9,9 @@
 /*---------------------------------------------------------------------*/
 
 body {
-    display: flex;
-    justify-content: center;
-    text-align: center;
     padding-top: 60px;
     background-color: var(--cor-background);
+    overflow: hidden;
 }
 
 *{
@@ -41,9 +39,28 @@ body {
     color: var(--cor-primaria);
 }
 
+#curriculo {
+    display: flex;
+}
+
+#tela {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: all 1.5s ease;
+    text-align: center;
+}
+
+.tela1 {
+    display: block;
+}
+
+.tela2 {
+    display: none;
+}
+
 /*---form curriculo---*/
 
-.espacocurriculo {
+#espacocurriculo {
     width: 400px;
     height: 500px;
     background-color: #fff;
@@ -53,17 +70,17 @@ body {
     border: #cfe3eb 1px solid;
 }
 
-.espacocurriculo h1 {
-    margin-top: 15px;
-    font-size: 22px;
+#espacocurriculo h1 {
+    margin-top: 25px;
+    font-size: 25px;
     cursor: default
 }
 
 /*---entradas---*/
 
-.espacocurriculo .entrada {
+#espacocurriculo .entrada {
     width: 100%;
-    height: 40px;
+    height: 55px;
     margin: 10px 0;
 }
 
@@ -84,6 +101,26 @@ body {
     color: var(--cor-placeholder);
 }
 
+.espacocurriculo1 #nome{
+    margin-top: 70px;
+}
+
+.espacocurriculo1 .entrada{
+    margin-top: 10px;
+}
+
+.espacocurriculo2 input{
+    margin-top: 40px;
+}
+
+.espacocurriculo2 #experiencia {
+    margin-top: 50px;
+}
+
+.espacocurriculo2 #formacao {
+    margin-top: 5px;
+}
+
 .entradalonga textarea {
     width: 80%;
     height: 80px;
@@ -91,7 +128,7 @@ body {
     border: none;
     outline: none;
     border: 2px solid rgba(240, 240, 240, 0.8);
-    border-radius: 40px;
+    border-radius: 30px;
     padding-left: 20px;
     padding-top: 10px;
     margin-left: 20px;
@@ -105,26 +142,34 @@ body {
 
 /*--------------*/
 
-.btncurriculo {
+#btncurriculo {
     color: #fff;
     font-weight: bold;
-    margin-top: 10px;
     width: 270px;
     height: 50px;
     border-radius: 30px;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
+    font: 600;
     background-color: var(--cor-botao);
     cursor: pointer;
     transition: all 0.4s ease;
     box-shadow: #555 0 2px 2px 0;
 }
 
-.btncurriculo:hover {
+.btncurriculo1 {
+    margin-top: 90px;
+}
+
+.btncurriculo2 {
+    margin-top: 70px;
+}
+
+#btncurriculo:hover {
     background-color: var(--cor-hover-botao);
 }
 
-.btncurriculo:focus {
+#btncurriculo:active {
     box-shadow: #555 0 0 0 0;
 }
 
