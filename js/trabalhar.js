@@ -6,3 +6,33 @@ if (voltar) {
     location.href = "logado.html";
   });
 }
+
+/*confere se os inpputs estão preenchidos*/
+document.getElementById("curriculo").addEventListener("submit", function(event) {
+
+  const tela1 = document.querySelector('.tela1');
+  const tela2 = document.querySelector('.tela2');
+  
+  if(window.getComputedStyle(tela1).display === "block"){
+    event.preventDefault();
+  
+    var nomeInput = document.querySelector('#nome input')
+    var emailInput = document.querySelector('#email input')
+    var numtelInput = document.querySelector('#numtel input')
+
+    nomeInput.setCustomValidity("");
+    emailInput.setCustomValidity("");
+    numtelInput.setCustomValidity("");
+      
+
+    tela2.style.display = "block"
+    tela1.style.transform = "translateX(-150dvw)"
+    setTimeout(function() {
+        tela1.style.display = "none"
+    }, 1400);
+  }
+  else if(window.getComputedStyle(tela2).display === "block"){
+    console.log("enviado")
+  }
+
+});
