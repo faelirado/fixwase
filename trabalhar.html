@@ -16,36 +16,61 @@
     <div id="header">
         <i class='bx bx-arrow-back' id="backi"></i>
     </div>
+    
+    <div id="main">
+        
+        <form id="curriculo" action="trabalharenv.html">
+            
+            <div id="tela" class="tela1">
+                
+                <div id="espacocurriculo" class="espacocurriculo1">
+                    
+                    <h1><i class='bx bxs-briefcase'></i> Currículo</h1>
+                    
+                    <div id="nome" class="entrada">
+                        <input type="text" placeholder="Nome completo" autocomplete="name" required>
+                    </div>
+                    
+                    <div id="email" class="entrada">
+                        <input type="email" placeholder="E-mail" autocomplete="email" required>
+                    </div>
+                    
+                    <div id="numtel" class="entrada">
+                        <input type="tel" placeholder="Número de telefone" autocomplete="tel" required>
+                    </div>
+                    
+                    
+                    <button type="submit" id="btncurriculo" class="btncurriculo1"> <i class='bx bx-right-arrow-alt'></i> </button>
+                </div>
+                
+                
+            </div>
+            
+            <div id="tela" class="tela2">
+                
+                <div id="espacocurriculo" class="espacocurriculo2">
 
-    <div class="espacocurriculo">
-        <form action="trabalharenv.html">
-            <h1><i class='bx bxs-briefcase'></i> Currículo</h1>
+                    <h1><i class='bx bxs-briefcase'></i> Currículo</h1>
 
-            <div class="entrada">
-                <input type="text" placeholder="Nome completo" autocomplete="name" required>
+                    <div class="entrada">
+                        <input name="profissaoInput" placeholder="Profissão" autocomplete="work">
+                    </div>
+                    
+                    <div id="experiencia" class="entradalonga">
+                        <textarea name="experienciaInput" placeholder="Experiência" cols="2" rows="2"></textarea>
+                    </div>
+                    
+                    <div id="formacao" class="entradalonga">
+                        <textarea name="formacaoInput" placeholder="Formação" cols="2" rows="2"></textarea>
+                    </div>
+
+                    <button type="submit" id="btncurriculo" class="btncurriculo2"> <i class='bx bx-right-arrow-alt'></i> </button>
+                
+                </div>
+
+
             </div>
 
-            <div class="entrada">
-                <input type="email" placeholder="E-mail" autocomplete="email" required>
-            </div>
-
-            <div class="entrada">
-                <input type="tel" placeholder="Número de telefone" autocomplete="tel" required>
-            </div>
-
-            <div class="entrada">
-                <input type="text" placeholder="Profissão" autocomplete="work" required>
-            </div>
-
-            <div class="entradalonga">
-                <textarea placeholder="Experiência" cols="2" rows="2" required></textarea>
-            </div>
-
-            <div class="entradalonga">
-                <textarea placeholder="Formação" cols="2" rows="2" required></textarea>
-            </div>
-
-            <button type="submit" class="btncurriculo" href="#">Enviar Currículo</button>
         </form>
     </div>
     
