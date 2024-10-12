@@ -7,6 +7,15 @@ if (voltar) {
   });
 }
 
+// icone chat
+var chat = document.getElementById('chat');
+
+if (chat) {
+  chat.addEventListener('click', function () {
+    location.href = "trabalhadorchat.html";
+  });
+}
+
 // comprar materiais
 var loja = document.querySelector('.divloja');
 
@@ -25,10 +34,16 @@ var menuanotacoes = document.getElementById('menuanotacoes');
 if (botaoanotacoes) {
   botaoanotacoes.addEventListener('click', function () {
     if(menuanotacoes.style.display === "flex"){
-      menuanotacoes.style.display = "none";
+      menuanotacoes.style.left = "-50%";
+      setTimeout(()=> {
+        menuanotacoes.style.display = "none";
+    }, 100);
     }
     else{
       menuanotacoes.style.display = "flex";
+      setTimeout(()=> {
+        menuanotacoes.style.left = "50%";
+    }, 100);
     }
   });
 }
@@ -62,6 +77,8 @@ function salvaranotacao(){
 
 /*---------------------------------------------------------------------*/
 
+/*---menu de seguranca---*/
+
 // icone seguranca
 var seguranca = document.getElementById('protecao');
 var menuseguranca = document.getElementById('menuprotecao');
@@ -69,11 +86,17 @@ var menuseguranca = document.getElementById('menuprotecao');
 if (seguranca) {
   seguranca.addEventListener('click', function () {
     if(menuseguranca.style.display === "block"){
-      menuseguranca.style.display = "none";
-    }
-    else{
-      menuseguranca.style.display = "block";
-    }
+      menuseguranca.style.left = "-50%";
+      setTimeout(()=> {
+        menuseguranca.style.display = "none";
+    }, 100);
+  }
+  else{
+    menuseguranca.style.display = "block";
+    setTimeout(()=> {
+      menuseguranca.style.left = "50%";
+    }, 100);
+  }
   });
 }
 
@@ -82,18 +105,16 @@ document.addEventListener('click', function(event) {
   const isClickInsideProtecao = seguranca.contains(event.target) || menuseguranca.contains(event.target);
   
   if (!isClickInsideProtecao) {
-    menuseguranca.style.display = "none";
+    menuseguranca.style.left = "-50%";
+    setTimeout(()=> {
+      menuseguranca.style.display = "none";
+    }, 100);
   }
 });
 
-// icone chat
-var chat = document.getElementById('chat');
+/*---------------------------------------------------------------------*/
 
-if (chat) {
-  chat.addEventListener('click', function () {
-    location.href = "trabalhadorchat.html";
-  });
-}
+/*---menu baixo---*/
 
 // Select DOM elements
 const bottomSheet = document.querySelector(".bottom-sheet");
@@ -154,3 +175,5 @@ document.addEventListener("touchmove", dragging);
 document.addEventListener("touchend", dragStop);
 
 sheetOverlay.addEventListener("click", hideBottomSheet);
+
+/*---------------------------------------------------------------------*/
