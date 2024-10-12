@@ -4,6 +4,7 @@
     --cor-background: #f5f5f5;
     --cor-botao: #72c2df;
     --cor-hover-botao:#39aed8;
+    --botao-denunciar: #cf321d;
 }
 /*---------------------------------------------------------------------*/
 
@@ -145,12 +146,13 @@ body {
     background-color: #fff;
     border-radius: 15px;
     position: absolute;
-    left: 50%;
+    left: -50%;
     top: 50%;
     transform: translate(-50%,-50%);
     justify-content: center;
     align-items: center;
     display: none;
+    transition: 0.5s ease;
 }
 
 #anotacoes {
@@ -201,28 +203,37 @@ body {
 #menuprotecao {
     width: 300px;
     height: 350px;
-    border: #0076a1 1px solid;
-    background-color: var(--cor-primaria);
+    border: #00a7e4 1px solid;
+    background-color: #fff;
     border-radius: 15px;
     position: absolute;
-    left: 50%;
+    left: -50%;
     top: 50%;
     transform: translate(-50%,-50%);
     display: none;
+    z-index: 3;
+    transition: 0.5s ease;
 }
 
 #espacoPolicia {
-    display: flex; /* Alinha os botões lado a lado */
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    width: 100%; /* Faz o contêiner dos botões ocupar toda a largura disponível */
-    margin-top: 25px; /* Ajuste de margem se necessário */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
 }
 
 #espacoGravarAudio {
-    display: flex; /* Alinha os botões lado a lado */
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    width: 100%; /* Faz o contêiner dos botões ocupar toda a largura disponível */
-    margin-top: 15px; /* Ajuste de margem se necessário */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#espacoDenunciar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
 }
 
 #quadradoProtecao {
@@ -231,50 +242,69 @@ body {
     width: 165px;
     height: 45px;
     font-weight: bold;
-    color: #fff;
-    border: 2px solid #fff;
+    color: #00bbff;
+    border: 2px solid #00bbff;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 800;
     overflow: hidden;
 }
 
-#quadradoProtecao a {
-    margin-left: 5px;
+#espacoDenunciar #quadradoProtecao {
+    color: var(--botao-denunciar);
+    border: 2px solid var(--botao-denunciar);
 }
 
-.separadorGravar {
-    width: 2px; /* Largura do separador */
-    height: 45px; /* Altura do separador */
-    background-color: #fff; /* Cor do separador */
-    margin: 0 10px; /* Espaçamento ao redor do separador */
-    transform: translateX(7px);
+#espacoGravarAudio a {
+    margin-right: 10px;
+}
+
+#espacoPolicia #quadradoProtecao {
+    color: #1b5494;
+    border: 2px solid #1b5494;
 }
 
 #numPolicia {
-    color: #cf1f00;
+    color: #ff6348fa;
     font-weight: 800;
     font-size: 18px;
-    width: 35%;
+    width: 40%;
     height: 100%;
-    background-color: #fff;
+    background-color: #1b5494;
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+#iconDenunciar {
+    color: #fff;
+    font-weight: 900;
+    font-size: 25px;
+    width: 32%;
+    height: 100%;
+    background-color: var(--botao-denunciar);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transform: translateX(-20px);
+    margin-left: 5px;
 }
 
 #iconGravarAudio {
     color: #fff;
     font-weight: 900;
     font-size: 25px;
-    width: 8%;
+    width: 35%;
     height: 100%;
+    background-color: #00bbff;
     justify-content: center;
     align-items: center;
     display: flex;
+    transform: translateX(-10px);
+    margin-left: 5px;
 }
 
 /*---------------------------------------------------------------------*/
