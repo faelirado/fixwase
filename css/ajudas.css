@@ -70,7 +70,8 @@ body {
 }
 
 #ajuda {
-    margin-right: 50dvw;
+    margin-left: 50%;
+    transform: translateX(-50%);
     transition: all 1.5s ease;
 }
 
@@ -174,11 +175,11 @@ body {
     justify-content: center;
 }
 
-.btnenviar:hover {
+#btnenviar:hover {
     background-color: var(--cor-hover-botao);
 }
 
-.btnenviar:focus {
+#btnenviar:focus {
     box-shadow: #555 0 0 0 0;
 }
 

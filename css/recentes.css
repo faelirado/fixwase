@@ -65,40 +65,40 @@ body {
     text-align: center;
 }
 
+#servicosRecentes {
+    display: flex;
+    flex-direction: column;
+}
+
 #servicosRecentes #semRecentes {
     display: block;
     color: #00000081;
 }
 
 #servicoRecente {
-    margin-top: 65px;
-    position: absolute;
-    top: -10px;
+    margin-top: -15px;
     border-bottom: #9999997e 1px solid;
     width: 100dvw;
-    height: 70px;
+    height: 75px;
+    margin-bottom: 14px;
     display: none;
+    cursor: pointer;
 }
 
 #servicoRecente img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    position: absolute;
-    left: 20px;
-    top: 8px;
+    margin-top: 10px;
+    transform: translateX(-210px);
 }
 
 #servicoRecente #nomeTrabalhador {
-    position: absolute;
-    left: 90px;
-    top: 5px;
+    transform: translate(-93px,-82px);
 }
 
 #servicoRecente #avaliacaoServico {
-    position: absolute;
-    left: 90px;
-    top: 27px;
+    transform: translate(90px,-32px);
     text-align: left;
     font-size: 12px;
     color: #ffe81e;
@@ -111,17 +111,13 @@ body {
 }
 
 #dataServico {
-    position: absolute;
-    top: 5px;
-    right: 10px;
+    transform: translate(225px,-120px);
     color: #999;
     font-size: 12px;
 }
 
 #precoServico {
-    position: absolute;
-    top: 25px;
-    right: 10px;
+    transform: translate(220px,-125px);
     color: #222;
     font-size: 14px;
 }

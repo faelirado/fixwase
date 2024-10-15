@@ -83,8 +83,8 @@ body::-webkit-scrollbar {
     border-radius: 5px;
     padding: 5px 10px;
     z-index: 3;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .menuperfil::before { /*seta em cima do menu*/
@@ -390,6 +390,43 @@ h3 {
     border-radius: 10px;
     margin: 0 5px 0 5px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+#imgZoomAvaliacao {
+    background-color: #0000006c;
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    top: 0;
+    z-index: 9;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgZoomAvaliacao #fecharZoom {
+    top: -20px;
+    right: 10px;
+    position: absolute;
+    font-size: 25px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    cursor: pointer;
+}
+
+#imgZoomAvaliacao img {
+    width: max-content;
+    height: max-content;
+    max-height: 100dvh;
+    max-width: 100dvw;
+    width: 100%;
 }
 
 /*responsivo*/

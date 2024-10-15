@@ -35,11 +35,13 @@ document.getElementById("ajudas").addEventListener("submit", function(event) {
             
             
             ajuda2.style.display = "block"
-            ajuda1.style.transform = "translateX(-100dvw)"
+            ajuda1.style.transform = "translateX(-150dvw)"
+            ajuda2.style.transform = "translateX(100%)"
             setTimeout(function() {
                 ajuda1.style.display = "none"
+                ajuda2.style.transform = "translateX(-50%)"
             }, 1400);
-
+            
             setTimeout(function() {
                 valorOrcamento.style.display = 'block';
             }, 1401);

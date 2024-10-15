@@ -76,7 +76,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(1, 135, 184, 0.3);
+    border: 2px solid rgba(240, 240, 240, 0.9);
     border-radius: 40px;
     padding-left: 20px;
     margin-left: 20px;

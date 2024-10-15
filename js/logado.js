@@ -39,10 +39,17 @@ window.onload = function() {
     // Carregar email salvo
     const savedEmail = localStorage.getItem('valor-email');
     if (savedEmail === null || savedEmail === "") {
-
+        
         location.href = "index.html";
     }
+    const cargo = localStorage.getItem('cargo');
 
+    if (cargo === "trabalhador") {
+      
+        document.getElementById("pagTrabalhar").innerHTML = "<i class='bx bxs-briefcase-alt-2'></i> Trabalhar"
+        document.getElementById("pagTrabalhar").href = "telatrabalhador.html"
+    }
+    
     // Carregar imagem salva
     const imagemSalva = localStorage.getItem('image');
     if (imagemSalva) {
@@ -68,6 +75,16 @@ whazapi.addEventListener('click', function () {
 const userIcon = document.getElementById('user-icon');
 const menuPerfil = document.querySelector('.menuperfil');
 
+/*desloga da conta*/
+
+document.getElementById('deslogar').addEventListener('click', function() {
+    localStorage.setItem('image', '');
+    localStorage.setItem('valor-nome', '');
+    localStorage.setItem('valor-email', '');
+    localStorage.setItem('valor-senha', '');
+    localStorage.setItem('lembrar-login', '');
+});
+
 // menu perfil
 document.getElementById('user-icon').addEventListener('click', function() {
     if (menuPerfil.style.top === '50px') {
@@ -75,17 +92,6 @@ document.getElementById('user-icon').addEventListener('click', function() {
     } else {
         menuPerfil.style.top = '50px';
     }
-});
-
-/*desloga da conta*/
-
-// menu perfil
-document.getElementById('deslogar').addEventListener('click', function() {
-    localStorage.setItem('image', '');
-    localStorage.setItem('valor-nome', '');
-    localStorage.setItem('valor-email', '');
-    localStorage.setItem('valor-senha', '');
-    localStorage.setItem('lembrar-login', '');
 });
 
 // Fecha o menu do perfil ao clicar fora dele
@@ -134,4 +140,44 @@ container.addEventListener('click', function(event) {
     }
   }
 
+});
+
+// zoom imagens avaliacao
+
+const imagensAvaliacao = document.querySelectorAll("#imagensCliente img")
+const imagemAvaliacao = document.querySelector("#imgZoomAvaliacao img")
+const avaliacaoZoom = document.getElementById("imgZoomAvaliacao")
+
+var zoomAberto = false
+
+for(const imgAvaliacao of imagensAvaliacao){
+    
+    imgAvaliacao.addEventListener("click", ()=>{
+
+        avaliacaoZoom.style.display = "flex"
+        imagemAvaliacao.src = imgAvaliacao.src
+        zoomAberto = true
+    })
+}
+
+const fecharZoom = document.getElementById("fecharZoom")
+
+fecharZoom.addEventListener("click",()=>{
+
+    imagemAvaliacao.src = ""
+    avaliacaoZoom.style.display = "none"
+    zoomAberto = false
+})
+
+// Fecha o zoom da imagem ao clicar fora dele
+avaliacaoZoom.addEventListener('click', function(event) {
+
+    if(zoomAberto){
+        const isClickInsideImgZoom = imagemAvaliacao.contains(event.target);
+        
+        if (!isClickInsideImgZoom) {
+            avaliacaoZoom.style.display = "none"
+            zoomAberto = false
+        }
+    }
 });
