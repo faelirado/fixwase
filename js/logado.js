@@ -49,6 +49,10 @@ window.onload = function() {
         document.getElementById("pagTrabalhar").innerHTML = "<i class='bx bxs-briefcase-alt-2'></i> Trabalhar"
         document.getElementById("pagTrabalhar").href = "telatrabalhador.html"
     }
+    else{
+        document.getElementById("pagTrabalhar").innerHTML = "<i class='bx bxs-briefcase-alt-2'></i> Trabalhe Aqui"
+        document.getElementById("pagTrabalhar").href = "trabalhar.html"
+    }
     
     // Carregar imagem salva
     const imagemSalva = localStorage.getItem('image');
