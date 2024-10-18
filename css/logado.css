@@ -398,7 +398,7 @@ h3 {
     background-color: #0000006c;
     position: absolute;
     width: 100dvw;
-    height: 100vh;
+    height: 110dvh;
     top: 0;
     z-index: 9;
     /* display: flex; */
