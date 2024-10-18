@@ -181,9 +181,9 @@ body {
 /*---responsivo---*/
 
 /*---celular---*/
-@media screen and (max-width: 390px){ /*responsivo*/
-    .espacocurriculo {
-        margin: 0px 15px 0px 15px;
+@media screen and (max-width: 430px){ /*responsivo*/
+    #espacocurriculo {
+        width: 90dvw;
     }
 }
 

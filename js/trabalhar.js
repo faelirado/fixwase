@@ -28,6 +28,10 @@ document.getElementById("curriculo").addEventListener("submit", function(event) 
     tela2.style.display = "block"
     tela1.style.transform = "translateX(-150dvw)"
     tela2.style.transform = "translateX(100%)"
+    nomeInput.blur();
+    emailInput.blur();
+    numtelInput.blur();
+    
     setTimeout(function() {
         tela1.style.display = "none"
         tela2.style.transform = "translateX(-50%)"
