@@ -25,6 +25,26 @@ if (loja) {
   });
 }
 
+// converte m em km caso m passe de 1000
+var distanciaRota = document.getElementById("distanciaRota")
+var aux = distanciaRota.textContent.split("")
+var distancia = ""
+
+for(var item of aux){
+  if(!isNaN(item)){
+    distancia += item
+  }
+}
+
+distancia = +distancia
+
+
+if(distancia >= 1000){
+  distancia = distancia / 1000
+  distanciaRota.textContent = `${distancia}km`
+}
+
+
 /*---anotacao---*/
 
 // icone anotacoes
