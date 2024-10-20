@@ -1,0 +1,331 @@
+/*---cores---*/
+:root {
+    --cor-primaria: #00A3E0;
+    --cor-background: #f5f5f5;
+    --cor-botao: #72c2df;
+    --cor-hover-botao:#39aed8;
+}
+/*---------------------------------------------------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-background);
+    overflow: hidden;
+}
+
+*{
+    -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+    user-select: none; /* Desativa a seleção de texto */
+    -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+    -moz-user-select: none; /* Suporte para Firefox */
+    -ms-user-select: none; /* Suporte para navegadores Microsoft */
+    -webkit-user-drag: none;
+}
+
+input[type="password"]::-ms-reveal,  /* Para Internet Explorer/Edge antigo */
+input[type="password"]::-ms-clear,   /* Para Internet Explorer/Edge antigo */
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none;
+}
+
+/*---header---*/
+
+#header {
+    background-color: var(--cor-primaria);
+    border-bottom: #0d7ea7 1px solid;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    font-size: 24px;
+    height: 30px;
+}
+
+#backi {
+    position: absolute;
+    left: 20px;
+    top: -8px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+}
+
+#avaliacao {
+    position: absolute;
+    right: 60px;
+    top: -2px;
+    font-size: 25px;
+    color: #fff;
+    font-size: 18px;
+    background-color: #5fbbdd;
+    border: #99999980 1px solid;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+#avaliacao i {
+    font-size: 20px;
+    color: #fff;
+    transform: translateY(2px);
+}
+
+#config {
+    position: absolute;
+    right: 20px;
+    top: -8px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+}
+
+#header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*---------------------------------------------------------------------*/
+
+#main {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#espaco_perfil {
+  transition: all 1s ease;
+  transform: translateX(0);
+  position: absolute;
+  margin-left: 13px;
+}
+
+#espaco_pagamentos {
+  display: none;
+  transition: all 1s ease;
+  position: absolute;
+  width: 100%;
+  transform: translateX(100%);
+}
+
+.pagsConta {
+  background-color: var(--cor-hover-botao);
+  border: 0;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 7px;
+  margin: 20px 3px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#perfil {
+  background-color: var(--cor-primaria);
+  border: 1px #0d7ea7 solid;
+}
+
+/*---espaco perfil---*/
+
+.profile-picture {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden; /* Esconde partes que ultrapassarem os limites do contêiner */
+  border-radius: 50%;
+  border: #999 1px solid;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* Faz a imagem cobrir o contêiner */
+}
+
+.escolhefoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Efeito de blur no fundo */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease; /* Suaviza a transição */
+}
+
+#escolhefotolbl {
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+  border: #333 1px solid;
+  border-radius: 15px;
+  width: 84%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centraliza o texto */
+  margin: 0; /* Remove qualquer margem padrão */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Suaviza a transição */
+}
+
+#escolhefotolbl:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Fundo mais claro ao passar o mouse */
+}
+
+.file-input {
+  display: none;
+}
+
+.informacao input {
+  margin-top: 20px;
+  width: 300px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(220, 220, 220, 0.8);
+  border-radius: 40px;
+  padding-left: 20px;
+}
+
+#iconesinput {
+  font-size: 20px;
+  transform: translate(8px,3px);
+}
+
+.toggle-password {
+  position: absolute;
+  transform: translate(-35px,30px);
+  font-size: 13px;
+  cursor: pointer;
+  color: #72c2df;
+  visibility: hidden;
+}
+
+#informacoes_conta {
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+/*---botao de salvar---*/
+
+#savebtn {
+    outline: none;
+    text-align: center;
+    margin-top: 30px;
+    width: 270px;
+    height: 50px;
+    border-radius: 20px;
+    background: var(--cor-hover-botao);
+    border: 2px solid var(--cor-hover-botao);
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: #555 0 2px 2px 0;
+  }
+  #savebtn:hover {
+    background: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+  }
+  #savebtn:active {
+    letter-spacing: 2px;
+  }
+  #savebtn:after {
+    content: "Salvar Alterações";
+  }
+  .onclic {
+    height: 50px;
+    width: 50px;
+    border-color: #bbbbbb;
+    background-color: #fff;
+    border-radius: 40px;
+    border-width: 3px;
+    box-shadow: #555 0 0 0 0;
+    font-size: 0;
+    border-left-color: var(--cor-primaria);
+    animation: rotating 1.5s 0.25s linear infinite;
+  }
+  .onclic:after {
+    content: "";
+  }
+  .onclic:hover {
+    color: var(--cor-primaria);
+    background: white;
+  }
+  .validate {
+    font-size: 25px;
+    color: white;
+    background: var(--cor-primaria);
+  }
+  .validate:after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+  }
+  
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/*---------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------*/
+
+/*---espaco_pagamentos---*/
+
+.formasPagamento {
+  width: 100%;
+  height: 35px;
+  border-bottom: 1px solid #9999993a;
+  display: flex;
+  cursor: pointer;
+}
+
+#dinheiro {
+  border: 0;
+}
+
+.formasPagamento i {
+  color: var(--cor-primaria);
+  font-size: 20px;
+  transform: translateY(-2px);
+  margin: 0 10px;
+}
+
+.formasPagamento #seta {
+  color: var(--cor-primaria);
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+}
+
+#addPagamento {
+  border-radius: 20px;
+  border: 0;
+  padding: 10px;
+  padding-left: 30px;
+  margin-top: 10px;
+}
+
+#addPagamento i {
+  position: absolute;
+  transform: translate(-22px,-2px);
+  font-size: 18px;
+  font-weight: 600;
+}

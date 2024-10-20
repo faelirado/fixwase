@@ -53,7 +53,16 @@ body {
 #backi {
     position: absolute;
     left: 20px;
-    top: 13px;
+    top: -10px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+}
+
+#filtro {
+    position: absolute;
+    right: 40px;
+    top: -8px;
     cursor: pointer;
     font-size: 25px;
     color: #fff;
