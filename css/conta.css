@@ -58,7 +58,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
     font-size: 25px;
     color: #fff;
     font-size: 18px;
-    background-color: #5fbbdd;
+    background-color: #b8b8b841;
     border: #99999980 1px solid;
     padding: 2px 5px;
     border-radius: 5px;
@@ -115,6 +115,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
   margin: 20px 3px;
   font-size: 17px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 #perfil {
@@ -198,7 +199,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
 
 #iconesinput {
   font-size: 20px;
-  transform: translate(8px,28px);
+  transform: translate(6px,28px);
   position: absolute;
 }
 
@@ -295,6 +296,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
   border-bottom: 1px solid #9999993a;
   display: flex;
   cursor: pointer;
+  padding-top: 20px;
 }
 
 #dinheiro {
@@ -322,6 +324,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
   padding: 10px;
   padding-left: 30px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 #addPagamento i {
