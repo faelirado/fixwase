@@ -93,9 +93,9 @@ input[type="password"]::-webkit-textfield-decoration-container {
 
 #espaco_perfil {
   transition: all 1s ease;
-  transform: translateX(0);
+  transform: translateX(-50%);
   position: absolute;
-  margin-left: 13px;
+  margin-left: 50%;
 }
 
 #espaco_pagamentos {
@@ -198,7 +198,8 @@ input[type="password"]::-webkit-textfield-decoration-container {
 
 #iconesinput {
   font-size: 20px;
-  transform: translate(8px,3px);
+  transform: translate(8px,28px);
+  position: absolute;
 }
 
 .toggle-password {

@@ -30,7 +30,7 @@ if (perfil) {
     setTimeout(()=>{
       espaco_pagamentos.style.display = "none"
       // espaco_ajuda.style.display = "none"
-      espaco_perfil.style.transform = "translateX(0)"
+      espaco_perfil.style.transform = "translateX(-50%)"
     },1001)
   });
 }
@@ -45,7 +45,7 @@ if (pagamentos) {
     ajuda.style.border = 0
     ajuda.style.backgroundColor = "var(--cor-hover-botao)"
     
-    espaco_perfil.style.transform = "translateX(-120%)"
+    espaco_perfil.style.transform = "translateX(-200%)"
     perfil.style.border = 0
     perfil.style.backgroundColor = "var(--cor-hover-botao)"
     setTimeout(()=>{
