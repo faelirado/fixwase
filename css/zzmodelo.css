@@ -48,6 +48,16 @@ body {
     z-index: 3;
     transition: all .4s ease;
 }
+
+/* #backi {
+    position: absolute;
+    left: 20px;
+    top: -8px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+} */
+
 /*---------------------------------------------------------------------*/
 
 #main {

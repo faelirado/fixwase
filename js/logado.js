@@ -75,6 +75,13 @@ whazapi.addEventListener('click', function () {
     location.href = "https://wa.me/985979676"
 });
 
+//click instagram
+var instagrami = document.getElementById('instagram');
+
+instagrami.addEventListener('click', function () {
+    location.href = "https://www.instagram.com/faelirado/"
+});
+
 // elementos do menu do perfil
 const userIcon = document.getElementById('user-icon');
 const menuPerfil = document.querySelector('.menuperfil');

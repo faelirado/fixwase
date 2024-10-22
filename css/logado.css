@@ -68,6 +68,7 @@ body::-webkit-scrollbar {
     height: 35px;
     border-radius: 50%;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .menuperfil {
@@ -205,23 +206,41 @@ body::-webkit-scrollbar {
     background-color: var(--cor-sociais);
     bottom: 5dvh;
     border-radius: 10px;
-    width: 80px;
+    width: 120px;
     display: flex;
-    justify-content: space-around;
     border: #0d7ea7 1px solid;
+    padding: 1px;
 }
 
-#menu #whazap  {
+#menu #whazap {
     padding: 5px 0;
     color: #3be22c;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 30px;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 #menu #meugmail {
     color: #c54739;
     font-size: 30px;
+    margin-left: 5px;
+    background-color: #fff;
+    padding: 1px 2px;
+    border-radius: 25%;
+}
+
+#menu #instagram  {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    color: #fff;
+    border-radius: 25%;
+    font-size: 32px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    margin-left: 5px;
+    transform: translate(78px,5px);
 }
 
 #menu #copiarbotao {
@@ -408,6 +427,7 @@ h3 {
     margin: 0 5px 0 5px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    object-fit: cover;
 }
 
 #imgZoomAvaliacao {

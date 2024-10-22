@@ -13,6 +13,7 @@ const pagamentos = document.getElementById('pagamentos');
 const ajuda = document.getElementById('ajuda');
 const espaco_perfil = document.getElementById('espaco_perfil');
 const espaco_pagamentos = document.getElementById('espaco_pagamentos');
+const espaco_ajuda = document.getElementById('espaco_ajuda');
 
 if (perfil) {
   perfil.addEventListener('click', function () {
@@ -20,16 +21,16 @@ if (perfil) {
     perfil.style.border = "1px #0d7ea7 solid"
     perfil.style.backgroundColor = "var(--cor-hover-botao)"
 
-    // espaco_ajuda.style.transform = "translateX(240%)"
+    espaco_ajuda.style.transform = "translateX(240%)"
     ajuda.style.border = 0
-    ajuda.style.backgroundColor = "var(--cor-hover-botao)"
+    ajuda.style.backgroundColor = "var(--cor-btns-pags)"
 
     espaco_pagamentos.style.transform = "translateX(120%)"
     pagamentos.style.border = 0
-    pagamentos.style.backgroundColor = "var(--cor-hover-botao)"
+    pagamentos.style.backgroundColor = "var(--cor-btns-pags)"
     setTimeout(()=>{
       espaco_pagamentos.style.display = "none"
-      // espaco_ajuda.style.display = "none"
+      espaco_ajuda.style.display = "none"
       espaco_perfil.style.transform = "translateX(-50%)"
     },1001)
   });
@@ -41,16 +42,16 @@ if (pagamentos) {
     pagamentos.style.backgroundColor = "var(--cor-hover-botao)"
     espaco_pagamentos.style.display = "block"
 
-    // espaco_ajuda.style.transform = "translateX(120%)"
+    espaco_ajuda.style.transform = "translateX(120%)"
     ajuda.style.border = 0
-    ajuda.style.backgroundColor = "var(--cor-hover-botao)"
+    ajuda.style.backgroundColor = "var(--cor-btns-pags)"
     
     espaco_perfil.style.transform = "translateX(-200%)"
     perfil.style.border = 0
-    perfil.style.backgroundColor = "var(--cor-hover-botao)"
+    perfil.style.backgroundColor = "var(--cor-btns-pags)"
     setTimeout(()=>{
       espaco_perfil.style.display = "none"
-      // espaco_ajuda.style.display = "none"
+      espaco_ajuda.style.display = "none"
       espaco_pagamentos.style.transform = "translateX(0)"
     },1001)
   });
@@ -58,21 +59,21 @@ if (pagamentos) {
 
 if (ajuda) {
   ajuda.addEventListener('click', function () {
-    // espaco_ajuda.style.display = "block"
+    espaco_ajuda.style.display = "block"
     ajuda.style.backgroundColor = "var(--cor-hover-botao)"
     ajuda.style.border = "1px #0d7ea7 solid"
 
     espaco_perfil.style.transform = "translateX(-240%)"
     perfil.style.border = 0
-    perfil.style.backgroundColor = "var(--cor-hover-botao)"
+    perfil.style.backgroundColor = "var(--cor-btns-pags)"
     
     espaco_pagamentos.style.transform = "translateX(-120%)"
     pagamentos.style.border = 0
-    pagamentos.style.backgroundColor = "var(--cor-hover-botao)"
+    pagamentos.style.backgroundColor = "var(--cor-btns-pags)"
     setTimeout(()=>{
       espaco_perfil.style.display = "none"
       espaco_pagamentos.style.display = "none"
-      // espaco_ajuda.style.transform = "translateX(0)"
+      espaco_ajuda.style.transform = "translateX(0)"
     },1001)
   });
 }
