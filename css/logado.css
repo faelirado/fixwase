@@ -351,16 +351,31 @@ h3 {
 }
 
 #avaliacoes {
-    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: scroll;
+    gap: 5px;
+}
+
+#avaliacoes::-webkit-scrollbar {
+    display:none;
+}
+
+#avaliacao {
+    flex: 0 0 auto;
+    width: 450px;
     height: 240px;
-    border: #9999997e solid;
-    border-width: 1px 0px 1px 0px; /* Cima, Direita, Baixo, Esquerda */
-    margin-top: 10px;
+    border: #9999997e 1px solid;
+    margin: 10px 5px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 #avaliacao #fotoCliente {
-    position: absolute;
-    transform: translate(10px,-100px);
+    position: relative;
+    transform: translate(10px,10px);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -375,22 +390,23 @@ h3 {
 }
 
 #avaliacao #nomeCliente {
-    position: absolute;
-    transform: translate(70px,-105px);
+    position: relative;
+    transform: translate(70px, -45px);
     font-weight: bold;
 }
 
 #avaliacao #dataAvaliacao {
-    position: absolute;
-    transform: translateY(-100px);
-    right: 10px;
+    position: relative;
+    top: -80px;
+    transform: translateX(380px);
     color: #999;
     font-size: 12px;
 }
 
 #avaliacao #avaliacaoCliente {
-    position: absolute;
-    transform: translate(70px,-85px);
+    position: relative;
+    top: -90px;
+    transform: translateX(70px);
     font-weight: bold;
     color: #f3de1c;
     text-shadow: 
@@ -402,8 +418,10 @@ h3 {
 }
 
 #avaliacao #descricaoCliente {
-    position: absolute;
-    transform: translate(20px,-55px);
+    position: relative;
+    top: -90px;
+    transform: translateX(20px);
+    width: 85%;
 }
 
 #imagensCliente {
@@ -413,6 +431,8 @@ h3 {
     margin-left: 10px;
     display: flex;
     height: 130px;
+    position: relative;
+    top: -190px;
 }
 
 #imagensCliente::-webkit-scrollbar {
@@ -425,7 +445,7 @@ h3 {
     height: 120px;
     border-radius: 10px;
     margin: 0 5px 0 5px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     object-fit: cover;
 }
@@ -435,6 +455,7 @@ h3 {
     position: fixed;
     width: 100dvw;
     height: 110dvh;
+    left: 0;
     top: 0;
     z-index: 9;
     /* display: flex; */
@@ -469,14 +490,16 @@ h3 {
 /*responsivo*/
 
 /*---computador---*/
-@media (min-width: 768px) {
+@media (min-width: 480px) {
     #conteudo img {
         width: 500px;
     }
 }
 /*---celular---*/
-@media (max-width: 768px) {
-
+@media (max-width: 480px) {
+    #avaliacao {
+        width: 96%;
+    }
 }
 
 /*---------------------------------------------------------------------*/

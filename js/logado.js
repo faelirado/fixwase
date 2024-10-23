@@ -123,11 +123,19 @@ scrollServicos.addEventListener('wheel', function(event) {
 });
 
 // Scroll lateral avaliacao
-const scrollAvaliacoes = document.getElementById('imagensCliente');
+const scrollAvaliacoes = document.getElementById('avaliacoes');
 
 scrollAvaliacoes.addEventListener('wheel', function(event) {
     event.preventDefault();
     scrollAvaliacoes.scrollLeft += event.deltaY; // Move horizontal scroll by the amount of vertical scroll
+});
+
+// Scroll lateral imgs avaliacao
+const scrollImgAvaliacoes = document.getElementById('imagensCliente');
+
+scrollImgAvaliacoes.addEventListener('wheel', function(event) {
+    event.preventDefault();
+    scrollImgAvaliacoes.scrollLeft += event.deltaY; // Move horizontal scroll by the amount of vertical scroll
 });
 
 /*---click servicos---*/
