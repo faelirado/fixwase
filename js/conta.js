@@ -7,6 +7,15 @@ if (voltar) {
   });
 }
 
+/*botao config*/
+const config = document.getElementById('config');
+
+if (config) {
+  config.addEventListener('click', function () {
+    location.href = "contaconfig.html";
+  });
+}
+
 /*botoes pags*/
 const perfil = document.getElementById('perfil');
 const pagamentos = document.getElementById('pagamentos');
