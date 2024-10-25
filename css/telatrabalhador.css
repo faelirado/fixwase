@@ -306,7 +306,12 @@ body {
     border: 2px solid var(--botao-denunciar);
 }
 
+#espacoDenunciar a {
+    transform: translateX(-15px);
+}
+
 #espacoGravarAudio a {
+    transform: translateX(-5px);
     margin-right: 10px;
 }
 
@@ -316,7 +321,7 @@ body {
 }
 
 #numPolicia {
-    color: #ff6348fa;
+    color: #ff2600fa;
     font-weight: 800;
     font-size: 18px;
     width: 40%;
@@ -331,14 +336,15 @@ body {
     color: #fff;
     font-weight: 900;
     font-size: 25px;
-    width: 32%;
+    width: 35%;
     height: 100%;
     background-color: var(--botao-denunciar);
     justify-content: center;
     align-items: center;
     display: flex;
-    transform: translateX(-20px);
+    transform: translateX(-35px);
     margin-left: 5px;
+    padding-left: 30px;
 }
 
 #iconGravarAudio {
@@ -351,8 +357,9 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-    transform: translateX(-10px);
+    transform: translateX(-18px);
     margin-left: 5px;
+    padding-left: 10px;
 }
 
 /*---------------------------------------------------------------------*/
