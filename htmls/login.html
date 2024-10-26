@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00A3E0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a1f9ee299c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="shortcut icon" type="icone/ico" href="icone.ico">
+    <title>Login - FixWase</title>
+</head>
+
+<body >
+
+    <div id="header">
+        <i class='bx bx-arrow-back' id="backi"></i>
+    </div>
+
+    <div class="espacologin">
+        <form action="logado.html">
+            <h1><i class='bx bx-log-in'></i> Login na conta</h1>
+
+            <div class="entrada">
+                <input type="email" placeholder="E-mail" id="usuarioEmail" autocomplete="email" required>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="entrada">
+                <input type="password" placeholder="Senha" onclick="olharSenha()" id="usuarioSenha" autocomplete="current-password" required>
+                <span class="toggle-password" onclick="togglePassword()"> <i class="fa-solid fa-eye-slash" id="olho"></i> </span>
+                <i class='bx bx-key'></i>
+            </div>
+            
+            <div class="relembrar">
+                <label><input type="checkbox" id="checkLembrar"> Lembrar do login</label>
+
+                <a href="#">Esqueci a senha</a>
+            </div>
+
+            <button type="submit" class="btnlogin">Fazer login</button>
+        </form>
+
+        <label>Não tem uma conta? <a href="criarconta.html" class="semconta">Crie uma conta</a></label>
+
+        <script src="/js/login.js"></script>
+    </div>
+
+</body>
+
+</html>

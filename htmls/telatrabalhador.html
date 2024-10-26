@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00A3E0">
+    <link rel="shortcut icon" type="icone/ico" href="icone.ico">
+    <link rel="stylesheet" href="/css/telatrabalhador.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>FixWase</title>
+</head>
+
+<body>
+    
+    <img src="/imagens/teste_mapa.png" id="mapa">
+    
+    <div id="header">
+        <i class='bx bx-arrow-back' id="backi"></i>
+    </div>
+    
+    <div id="main">
+        
+        <div id="rota">
+            <p id="rotas"><i class='bx bxs-direction-right'></i></p>
+            <p id="distanciaRota">3860m</p>
+        </div>
+        <p id="audioRota"><i class='bx bxs-volume-full'></i></p>
+
+
+        <div id="serviconotif">
+            <img src="/imagens/user-default.jpg" id="fotoCliente">
+            <p id="nomeCliente">Nome do cliente</p>
+
+            <p id="descricaoCliente">1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2</p>
+            <button id="abrir"><i class='bx bx-check'></i></button>
+            <button id="fechar"><i class='bx bx-x' ></i></button>
+        </div>
+
+        <div id="menuprotecao">
+
+            <div id="espacoPolicia">
+
+                <div id="quadradoProtecao" class="ligarPolicia">
+                    <div id="numPolicia">190</div>
+                    <a> Ligar para a policia</a>
+                </div>
+
+            </div>
+            
+            <div id="espacoDenunciar">
+            
+                <div id="quadradoProtecao" class="Denunciar">
+                    <div id="iconDenunciar"><i class='bx bxs-flag-alt'></i></div>
+                                
+                        <a> Denunciar</a>
+                    </div>
+            
+            </div>
+
+            <div id="espacoGravarAudio">
+
+                <div id="quadradoProtecao" class="gravarAudio">
+                    <div id="iconGravarAudio"><i class='bx bxs-microphone'></i></div>
+                    
+                    <a> Gravar audio</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="menuanotacoes">
+
+            <textarea id="anotacoes" placeholder="Faça suas anotações aqui" onkeypress="salvaranotacao()"></textarea>
+            <button id="salvaranotacao" onclick="salvaranotacao()">Salvar</button>
+
+        </div>
+
+        <div class="bottom-sheet">
+            <div class="sheet-overlay"></div>
+            <div class="content">
+
+                <p id="protecao"><i class='bx bxs-shield'></i></p>
+
+                
+                <p id="botaoanotacoes"><i class='bx bxs-edit-alt'></i></p>
+                
+                <p id="chat"><i class='bx bxs-conversation'></i></p>
+
+                <p id="localAtual"><i class='bx bx-current-location'></i></p>
+
+
+                <div class="header">
+                    <div class="drag-icon"><span></span></div>
+                </div>
+
+                <div class="body">
+                    <div class="divloja"> <img src="/imagens/icon_loja.png"> <label>Comprar <br> Materiais</label></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/telatrabalhador.js"></script>
+
+</body>
+
+</html>

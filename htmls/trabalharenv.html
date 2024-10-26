@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00A3E0">
+    <link rel="shortcut icon" type="icone/ico" href="icone.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>FixWase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #00A3E0;
+            font-size: 28px;
+        }
+
+        #main {
+            margin: 20px auto;
+            width: 80%;
+            text-align: center;
+            cursor: default;
+            transform: translateY(150px);
+        }
+
+        #main i {
+            font-size: 50px;
+            color: #00A3E0;
+        }
+
+        #header i {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #00A3E0;
+        }
+
+        #header p {
+            position: absolute;
+            left: 45px;
+            top: 0px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #00A3E0;
+        }
+
+        * {
+            -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+            user-select: none; /* Desativa a seleção de texto */
+            -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+            -moz-user-select: none; /* Suporte para Firefox */
+            -ms-user-select: none; /* Suporte para navegadores Microsoft */
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <i class='bx bx-arrow-back' id="backi"></i>
+        <p>Voltar para o início</p>
+    </div>
+
+    <div id="main">
+        <h2>Currículo enviado</h2>
+        <p>Enviaremos o seu currículo para nossos especialistas, e enviaremos a você uma resposta.</p>
+        <i class='bx bxs-check-circle'></i>
+    </div>
+
+    <script src="/js/trabalharenv.js"></script>
+
+</body>
+
+</html>

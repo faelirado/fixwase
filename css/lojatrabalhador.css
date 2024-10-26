@@ -226,7 +226,7 @@ body::-webkit-scrollbar {
     font-weight: bold;
 }
 
-#barraProcurar {
+/* #barraProcurar {
     margin-top: 70px;
     position: absolute;
     top: 10px;
@@ -238,6 +238,27 @@ body::-webkit-scrollbar {
     padding-left: 10px;
     padding-right: 6%;
     border: 2px solid var(--cor-barra-procurar);
+} */
+
+#procurar {
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 70px;
+    top: 10px;
+    width: 75dvw;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#barraProcurar {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 6%;
+    border: 2px solid var(--cor-barra-procurar);
 }
 
 #barraProcurar:focus {
@@ -245,10 +266,9 @@ body::-webkit-scrollbar {
 }
 
 #botaoProcurar {
+    transform: translate(-4px,4px);
     width: 29px;
     height: 29px;
-    right: 8.9dvw;
-    top: 83.5px;
     border-radius: 15px;
     position: absolute;
     border: none;

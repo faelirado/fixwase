@@ -115,6 +115,10 @@ body::-webkit-scrollbar {
     transform: translateX(-50%);
 }
 
+.menuperfil .menuperfil-item:last-child{
+    color: #3be22c;
+}
+
 /*---------------------------------------------------------------------*/
 
 /*---------------------------------------------------------------------*/
@@ -400,7 +404,7 @@ h3 {
 #avaliacao #dataAvaliacao {
     position: relative;
     top: -80px;
-    transform: translateX(380px);
+    transform: translateX(85%);
     color: #999;
     font-size: 12px;
 }
@@ -492,7 +496,7 @@ h3 {
 /*responsivo*/
 
 /*---computador---*/
-@media (min-width: 500px) {
+@media (min-width: 550px) {
     #conteudo img {
         width: 500px;
     }
@@ -501,6 +505,12 @@ h3 {
 @media (max-width: 500px) {
     #avaliacao {
         width: 96%;
+        overflow: visible;
+        min-width: 350px;
+    }
+    
+    #avaliacao #dataAvaliacao {
+        color: transparent;
     }
 }
 

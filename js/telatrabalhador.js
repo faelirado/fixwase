@@ -12,7 +12,7 @@ var chat = document.getElementById('chat');
 
 if (chat) {
   chat.addEventListener('click', function () {
-    location.href = "trabalhadorchat.html";
+    location.href = "chats.html";
   });
 }
 
