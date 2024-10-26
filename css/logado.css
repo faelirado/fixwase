@@ -508,9 +508,22 @@ h3 {
         overflow: visible;
         min-width: 350px;
     }
-    
+}
+/*---celular---*/
+@media (max-width: 450px) {
     #avaliacao #dataAvaliacao {
-        color: transparent;
+        display: none;
+    }
+    #avaliacao #avaliacaoCliente {
+        top: -60px;
+    }
+    
+    #avaliacao #descricaoCliente {
+        top: -60px;
+    }
+    
+    #imagensCliente {
+        margin-top: 140px;
     }
 }
 
