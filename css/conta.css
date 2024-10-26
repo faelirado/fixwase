@@ -130,7 +130,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
   transition: all 1s ease;
   position: absolute;
   width: 100%;
-  transform: translateX(100%);
+  transform: translateX(120%);
 }
 
 #espaco_ajuda {
@@ -138,6 +138,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
   transition: all 1s ease;
   position: absolute;
   width: 100%;
+  transform: translateX(240%);
 }
 
 /*---------------------------------------------------------------------*/

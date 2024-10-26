@@ -18,6 +18,21 @@ menuButton.addEventListener('click', function () {
     }
 });
 
+//mostra o scroll das avaliações
+const avaliacoes = document.getElementById("avaliacoes")
+
+// avaliacoes.style.transform = "translateX(-50px)"
+avaliacoes.scrollTo({
+    left: avaliacoes.scrollLeft + 200, // Ajuste a quantidade de pixels que quer rolar
+    behavior: 'smooth' // Ativa a rolagem suave
+});
+setTimeout(()=>{
+    avaliacoes.scrollTo({
+        left: avaliacoes.scrollLeft - 200, // Ajuste a quantidade de pixels que quer rolar
+        behavior: 'smooth' // Ativa a rolagem suave
+    });
+},1000)
+
 // Fecha o menu do perfil ao clicar fora dele
 document.addEventListener('click', function(event) {
     const isClickInsideMenu = menuButton.contains(event.target) || menu.contains(event.target);

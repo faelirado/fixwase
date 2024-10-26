@@ -26,7 +26,7 @@ if (loja) {
 }
 
 // converte m em km caso m passe de 1000
-var distanciaRota = document.getElementById("distanciaRota")
+const distanciaRota = document.getElementById("distanciaRota")
 var aux = distanciaRota.textContent.split("")
 var distancia = ""
 
@@ -43,6 +43,40 @@ if(distancia >= 1000){
   distancia = distancia / 1000
   distanciaRota.textContent = `${distancia}km`
 }
+
+//trocar icones
+
+const rotas = document.querySelector("#rotas i")
+
+rotas.addEventListener("click",()=>{
+  if(rotas.className == "bx bxs-direction-right"){
+    rotas.className = "bx bxs-direction-left"
+    rotas.style.fontSize = "80px"
+  }
+  else if(rotas.className == "bx bxs-direction-left"){
+    rotas.className = "bx bxs-hand"
+    rotas.style.fontSize = "60px"
+  }
+  else{
+    rotas.className = "bx bxs-direction-right"
+    rotas.style.fontSize = "80px"
+
+  }
+})
+
+//trocar icones audio rota
+
+const audioRota = document.querySelector("#audioRota i")
+
+audioRota.addEventListener("click",()=>{
+  if(audioRota.className == "bx bxs-volume-full"){
+    audioRota.className = "bx bxs-volume-mute"
+  }
+  else{
+    audioRota.className = "bx bxs-volume-full"
+
+  }
+})
 
 
 /*---anotacao---*/
@@ -100,22 +134,25 @@ function salvaranotacao(){
 /*---menu de seguranca---*/
 
 // icone seguranca
-var seguranca = document.getElementById('protecao');
-var menuseguranca = document.getElementById('menuprotecao');
+const seguranca = document.getElementById('protecao');
+const menuseguranca = document.getElementById('menuprotecao');
 
 if (seguranca) {
   seguranca.addEventListener('click', function () {
     if(menuseguranca.style.display === "block"){
+      //fecha
       menuseguranca.style.left = "-50%";
       setTimeout(()=> {
         menuseguranca.style.display = "none";
     }, 100);
   }
   else{
+    //abrir
     menuseguranca.style.display = "block";
     setTimeout(()=> {
       menuseguranca.style.left = "50%";
     }, 100);
+    updateSheetHeight(2); // Fecha o menu
   }
   });
 }
@@ -162,6 +199,11 @@ const dragStart = (e) => {
     startHeight = parseInt(sheetContent.style.height) || 2;
     bottomSheet.classList.add("dragging");
     document.body.classList.add("no-scroll");
+
+    menuseguranca.style.left = "-50%";
+      setTimeout(()=> {
+        menuseguranca.style.display = "none";
+    }, 100);
 }
 
 // Calculates the new height for the sheet content and call the updateSheetHeight function

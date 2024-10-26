@@ -57,8 +57,9 @@ body {
     top: 13px;
     cursor: pointer;
     font-size: 25px;
-    color: #fff;
-    background-color: var(--cor-primaria);
+    font-weight: 600;
+    color: var(--cor-primaria);
+    background-color: #fff;
     border-radius: 50%;
     padding: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -75,6 +76,17 @@ body {
     flex: 1;
 }
 
+#rota {
+    background-color: #fff;
+    border-radius: 0% 0% 0% 90%;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
 #rotas {
     color: var(--cor-primaria);
     display: flex;
@@ -82,32 +94,44 @@ body {
     flex-direction: column;
     text-align: center;
     border-radius: 50%;
-    font-size: 50px;
-    height: 50px;
-    width: 50px;
+    font-size: 80px;
+    height: 80px;
+    width: 80px;
     position: fixed;
     right: 10px;
-    top: -30px;
+    top: -75px;
     z-index: 2;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    background-color: #fff;
 }
 
 #distanciaRota {
     color: var(--cor-primaria);
     text-align: center;
     border-radius: 50%;
-    font-size: 16px;
+    font-size: 20px;
     position: fixed;
     right: 10px;
-    top: 55px;
+    top: 65px;
     z-index: 2;
-    text-shadow: 
-    0 1px 1px rgba(0, 0, 0, 0.5), /* Sombra para a esquerda e para cima */
-    0 1px 1px rgba(0, 0, 0, 0.5),  /* Sombra para a direita e para cima */
-    0 1px 1px rgba(0, 0, 0, 0.5),  /* Sombra para a esquerda e para baixo */
-    0 1px 1px rgba(0, 0, 0, 0.5);   /* Sombra para a direita e para baixo */
-    ;
+    font-weight: bold
+}
+
+#audioRota {
+    color: #333;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 5px;
+    top: 120px;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
 }
 
 
@@ -441,27 +465,6 @@ body {
     cursor: pointer;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
-
-#audioRota {
-    color: #333;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 30px;
-    height: 40px;
-    width: 40px;
-    position: fixed;
-    right: 10px;
-    top: 65px;
-    transform: translateY(-260px);
-    z-index: 2;
-    cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    background-color: #fff;
-}
-
 
 /*---menu embaixo---*/
 
