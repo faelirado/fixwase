@@ -1,3 +1,4 @@
+//volta a pag
 const voltar = document.getElementById('backi');
 
 if (voltar) {
@@ -5,6 +6,23 @@ if (voltar) {
     window.history.back();
   });
 }
+
+//clique em alguma mensagem
+const mensagens = document.querySelectorAll('#mensagem');
+
+mensagens.addEventListener('click', function (mensagem) {
+  localStorage.setItem("nomeConversa",mensagem.getElementById("nomeCliente").textContent) //nao ta funcionando !!!
+  window.location.href = "conversa.html"
+});
+
+// if (mensagens) {
+//   for(var mensagem of mensagens){
+//     mensagem.addEventListener('click', function () {
+//       localStorage.setItem("nomeConversa",mensagem.getElementById("nomeCliente").textContent)
+//       window.location.href = "conversa.html"
+//     });
+//   }
+// }
 
 //testa as mensagens
 
@@ -28,6 +46,8 @@ if (titulo) {
     }
   });
 }
+
+// nao ta indo por causa do erro das msg
 
 //mais notif que 99 fica 99+
 const qntNotifs = document.querySelectorAll("#qntNotifs")

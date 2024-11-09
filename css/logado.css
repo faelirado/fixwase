@@ -342,8 +342,8 @@ body::-webkit-scrollbar {
     cursor: pointer;
     font-size: 22px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    bottom: 20px;
-    right: 15px;
+    bottom: 10px;
+    left: 15px;
     position: absolute;
 }
 

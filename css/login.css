@@ -116,7 +116,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
     margin-right: 3px;
 }
 .relembrar label {
-    color: #90c3d6;
+    color: rgb(144, 195, 214);
 }
 
 .relembrar a {

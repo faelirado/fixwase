@@ -143,7 +143,6 @@ document.addEventListener('click', function(event) {
 
 
 //-----------------------------------------------
-const salvarAlt = document.getElementById('savebtn');
 
 // Seleciona o input de arquivo e a imagem de usuário
 const fileInput = document.getElementById('fileInput');
@@ -160,62 +159,64 @@ const senhaInput = document.getElementById('usuarioSenha');
 
 // Carregar imagem e nome do Local Storage, se existirem
 window.onload = function() {
-
-    // Carregar imagem salva
-    const imagemSalva = localStorage.getItem('image');
-    if (imagemSalva) {
-      
-        imagemUser.src = imagemSalva;
-    }
-
-    // Carregar nome salvo
-    const savedNome = localStorage.getItem('valor-nome');
-    if (savedNome) {
-
-        nomeInput.value = savedNome;
-    }
-
-    // Carregar email salvo
-    const savedEmail = localStorage.getItem('valor-email');
-    if (savedEmail) {
-
-        emailInput.value = savedEmail;
-    }
-
-    // Carregar email salvo
-    const savedSenha = localStorage.getItem('valor-senha');
-    if (savedSenha) {
-
-        senhaInput.value = savedSenha;
-    }
+  
+  // Carregar imagem salva
+  const imagemSalva = localStorage.getItem('image');
+  if (imagemSalva) {
+    
+    imagemUser.src = imagemSalva;
+  }
+  
+  // Carregar nome salvo
+  const savedNome = localStorage.getItem('valor-nome');
+  if (savedNome) {
+    
+    nomeInput.value = savedNome;
+  }
+  
+  // Carregar email salvo
+  const savedEmail = localStorage.getItem('valor-email');
+  if (savedEmail) {
+    
+    emailInput.value = savedEmail;
+  }
+  
+  // Carregar email salvo
+  const savedSenha = localStorage.getItem('valor-senha');
+  if (savedSenha) {
+    
+    senhaInput.value = savedSenha;
+  }
 };
 
 // Manipula a seleção de uma nova imagem
 fileInput.addEventListener('change', function(event) {
+  
+  const file = event.target.files[0];
+  if (file && file.type.startsWith('image/')) {
     
-    const file = event.target.files[0];
-    if (file && file.type.startsWith('image/')) {
-
-      //tira o escolhe perfil depois de escolher
-      const escolhefoto = document.querySelector('.escolhefoto');
-      escolhefoto.style.display = 'none';
-        
-      const reader = new FileReader();
-      reader.onload = function(e) {
-            
-        const imageURL = e.target.result;
-        imagemUser.src = imageURL;
-            
-            // Salva a imagem no Local Storage ao clicar no botão
-            salvarAlt.addEventListener('click', () => {
-                localStorage.setItem('image', imageURL);
-            });
-        };
-        reader.readAsDataURL(file);
-    } else {
-        alert('Erro ao selecionar foto, selecione um arquivo de imagem.');
-    }
+    //tira o escolhe perfil depois de escolher
+    const escolhefoto = document.querySelector('.escolhefoto');
+    escolhefoto.style.display = 'none';
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      
+      const imageURL = e.target.result;
+      imagemUser.src = imageURL;
+      
+      // Salva a imagem no Local Storage ao clicar no botão
+      salvarAlt.addEventListener('click', () => {
+        localStorage.setItem('image', imageURL);
+      });
+    };
+    reader.readAsDataURL(file);
+  } else {
+    alert('Erro ao selecionar foto, selecione um arquivo de imagem.');
+  }
 });
+
+const salvarAlt = document.getElementById('savebtn');
 
 // Salva o nome e email no Local Storage ao clicar no botão e animação de salvar
 

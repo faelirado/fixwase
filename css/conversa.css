@@ -24,6 +24,8 @@ body {
 /*---header---*/
 
 #header {
+    background-color: var(--cor-primaria);
+    border-bottom: #0d7ea7 1px solid;
     color: #fff;
     padding: 12px;
     text-align: center;
@@ -42,83 +44,26 @@ body {
 
 .titulo {
     position: absolute;
-    color: var(--cor-primaria);
+    left: 60px;
     z-index: 3;
-    top:-5px;
-    left: 50%;
-    transform: translateX(-50%);
+    transition: all .4s ease;
 }
 
-#backi {
+/* #backi {
     position: absolute;
     left: 20px;
     top: -8px;
     cursor: pointer;
     font-size: 25px;
-    color: var(--cor-primaria);
-    text-shadow: 
-    0px 0px 0px transparent, /* Sombra para a esquerda e para cima */
-    0px 0px 0px transparent,  /* Sombra para a direita e para cima */
-    -1px 1px 1px #616161,  /* Sombra para a esquerda e para baixo */
-    1px 1px 1px #616161;   /* Sombra para a direita e para baixo */
-    ;
-}
+    color: #fff;
+} */
 
 /*---------------------------------------------------------------------*/
 
 #main {
-    margin-top: 55px;
+    margin: 5px 20px auto;
+    margin-top: 70px;
     text-align: center;
-}
-
-.tiposConfig {
-    width: 100%;
-    height: 35px;
-    border-bottom: 1px solid #9999993a;
-    display: flex;
-    cursor: pointer;
-    font-size: 15px;
-    padding-top: 20px;
-    padding-left: 15px;
-    transition: background-color 0.5s ease;
-    font-weight: bold;
-    color: var(--cor-primaria);
-}
-
-#main .tiposConfig:last-child {
-    border-bottom: 0;
-}
-
-#sairConta {
-    color: #df0d0d;
-}
-
-.tiposConfig #iconsConfig {
-    color: var(--cor-primaria);
-    margin-right: 10px;
-    font-size: 20px;
-    transform: translateY(-2px);
-}
-
-#sairConta #iconsConfig {
-    color: #df0d0d;
-}
-
-.tiposConfig:active {
-    background-color: #99999928;
-}
-  
-.tiposConfig #seta {
-    color: var(--cor-primaria);
-    font-size: 20px;
-    position: absolute;
-    right: 10px;
-    font-size: 25px;
-    transform: translateY(-3px);
-}
-  
-#sairConta #seta {
-    color: #df0d0d;
 }
 
 /*responsivo*/

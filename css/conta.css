@@ -37,9 +37,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
 /*---header---*/
 
 #header {
-    background-color: var(--cor-primaria);
-    border-bottom: #0d7ea7 1px solid;
-    color: #fff;
+    color: var(--cor-primaria);
     padding: 12px;
     text-align: center;
     font-size: 24px;
@@ -55,7 +53,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
     top: -8px;
     cursor: pointer;
     font-size: 25px;
-    color: #fff;
+    color: var(--cor-primaria);
 }
 
 #avaliacao {
@@ -63,17 +61,14 @@ input[type="password"]::-webkit-textfield-decoration-container {
     right: 80px;
     top: -3px;
     font-size: 25px;
-    color: #fff;
+    color: #ffad14;
     font-size: 18px;
-    background-color: #b8b8b841;
-    border: #99999980 1px solid;
     padding: 2px 5px;
-    border-radius: 5px;
 }
 
 #avaliacao i {
     font-size: 20px;
-    color: #fff;
+    color: #ffad14;
     transform: translateY(2px);
 }
 
@@ -83,12 +78,12 @@ input[type="password"]::-webkit-textfield-decoration-container {
     top: -8px;
     cursor: pointer;
     font-size: 25px;
-    color: #fff;
+    color: var(--cor-primaria);
 }
 
 #header a {
     text-decoration: none;
-    color: #fff;
+    color: var(--cor-primaria);
 }
 
 /*---------------------------------------------------------------------*/
@@ -169,7 +164,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px); /* Efeito de blur no fundo */
   display: none;
   flex-direction: column;
@@ -239,7 +234,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
 
 /*---botao de salvar---*/
 
-#savebtn {
+form div button {
     outline: none;
     text-align: center;
     margin-top: 30px;
@@ -257,14 +252,14 @@ input[type="password"]::-webkit-textfield-decoration-container {
     transition: all 0.25s ease;
     box-shadow: #555 0 2px 2px 0;
   }
-  #savebtn:hover {
+  form div button:hover {
     background: var(--cor-primaria);
     border: 2px solid var(--cor-primaria);
   }
-  #savebtn:active {
+  form div button:active {
     letter-spacing: 2px;
   }
-  #savebtn:after {
+  form div button:after {
     content: "Salvar Alterações";
   }
   .onclic {

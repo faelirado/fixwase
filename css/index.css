@@ -1,10 +1,10 @@
 /*---cores---*/
 :root {
-    --cor-primaria: #00A3E0;
+    --cor-primaria: rgb(0, 163, 224);
     --cor-background: #f5f5f5;
-    --cor-botao: #72c2df;
+    --cor-botao: rgb(114, 194, 223);
     --cor-hover-botao: #39aed8;
-    --cor-placeholder: #90bbca;
+    --cor-placeholder: rgb(144, 187, 202);
 }
 /*---------------------------------------------------------------------*/
   
@@ -16,24 +16,24 @@ body {
     background-color: var(--cor-background);
 }
   
-  *{
-    -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
-    user-select: none; /* Desativa a seleção de texto */
-    -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
-    -moz-user-select: none; /* Suporte para Firefox */
-    -ms-user-select: none; /* Suporte para navegadores Microsoft */
-    -webkit-user-drag: none;
-  }
+*{
+  -webkit-tap-highlight-color:transparent; /*tira o click  do mobile*/
+  user-select: none; /* Desativa a seleção de texto */
+  -webkit-user-select: none; /* Suporte para navegadores baseados em WebKit */
+  -moz-user-select: none; /* Suporte para Firefox */
+  -ms-user-select: none; /* Suporte para navegadores Microsoft */
+  -webkit-user-drag: none;
+}
   
-  .espacologin {
-    width: 390px;
-    height: 350px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    color: var(--cor-primaria);
-    position: relative;
-    border: #cfe3eb 1px solid;
-  }
+.espacologin {
+  width: 390px;
+  height: 350px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  color: var(--cor-primaria);
+  position: relative;
+  border: rgb(207, 227, 235) 1px solid;
+}
   
 .espacologin h1 {
   margin-top: 5px;
@@ -41,171 +41,176 @@ body {
   font-family: Arial, sans-serif;
 }
   
-  * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.espacologin .entrada {
+  width: 100%;
+  height: 40px;
+  margin: 15px 0;
+  margin-top: 5px;
+}
+
+.entrada input {
+  width: 70%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(1, 135, 184, 0.3);
+  border-radius: 40px;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.entrada input::placeholder {
+  color: var(--cor-placeholder);
+  font-size: 12px;
+}
+
+.entrada i {
+  position: absolute;
+  right: 28px;
+  transform: translateY(80%);
+}
+
+.espacologin .btncadastrar {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 270px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  background-color: var(--cor-botao);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: #555 0 2px 2px 0;
+}
+
+.btncadastrar:hover {
+  background-color: var(--cor-hover-botao);
+}
+
+.btncadastrar:focus {
+  box-shadow: #555 0 0 0 0;
+}
+
+.separador {
+  width: 3px; /* Largura do separador */
+  height: 45px; /* Altura do separador */
+  background-color: rgb(144, 195, 214); /* Cor do separador */
+  margin: 0 10px; /* Espaçamento ao redor do separador */
+  transform: translateX(10px);
+}
+
+.separacaoformas{
+  margin-top: 15px;
+  color: var(--cor-primaria);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.separacaoformas::before,
+.separacaoformas::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid rgba(114, 194, 223, 0.5); /* Cor e estilo da linha */
+  margin: 0 30px;
+}
+
+.separacaoformas::before {
+  margin-right: 10px; /* Espaço à direita da linha antes do texto */
+}
+
+.separacaoformas::after {
+  margin-left: 10px; /* Espaço à esquerda da linha depois do texto */
+}
+
+.forma {
+  border-radius: 15px;
+  background-color: transparent;
+  width: 165px;
+  height: 45px;
+  font-weight: bold;
+  color: #90c3d6;
+  border: 2px solid rgb(144, 195, 214);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#espacoformas {
+  display: flex; /* Alinha os botões lado a lado */
+  gap: 13px; /* Espaço entre os botões */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  width: 100%; /* Faz o contêiner dos botões ocupar toda a largura disponível */
+  margin-top: 15px; /* Ajuste de margem se necessário */
+}
+
+.icone_google {
+  width: 25px;
+  transform: translateX(10px);
+}
+
+.icone_apple {
+  width: 25px;
+  transform: translateX(10px);
+}
+
+#formagoogle {
+  display: inline-flex;
+  align-items: center;
+}
+
+.comconta {
+  text-decoration: none;
+  color: var(--cor-botao);
+}
+
+.comconta:hover {
+  text-decoration: underline;
+  color: var(--cor-hover-botao);
+}
+
+/*---responsivo---*/
+
+/*---celular---*/
+@media screen and (max-width: 390px){ /*responsivo*/
+  .espacologin {
+      margin: 0px 15px 0px 15px;
   }
-  
-  .espacologin .entrada {
-    width: 100%;
-    height: 40px;
-    margin: 15px 0;
-    margin-top: 5px;
-  }
-  
-  .entrada input {
-    width: 70%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(1, 135, 184, 0.3);
-    border-radius: 40px;
-    padding-left: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  
-  .entrada input::placeholder {
-    color: var(--cor-placeholder);
-    font-size: 12px;
-  }
-  
-  .entrada i {
-    position: absolute;
-    right: 28px;
-    transform: translateY(80%);
-  }
-  
-  #espacoformas {
-    display: flex; /* Alinha os botões lado a lado */
-    gap: 13px; /* Espaço entre os botões */
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    width: 100%; /* Faz o contêiner dos botões ocupar toda a largura disponível */
-    margin-top: 15px; /* Ajuste de margem se necessário */
-  }
-  
+
   .forma {
-    border-radius: 15px;
-    background-color: transparent;
-    width: 165px;
-    height: 45px;
-    font-weight: bold;
-    color: #90c3d6;
-    border: 2px solid #90c3d6;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-weight: bold;
+      width: 140px;
+      height: 38px;
+      font-size: 11px;
   }
-  
+
   .separador {
-    width: 3px; /* Largura do separador */
-    height: 45px; /* Altura do separador */
-    background-color: #90c3d6; /* Cor do separador */
-    margin: 0 10px; /* Espaçamento ao redor do separador */
-    transform: translateX(10px);
+      width: 5px; /* Largura do separador */
+      height: 38px; /* Altura do separador */
   }
-  
-  .separacaoformas{
-    margin-top: 15px;
-    color: var(--cor-primaria);
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 10px;
+
+  .espacologin .entrada {
+      transform: translateX(-5px);
   }
-  
-  .separacaoformas::before,
-  .separacaoformas::after {
-    content: '';
-    flex: 1;
-    border-bottom: 2px solid rgba(114, 194, 223, 0.5); /* Cor e estilo da linha */
-    margin: 0 30px;
+
+  #espacoformas {
+      margin-top: 10px; /* Ajuste de margem se necessário */
+      margin-bottom: 5px;
   }
-  
-  .separacaoformas::before {
-    margin-right: 10px; /* Espaço à direita da linha antes do texto */
-  }
-  
-  .separacaoformas::after {
-    margin-left: 10px; /* Espaço à esquerda da linha depois do texto */
-  }
-  
-  .icone_google {
-    width: 25px;
-    transform: translateX(10px);
-  }
-  
-  #formagoogle {
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .espacologin .btncadastrar {
-    color: #fff;
-    font-weight: bold;
-    margin-top: 10px;
-    width: 270px;
-    height: 50px;
-    border-radius: 20px;
-    border: none;
-    font-size: 20px;
-    background-color: var(--cor-botao);
-    cursor: pointer;
-    transition: all 0.4s ease;
-    box-shadow: #555 0 2px 2px 0;
-  }
-  
-  .btncadastrar:hover {
-    background-color: var(--cor-hover-botao);
-  }
-  
-  .btncadastrar:focus {
-    box-shadow: #555 0 0 0 0;
-  }
-  
-  .comconta {
-    text-decoration: none;
-    color: var(--cor-botao);
-  }
-  
-  .comconta:hover {
-    text-decoration: underline;
-    color: var(--cor-hover-botao);
-  }
-  
-  /*---responsivo---*/
-  
-  /*---celular---*/
-  @media screen and (max-width: 390px){ /*responsivo*/
-    .espacologin {
-        margin: 0px 15px 0px 15px;
-    }
-  
-    .forma {
-        width: 140px;
-        height: 38px;
-        font-size: 11px;
-    }
-  
-    .separador {
-        width: 5px; /* Largura do separador */
-        height: 38px; /* Altura do separador */
-    }
-  
-    .espacologin .entrada {
-        transform: translateX(-5px);
-    }
-  
-    #espacoformas {
-        margin-top: 10px; /* Ajuste de margem se necessário */
-        margin-bottom: 5px;
-    }
-  }
-  
-  /*---------------------------------------------------------------------*/
+}
+
+/*---------------------------------------------------------------------*/

@@ -56,7 +56,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
     cursor: default;
 }
 
-* {
+* { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
