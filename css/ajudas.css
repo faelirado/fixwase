@@ -4,6 +4,7 @@
     --cor-background: #f5f5f5;
     --cor-botao: #72c2df;
     --cor-hover-botao: #39aed8;
+    --cor-barra-procurar: #51b0d3;
   }
 /*---------------------------------------------------------------------*/
 
@@ -57,8 +58,48 @@ body {
 
 /*---------------------------------------------------------------------*/
 
+/*---procurar---*/
+
+#procurar {
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    top: -10px;
+    width: 75dvw;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#barraProcurar {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 6%;
+    border: 2px solid var(--cor-barra-procurar);
+}
+
+#barraProcurar:focus {
+    outline: none; /* Remove o foco padrão */
+}
+
+#botaoProcurar {
+    transform: translate(-4px,4px);
+    width: 29px;
+    height: 29px;
+    border-radius: 15px;
+    position: absolute;
+    border: none;
+    font-size: 16px;
+    background-color: var(--cor-barra-procurar);
+    color: #fff;
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------------------*/
+
 #main {
-    margin: 20px auto;
     width: 50dvh;
     text-align: center;
 }
@@ -67,15 +108,18 @@ body {
 
 #ajudas {
     display: flex;
-    width: 100%;
+    width: 100dvw;
     overflow: hidden;
     height: 100dvh;
 }
 
 #ajuda {
-    margin-left: 50%;
-    transform: translateX(-50%);
     transition: all 1.5s ease;
+}
+
+.ajuda1 {
+    /* display: none; */
+    margin-top: 30px;
 }
 
 .ajuda2 {
@@ -84,6 +128,69 @@ body {
 
 .ajuda2 p {
     font-weight: bold;
+}
+
+#espacoajuda {
+    width: 100dvw;
+    height: 82.5dvh;
+    border-bottom: 1px solid #999;
+    overflow-y: auto;
+}
+
+.espacoajuda1 {
+    height: 75.5dvh !important;
+}
+
+.espacoajuda1 h3 {
+    padding: 0 10px;
+}
+
+#espacoajuda::-webkit-scrollbar {
+    display: none;
+}
+
+#escolherajuda {
+    border-bottom: 1px solid #9999993a;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+#escolherajuda:active {
+    background-color: #99999928;
+}
+
+#espacoajuda #escolherajuda:last-child {
+    border-bottom: 0;
+}
+
+#escolherajuda input[type="checkbox"] {
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 20%;
+    border: 1px solid #555;
+    width: 15px;
+    height: 15px;
+    transform: translateY(4px);
+    margin-left: 10px;
+    transition: background-color 0.4s ease;
+}
+
+#escolherajuda input[type="checkbox"]:checked {
+    content: "";
+    background: var(--cor-primaria);
+    width: 15px;
+    height: 15px;
+}
+
+#escolherajuda label{
+    text-wrap: nowrap;
+    cursor: pointer;
 }
 
 #rangeorcamento {
@@ -105,59 +212,45 @@ body {
     width: 13px;
     height: 13px;
     background: var(--cor-primaria); /* Cor do botão do slider */
+    transform: translateY(-1px);
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 #valororcamento {
-    width: min-content;
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
+    width: fit-content;
     color: #222;
     font-size: 29px;
     font-weight: bold;
     border-bottom: #3c6b7c 1px solid;
     padding: 3px;
+}
+
+.espacoajuda2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#escolherorcamento {
+    text-align: center;
+}
+
+#valoresOrcamento #min{
+    position: absolute;
+    left: 8dvw;
     display: none;
 }
 
-#escolherajuda input[type="checkbox"] {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border-radius: 20%;
-    border: 1px solid #555;
-    width: 15px;
-    height: 15px;
-    transform: translateY(4px);
-    transition: background-color 0.4s ease;
-}
-
-#escolherajuda input[type="checkbox"]:checked {
-    content: "";
-    background: var(--cor-primaria);
-    width: 15px;
-    height: 15px;
-}
-
-#escolherajuda {
-    display: flex;
-    margin-left: 10px;
-}
-
-#escolherajuda label{
-    text-wrap: nowrap;
-}
-
-#espacoajuda {
-    margin-top: 50px;
-    width: 330px;
-    height: 370px;
-    overflow-y: auto;
-    border: #3c6b7c 1px solid;
-    border-radius: 10px;
+#valoresOrcamento #max{
+    position: absolute;
+    right: 5%;
+    display: none;
 }
 
 #btnenviar {

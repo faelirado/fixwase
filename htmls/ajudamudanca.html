@@ -23,6 +23,11 @@
 
             <div id="ajuda" class="ajuda1">
 
+                <div id="procurar">
+                    <input type="text" id="barraProcurar" onkeyup="pesquisar()">
+                    <button id="botaoProcurar" onclick="pesquisar()"><i class='bx bx-search-alt-2'></i></button>
+                </div>
+
                 <div id="espacoajuda" class="espacoajuda1">
 
                     <h3>Selecione o tipo de serviço de mudança que quer:</h3>
@@ -31,31 +36,21 @@
                         <label><input type="checkbox" id="tipoajuda1" value="10" class="mudanRes"> Residencial</label>
                     </div>
 
-                    <br>
-
                     <div id="escolherajuda">
                         <label><input type="checkbox" id="tipoajuda2" value="10" class="mudanComer"> Comercial</label>
                     </div>
-
-                    <br>
 
                     <div id="escolherajuda">
                         <label><input type="checkbox" id="tipoajuda3" value="10" class="mudanPeqPort"> Pequeno Porte</label>
                     </div>
 
-                    <br>
-
                     <div id="escolherajuda">
                         <label><input type="checkbox" id="tipoajuda4" value="10" class="mudanTemp"> Temporária</label>
                     </div>
 
-                    <br>
-
                     <div id="escolherajuda">
                         <label><input type="checkbox" id="tipoajuda5" value="10" class="mudanItSens"> Itens Sensíveis</label>
                     </div>
-
-                    <br>
 
                     <div id="escolherajuda">
                         <label><input type="checkbox" id="tipoajuda6" value="10" class="mudanAltComp"> Alta Complexidade</label>
@@ -72,12 +67,15 @@
                 <div id="espacoajuda" class="espacoajuda2">
                     <h3>Defina o valor do orçamento:</h3>
 
-                    <p>Preço mínimo: R$<label id="valormin">10</label></p>
-
                     <div id="escolherorcamento">
                         <div id="valororcamento"></div>
                         <br>
                         <input type="range" id="rangeorcamento" min="" max="100" value="">
+                        
+                        <div id="valoresOrcamento">
+                            <p id="min">R$<label id="valormin">10</label></p>
+                            <p id="max">R$<label id="valormax">100</label></p>
+                        </div>
                     </div>
 
                 </div>

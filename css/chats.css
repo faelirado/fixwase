@@ -70,6 +70,8 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
+/*---procurar---*/
+
 #procurar {
     position: absolute;
     margin-left: 50%;
