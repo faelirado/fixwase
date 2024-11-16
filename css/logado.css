@@ -136,6 +136,15 @@ body::-webkit-scrollbar {
     font-weight: bold;
 }
 
+#conteudo {
+    text-align: center;
+}
+
+#conteudo img {
+    width: 80%;
+    border-radius: 30px;
+}
+
 /*---MENU ESQUERDA---*/
 
 #menu-button {
@@ -253,15 +262,6 @@ body::-webkit-scrollbar {
     border: 0px;
     font-size: 12px;
     cursor: pointer;
-}
-
-#conteudo {
-    text-align: center;
-}
-
-#conteudo img {
-    width: 80%;
-    border-radius: 30px;
 }
 
 /*---------------------------------------------------------------------*/
