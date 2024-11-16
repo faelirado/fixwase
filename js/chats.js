@@ -3,26 +3,21 @@ const voltar = document.getElementById('backi');
 
 if (voltar) {
   voltar.addEventListener('click', function () {
-    window.history.back();
+    // window.history.back();
+    window.location.href = "logado.html"
   });
 }
 
 //clique em alguma mensagem
 const mensagens = document.querySelectorAll('#mensagem');
 
-mensagens.addEventListener('click', function (mensagem) {
-  localStorage.setItem("nomeConversa",mensagem.getElementById("nomeCliente").textContent) //nao ta funcionando !!!
-  window.location.href = "conversa.html"
+mensagens.forEach(mensagem => {
+  mensagem.addEventListener("click", function() {
+    var nomeCliente = mensagem.querySelector("#nomeCliente"); // Alterado para querySelector
+    localStorage.setItem("nomeConversa", nomeCliente.textContent);
+    window.location.href = "conversa.html";
+  });
 });
-
-// if (mensagens) {
-//   for(var mensagem of mensagens){
-//     mensagem.addEventListener('click', function () {
-//       localStorage.setItem("nomeConversa",mensagem.getElementById("nomeCliente").textContent)
-//       window.location.href = "conversa.html"
-//     });
-//   }
-// }
 
 //testa as mensagens
 
