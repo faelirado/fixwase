@@ -29,14 +29,12 @@ servicos.forEach(function(servico) {
 });
 }
 
-const divchecks = document.querySelectorAll("#escolherajuda")
-
-divchecks.forEach(div => {
-    div.addEventListener("click",function(){
-        var check = this.querySelector("input")
+function marcarAjuda(div) {
+    const check = div.querySelector("input")
+    if(check){
         check.checked = !check.checked
-    })
-})
+    }
+}
 
 /*confere se há algum checkbox marcado*/
 document.getElementById("ajudas").addEventListener("submit", function(event) {
